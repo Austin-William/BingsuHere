@@ -1,66 +1,232 @@
-.navbar {
-  width: 100vw;
-  background-color: #f8f9fa;
+@use '../../../variables.scss' as *;
 
-  &__container {
+.drawer {
+  &-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 16px;
-  }
-
-  &__content {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 24px;
+    padding: 1.8rem;
+    height: 100%;
+    overflow-y: auto;
   }
 
-  &__logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &-title {
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 1px solid $color-3;
+    padding-bottom: 1rem;
+  }
 
-    &__image {
-      height: 50px;
-      width: auto;
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2rem;
+    margin-bottom: $space;
+
+    &-item {
+      font-size: 20px;
+      text-decoration: none;
+      color: $text;
     }
   }
 
-  &__menu {
+  &-logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: $space;
 
-    &__item {
-      position: relative;
-      margin: 0 10px;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #495057;
+    &-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
+    }
+  }
+
+  &-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.1rem;
       text-decoration: none;
-      transition: color 0.3s;
+
+      &-image {
+        width: 16px;
+      }
+    }
+  }
+}
+
+.toolbar {
+  color: $text;
+  background-color: $color-2;
+  height: fit-content;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0.3rem
+  }
+
+  &-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    text-decoration: none;
+    color: $text;
+  }
+
+  &-drawer {
+    &-button {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  &-logo {
+    &-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  &-menu {
+    display: flex;
+    gap: 1rem;
+
+    &-item {
+      position: relative;
+      font-size: 16px;
+      text-decoration: none;
+      color: $text;
+      transition: all 0.3s ease-in-out;
 
       &::before {
         content: '';
-        position: absolute;
-        bottom: -2px;
         display: block;
+        position: absolute;
         width: 0;
-        height: 2px;
-        background-color: var(--color-4);
+        bottom: 0;
+        height: 1px;
+        background-color: $color-4;
         transition: all 0.3s ease-in-out;
       }
 
       &:hover {
-        color: var(--color-4);
+        color: $color-4;
 
         &::before {
           width: 100%;
         }
+      }
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-right: 0.4rem;
+  }
+
+  &-button {
+    color: $text;
+    line-height: 0;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-4;
+    }
+
+    &-icon {
+      font-size: 24px;
+      height: auto;
+      width: fit-content;
+    }
+  }
+
+  &-language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &-icon {
+        font-size: 24px;
+        height: auto;
+        width: fit-content;
+      }
+
+      &:hover {
+        color: $color-4;
+      }
+    }
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    height: 4rem;
+
+    &-logo,
+    &-buttons,
+    &-menu,
+    &-logo {
+      display: none;
+    }
+
+    &-language {
+      &-button {
+        &-icon {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &-drawer {
+      &-button {
+        display: flex;
       }
     }
   }

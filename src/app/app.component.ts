@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 import { NavbarComponent } from "./components/navbar/navbar.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent],
+  imports: [NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }

@@ -3,6 +3,8 @@
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 
+@use 'variables.scss';
+
 html {
   @include mat.theme((
     color: (
@@ -22,15 +24,6 @@ html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-
-  --color-1: #e63946;
-  --color-2: #f1faee;
-  --color-3: #a8dadc;
-  --color-4: #457b9d;
-  --color-5: #1d3557;
-
-  --background: #fefefe;
-  --text: #333333;
 }
 
 html, body { height: 100%; }

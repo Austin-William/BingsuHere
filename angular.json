@@ -5,6 +5,15 @@
   "projects": {
     "bingsuproject": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr-FR": {
+            "translation": "src/locale/messages.fr.xlf",
+            "subPath": "fr"
+          }
+        }
+      },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -17,11 +26,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": [
+              "fr-FR"
+            ],
             "outputPath": "dist/bingsuproject",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -85,7 +98,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
@@ -96,7 +110,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/variables.scss"
             ],
             "scripts": []
           }
