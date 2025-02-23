@@ -1,23 +1,26 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 
-@use 'variables.scss';
+@use 'variables.scss' as *;
 
 html {
-  @include mat.theme((
-    color: (
-      theme-type: light,
-      primary: mat.$azure-palette,
-      tertiary: mat.$blue-palette,
-    ),
-    typography: Roboto,
-    density: 0,
-  ));
-}/* You can add global styles to this file, and also import other style files */
+  @include mat.theme((color: (theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    ));
 
-// add global styles
+  @include mat.menu-overrides((
+    container-color: $background,
+    container-shape: rounded,
+    container-elevation-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+    ));
+}
+
+/* You can add global styles to this file, and also import other style files */
 
 * {
   box-sizing: border-box;
@@ -26,5 +29,12 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

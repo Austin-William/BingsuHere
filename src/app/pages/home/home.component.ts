@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }
 })
 
-export class HomeComponent {}
+export class HomeComponent {
+  
+}

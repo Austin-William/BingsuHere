@@ -21,7 +21,7 @@
       <div class="toolbar-menu">
         @for (item of product_links; track $index) {
         <a routerLink="/products/{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page"
-          class="toolbar-menu-item" [tabIndex]="$index">
+          class="toolbar-menu-item">
           {{ item.name }}
         </a>
         }
@@ -30,22 +30,32 @@
     <section class="toolbar-right">
       <div class="toolbar-buttons">
         @for (item of buttons_links; track $index) {
-        <a routerLink="/{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-button"
+        <a routerLink="{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-button"
           [tabIndex]="$index">
-          <mat-icon class="toolbar-button-icon">
-            {{ item.icon }}
-          </mat-icon>
+          <img src="{{ item.icon }}" alt="{{ item.name }}" class="toolbar-button-icon" />
         </a>
         }
       </div>
       <!-- Language here -->
-      <div class="toolbar-language">
-        <button class="toolbar-language-button">
+      <!-- <div class="toolbar-language">
+        <button class="toolbar-language-button" [matMenuTriggerFor]="menuLanguage">
           <mat-icon class="toolbar-language-button-icon">
             language
           </mat-icon>
         </button>
-      </div>
+        <mat-menu #menuLanguage>
+          <div class="toolbar-language-menu">
+            @for (item of languages; track $index) {
+            <button class="toolbar-language-menu-button" (click)="handleLanguageSwitch(item.code)" [tabIndex]="$index">
+              <img src="{{ item.iconPath }}" alt="{{ item.text }}" class="toolbar-language-menu-button-image" />
+              <span class="toolbar-language-menu-button-text">
+                {{ item.text }}
+              </span>
+            </button>
+            }
+          </div>
+        </mat-menu>
+      </div> -->
     </section>
   </div>
 </mat-toolbar>

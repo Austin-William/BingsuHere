@@ -3,21 +3,24 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 
 type ListProduct = { name: string, path: string }[];
 type ListButton = { name: string, icon: string, path: string }[];
 type ListSocial = { name: string, iconPath: string, url: string }[];
-type ListLanguage = { name: string, code: string }[];
+type ListLanguage = { text: string, code: string, iconPath: string }[];
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatIconModule, MatToolbarModule, MatSidenavModule],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatIconModule, MatToolbarModule, MatSidenavModule, MatMenuModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }
 })
 
 export class NavbarComponent {  
+  isLanguageMenuOpen: boolean = false;
+
   product_links: ListProduct = [
     { name: $localize`Bingsu`, path: 'bingsu' },
     { name: $localize`Brunch`, path: 'brunch' },
@@ -27,8 +30,9 @@ export class NavbarComponent {
   ];
 
   buttons_links: ListButton = [
-    { name: $localize`Home`, icon: 'home', path: 'home' },
-    { name: $localize`Stores`, icon: 'search', path: 'store' },
+    { name: $localize`Home`, icon: '/assets/icons/home.svg', path: '/' },
+    { name: $localize`Stores`, icon: '/assets/icons/shopping_bag.svg', path: 'store' },
+    { name: $localize`Help`, icon: '/assets/icons/help.svg', path: 'help' },
   ];
 
   social_links: ListSocial = [
@@ -37,14 +41,17 @@ export class NavbarComponent {
   ];
 
   languages: ListLanguage = [
-    { name: $localize`English`, code: 'en' },
-    { name: $localize`Français`, code: 'fr' },
+    { text: $localize`English`, code: 'en', iconPath: "/assets/icons/uk.png" },
+    { text: $localize`Français`, code: 'fr', iconPath: "/assets/icons/france.png" },
   ];
 
   handleLanguageSwitch(option: string): void {
-    // Ajouter le code pour changer la langue
+    const url = window.location.href;
 
-    // Angular ne peut pas hot refresh les changements de langue
-    // Il faut recharger la page avec le bon /en ou /fr
+    if (option === 'en') {
+      window.location.href = url.replace(/\/fr\//, '/en/');
+    } else if (option === 'fr') {
+      window.location.href = url.replace(/\/en\//, '/fr/');
+    }
   }
 }
