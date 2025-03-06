@@ -1,0 +1,9 @@
+<button
+  class="button-component {{ this.class }}"
+  type="{{ this.type }}"
+  id="{{ this.id }}"
+  disabled="{{ this.disabled }}"
+  (click)="this.onClick()"
+>
+  <ng-content></ng-content>
+</button>

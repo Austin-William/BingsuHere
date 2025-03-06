@@ -3,9 +3,11 @@
   <div class="toolbar-container">
     <section class="toolbar-left">
       <!-- Add drawer -->
-      <button class="toolbar-drawer-button" (click)="drawer.toggle()">
+      @if (isMobile) {
+      <button class="toolbar-drawer-button" (click)="drawer.toggleDrawer()">
         <mat-icon>menu</mat-icon>
       </button>
+      }
       <div class="toolbar-logo">
         <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-logo">
           <img src="/assets/images/logo/bingsu_logo.jpg" alt="logo" class="toolbar-logo-image">
@@ -61,46 +63,39 @@
 </mat-toolbar>
 
 <!-- Drawer -->
-<mat-drawer-container hasBackdrop="true">
-  <mat-drawer #drawer mode="over" class="drawer">
-    <div class="drawer-wrapper">
-      <section class="drawer-content">
-        <div class="drawer-logo">
-          <img src="/assets/images/logo/bingsu_logo.jpg" alt="logo" class="drawer-logo-image">
-        </div>
-        <div class="drawer-menu">
-          <h3 class="drawer-title">
-            Links
-          </h3>
-          @for (item of buttons_links; track $index) {
-          <a routerLink="/{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page"
-            class="drawer-menu-item" [tabIndex]="$index">
-            {{ item.name }}
-          </a>
-          }
-        </div>
-        <div class="drawer-menu">
-          <h3 class="drawer-title">
-            Products
-          </h3>
-          @for (item of product_links; track $index) {
-          <a routerLink="/products/{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page"
-            class="drawer-menu-item" [tabIndex]="$index">
-            {{ item.name }}
-          </a>
-          }
-        </div>
-      </section>
-      <section class="drawer-social">
-        @for (item of social_links; track $index) {
-        <a href="{{ item.url }}" target="_blank" class="drawer-social-item" [tabIndex]="$index">
-          <img src="{{ item.iconPath }}" alt="{{ item.name }}" class="drawer-social-item-image">
-        </a>
-        }
-      </section>
+<app-drawer #drawer>
+  <section class="drawer-content">
+    <div class="drawer-logo">
+      <img src="/assets/images/logo/bingsu_logo.jpg" alt="logo" class="drawer-logo-image">
     </div>
-  </mat-drawer>
-  <mat-drawer-content>
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+    <div class="drawer-menu">
+      <h3 class="drawer-title">
+        Links
+      </h3>
+      @for (item of buttons_links; track $index) {
+      <a routerLink="/{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page" class="drawer-menu-item"
+        [tabIndex]="$index">
+        {{ item.name }}
+      </a>
+      }
+    </div>
+    <div class="drawer-menu">
+      <h3 class="drawer-title">
+        Products
+      </h3>
+      @for (item of product_links; track $index) {
+      <a routerLink="/products/{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page"
+        class="drawer-menu-item" [tabIndex]="$index">
+        {{ item.name }}
+      </a>
+      }
+    </div>
+  </section>
+  <section class="drawer-social">
+    @for (item of social_links; track $index) {
+    <a href="{{ item.url }}" target="_blank" class="drawer-social-item" [tabIndex]="$index">
+      <img src="{{ item.iconPath }}" alt="{{ item.name }}" class="drawer-social-item-image">
+    </a>
+    }
+  </section>
+</app-drawer>

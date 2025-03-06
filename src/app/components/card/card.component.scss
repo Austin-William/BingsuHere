@@ -1,0 +1,127 @@
+@use "../../../variables.scss" as *;
+
+.card {
+  width: 300px;
+  min-width: 300px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+
+  &-container {
+    padding: 1rem;
+  }
+
+  &-image {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  &-carousel {
+    min-width: unset;
+    width: unset;
+  }
+
+  &-labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  &-title {
+    margin-top: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+
+  &-description {
+    margin-top: 0.7rem;
+    text-align: left;
+    word-spacing: 2px;
+    height: 130px;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    overflow-y: auto;
+  }
+
+  &-options {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.8rem;
+  }
+
+  &-price {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: end;
+
+    &-text {
+      font-size: 26px;
+      font-weight: 500;
+      color: darken($color: $color-4, $amount: 10%);
+    }
+
+    &-currency {
+      font-size: 20px;
+      margin-left: 2px;
+    }
+  }
+
+  &-radio {
+    position: relative;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input[type="radio"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      appearance: none;
+      border: 1px solid $border-color;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: border-color $transition-time $transition-type;
+
+      &:hover {
+        border: 2px solid lighten($color: $color-4, $amount: 30%);
+      }
+
+      &:checked {
+        border: 2px solid $color-5;
+      }
+    }
+
+    label {
+      z-index: 1;
+      line-height: 0;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    &-description {
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="drawer-component {{ isOpen ? 'open' : 'closed' }}">
+  <div class="drawer-component-container">
+    <button class="drawer-component-close-button" (click)="toggleDrawer()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <ng-content></ng-content>
+  </div>
+  @if (isOpen) {
+  <div class="drawer-component-backdrop" (click)="toggleDrawer()"></div>
+  }
+</div>

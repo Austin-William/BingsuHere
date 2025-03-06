@@ -1,0 +1,40 @@
+<div class="card {{ classType }}" id="{{ id }}">
+  <div class="card-container">
+    <img src="{{ imagePath }}" alt="{{ title }}" class="card-image" />
+    <div class="card-labels">
+      @for (item of labels; track $index) {
+      <app-label [classname]="item.classname">
+        {{ item.title }}
+      </app-label>
+      }
+    </div>
+    <h2 class="card-title">
+      {{ title }}
+    </h2>
+    <p class="card-description">
+      {{ description }}
+    </p>
+    <div class="card-options">
+      @for (item of options; track $index) {
+      <div class="card-radio">
+        <label for="{{ item.id }}">
+          {{ item.value }}
+        </label>
+        <input
+          type="radio"
+          name="size_{{ id }}"
+          id="{{ item.id }}"
+          value="{{ item.value }}"
+          (change)="handleSelectedOption(item.id, item.value, item.price)"
+          [checked]="selectedOptionId === item.id"
+          />
+      </div>
+      }
+    </div>
+    <div class="card-price">
+      <span class="card-price-text">
+        {{ displayedPrice }}<span class="card-price-currency">€</span>
+      </span>
+    </div>
+  </div>
+</div>

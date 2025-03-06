@@ -1,0 +1,10 @@
+<a
+  href="{{ this.href }}"
+  routerLink="{{ this.routerLink }}"
+  target="{{ this.target }}"
+  class="link-component {{ this.class }}"
+  id="{{ this.id }}"
+  (click)="this.onClick()"
+>
+  <ng-content></ng-content>
+</a>

@@ -1,3 +1,77 @@
 <main class="home">
-  home page
+  <section class="home-hero">
+    <div class="home-hero-content">
+      <h1 class="home-hero-content-title">
+        Experience the Magic of Korean Bingsu
+      </h1>
+      <p class="home-hero-content-description">
+        Discover the rich flavors of Korea with our delectable bingsu
+      </p>
+      <div class="home-hero-content-button">
+        <app-link routerLink="/products" type="button" id="home-explore-button" class="text-lg">
+          Explore Now
+        </app-link>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-products">
+    <h2 class="featured-products-title">
+      Our Signature Bingsu
+    </h2>
+    <div class="featured-products-carousel">
+      <p-carousel [value]="products_signature" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product #item>
+          <app-card type="carousel" [id]="product.id" [title]="product.title" [description]="product.description"
+            [imagePath]="product.image" [discount]="product.discount" [available]="product.available"
+            [labels]="product.labels" [options]="product.options" [kcal]="product.kcal" />
+        </ng-template>
+      </p-carousel>
+    </div>
+  </section>
+
+  <section class="social-media">
+    <h2>
+      Discover Us !
+    </h2>
+  </section>
+
+  <section class="store-info">
+    <div class="info-content">
+      <h2>
+        Visit Us Today
+      </h2>
+      <p>
+        Experience the perfect blend of traditional Korean shaved ice with modern flavors
+      </p>
+      <div class="info-details">
+        <div class="info-item">
+          <mat-icon>
+            access_time
+          </mat-icon>
+          <div>
+            <h4>
+              Schedule
+            </h4>
+            <p>
+              Monday-Sunday: 11AM - 9PM
+            </p>
+          </div>
+        </div>
+        <div class="info-item">
+          <mat-icon>
+            location_on
+          </mat-icon>
+          <div>
+            <h4>
+              Location
+            </h4>
+            <p>
+              123 Dessert Street, Sweet City
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>

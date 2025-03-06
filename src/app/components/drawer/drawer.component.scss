@@ -1,0 +1,56 @@
+@use '../../../variables.scss' as *;
+
+.drawer-component {
+  position: relative;
+
+  &-backdrop {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity $transition-time $transition-type;
+  }
+
+  &-container {
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.8rem;
+    height: 100%;
+    width: clamp(20rem, 80%, 30rem);
+    overflow-y: auto;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform $transition-time $transition-type;
+  }
+
+  &-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    color: $color-4;
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.open {
+  .drawer-component {
+    &-container {
+      transform: translateX(0);
+    }
+
+    &-backdrop {
+      opacity: 1;
+    }
+  }
+}

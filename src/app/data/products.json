@@ -1,0 +1,143 @@
+{
+  "products": {
+    "signatures": [
+      {
+        "id": 10000001,
+        "title": "Mango Bingsu",
+        "description": "Mango Bingsu with sweet mango chunks, creamy condensed milk and a scoop of ice cream.",
+        "image": "assets/images/products/signatures/mango-bingsu.jpg",
+        "discount": 2.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Best Seller",
+            "classname": "label-best-seller"
+          },
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Fresh Mango Chunks",
+          "Shaved Ice",
+          "Condensed Milk"
+        ],
+        "kcal": 400,
+        "options": [
+          {
+            "id": 10000011,
+            "title": "Small",
+            "value": "s",
+            "price": 10.00
+          },
+          {
+            "id": 10000021,
+            "title": "Medium",
+            "value": "m",
+            "price": 12.00
+          },
+          {
+            "id": 10000031,
+            "title": "Large",
+            "value": "l",
+            "price": 16.00
+          }
+        ]
+      },
+      {
+        "id": 10000002,
+        "title": "Strawberry Bingsu",
+        "description": "Strawberry Bingsu with fresh, juicy strawberries, sweet strawberry syrup, and a drizzle of condensed milk.",
+        "image": "assets/images/products/signatures/strawberry-bingsu.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Best Seller",
+            "classname": "label-best-seller"
+          }
+        ],
+        "ingredients": [
+          "Fresh Strawberries",
+          "Shaved Ice",
+          "Strawberry Syrup",
+          "Whipped Cream"
+        ],
+        "kcal": 450,
+        "options": [
+          {
+            "id": 100000012,
+            "title": "Small",
+            "value": "s",
+            "price": 13.00
+          },
+          {
+            "id": 10000022,
+            "title": "Medium",
+            "value": "m",
+            "price": 15.00
+          },
+          {
+            "id": 10000032,
+            "title": "Large",
+            "value": "l",
+            "price": 17.00
+          }
+        ]
+      },
+      {
+        "id": 10000003,
+        "title": "Matcha Bingsu",
+        "description": "Matcha Bingsu with rich, earthy matcha flavor. Topped with sweet red bean, chewy mochi, matcha ice cream and a drizzle of condensed milk.",
+        "image": "assets/images/products/signatures/matcha-bingsu.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Best Seller",
+            "classname": "label-best-seller"
+          },
+          {
+            "title": "New",
+            "classname": "label-new"
+          }
+        ],
+        "ingredients": [
+          "Matcha",
+          "Shaved Ice",
+          "Red Bean",
+          "Chewy Mochi",
+          "Condensed Milk"
+        ],
+        "kcal": 380,
+        "options": [
+          {
+            "id": 10000031,
+            "title": "Small",
+            "value": "s",
+            "price": 15.00
+          },
+          {
+            "id": 10000032,
+            "title": "Medium",
+            "value": "m",
+            "price": 17.00
+          },
+          {
+            "id": 10000033,
+            "title": "Large",
+            "value": "l",
+            "price": 19.00
+          }
+        ]
+      }
+    ],
+    "usual": [
+
+    ]
+  }
+}

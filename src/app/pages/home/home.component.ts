@@ -1,12 +1,38 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { CarouselModule } from 'primeng/carousel';
+
+import { LinkComponent } from '../../components/link/link.component';
+import { CardComponent } from '../../components/card/card.component';
+
+import { products } from '../../data/products.json';
 
 @Component({
   selector: 'app-home',
+  imports: [MatIconModule, LinkComponent, CardComponent, CarouselModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }
 })
 
 export class HomeComponent {
-  
+  products_signature = products.signatures;
+
+  responsiveOptions: any[] = [
+    {
+      breakpoint: '1024px',
+      numVisible: 2,
+      numScroll: 1
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 1,
+      numScroll: 1
+    },
+    {
+      breakpoint: '480px',
+      numVisible: 1,
+      numScroll: 1
+    },
+  ];
 }

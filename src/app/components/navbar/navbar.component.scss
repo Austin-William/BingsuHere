@@ -1,20 +1,12 @@
 @use '../../../variables.scss' as *;
 
 .drawer {
-  &-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1.8rem;
-    height: 100%;
-    overflow-y: auto;
-  }
-
   &-title {
     font-size: 24px;
     font-weight: 500;
     border-bottom: 1px solid $color-3;
     padding-bottom: 1rem;
+    color: $text;
   }
 
   &-menu {
@@ -35,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: $space;
+    margin: $space 0;
 
     &-image {
       width: 100px;
@@ -92,6 +84,7 @@
       justify-content: center;
       background-color: transparent;
       border: none;
+      color: $color-5;
     }
   }
 
@@ -112,7 +105,7 @@
       font-size: 16px;
       text-decoration: none;
       color: $text;
-      transition: all 0.3s ease-in-out;
+      transition: all $transition-time $transition-type;
 
       &::before {
         content: '';
@@ -122,7 +115,7 @@
         bottom: 0;
         height: 1px;
         background-color: $color-4;
-        transition: all 0.3s ease-in-out;
+        transition: all $transition-time $transition-type;
       }
 
       &:hover {
@@ -145,7 +138,7 @@
   }
 
   &-button {
-    transition: all 0.3s ease-in-out;
+    transition: color $transition-time $transition-type;
 
     &:hover {
       color: $color-4;
@@ -169,7 +162,7 @@
       border: none;
       background-color: transparent;
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
+      transition: all $transition-time $transition-type;
 
       &-icon {
         font-size: 24px;
@@ -196,7 +189,7 @@
         justify-content: flex-start;
         gap: 0.5rem;
         cursor: pointer;
-        transition: all 0.3s ease-in-out;
+        transition: all $transition-time $transition-type;
 
         &:hover {
           color: $color-4;
@@ -217,6 +210,7 @@
   &-left {
     display: flex;
     align-items: center;
+    min-width: 100px;
   }
 
   &-right {
@@ -250,6 +244,10 @@
           font-size: 20px;
         }
       }
+    }
+
+    &-left {
+      min-width: 0;
     }
 
     &-drawer {

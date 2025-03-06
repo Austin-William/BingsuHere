@@ -1,0 +1,23 @@
+@use "../../../variables.scss" as *;
+
+.label {
+  border: 2px solid $color-4;
+  border-radius: 10px;
+  padding: 0.3rem;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 400;
+
+  // Class to add to change the border color
+  &-best-seller {
+    border-color: $color-best-seller;
+  }
+
+  &-new {
+    border-color: $color-new;
+  }
+
+  &-discount {
+    border-color: $color-discount;
+  }
+}

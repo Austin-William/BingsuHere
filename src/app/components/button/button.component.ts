@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+type ButtonType = 'button' | 'submit' | 'reset';
 
 @Component({
   selector: 'app-button',
@@ -8,4 +10,10 @@ import { Component } from '@angular/core';
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }
 })
 
-export class ButtonComponent {}
+export class ButtonComponent {
+  @Input() type: ButtonType = 'button';
+  @Input() disabled: boolean = false;
+  @Input() class: string = '';
+  @Input() id: string = '';
+  @Input() onClick: any = () => {};
+}
