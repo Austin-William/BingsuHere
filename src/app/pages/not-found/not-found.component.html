@@ -1,11 +1,18 @@
-<main>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>404</h1>
-        <h2>Page not found</h2>
-        <p>Sorry, the page you are looking for does not exist.</p>
-      </div>
+<main class="error-page">
+  <div class="error-page-container">
+    <h1 class="error-page-title">
+      Page not found
+    </h1>
+    <p class="error-page-description">
+      The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+      <br />Please try again later.
+    </p>
+    <div class="error-page-links">
+      @for (item of list_buttons; track $index) {
+      <app-link routerLink="{{ item.url }}" target="_self" classname="color-5 border-color-5 text-lg">
+        {{ item.title }}
+      </app-link>
+      }
     </div>
   </div>
 </main>

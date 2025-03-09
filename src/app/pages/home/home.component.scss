@@ -5,35 +5,108 @@
   color: $text;
   overflow: hidden;
 
-  &-hero {
-    height: clamp(750px, 70vh, 1200px);
+  .hero {
+    height: clamp(750px, 70lvh, 1200px);
     background: linear-gradient(rgba($color-4, 0.6), rgba($color-4, 0.6)),
       url('/assets/images/presentation/presentation-shop.jpg') center/cover no-repeat;
     background-attachment: fixed;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: $space;
+    flex-direction: row;
 
     &-content {
-      text-align: center;
       color: $text-light;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      &-wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: $space;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
 
       &-title {
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        margin-bottom: clamp(2rem, 3vw, 3rem);
+        font-size: clamp(3rem, 8lvw, 7rem);
+        margin-bottom: clamp(2rem, 3lvw, 3rem);
         letter-spacing: 2px;
+        text-transform: uppercase;
         animation: fadeInUp 0.8s ease-out;
       }
 
       &-description {
-        font-size: clamp(1.2rem, 2vw, 1.5rem);
-        margin-bottom: clamp(4rem, 5vw, 5rem);
+        font-size: clamp(1.2rem, 3lvw, 1.8rem);
+        margin-bottom: clamp(4rem, 5lvw, 5rem);
         animation: fadeInUp 0.8s ease-out 0.2s backwards;
       }
 
       &-button {
         animation: fadeInUp 0.8s ease-out 0.4s backwards;
+      }
+    }
+
+    &-image {
+      max-width: 600px;
+      height: auto;
+      filter: drop-shadow(0 0 0.5rem $color-1);
+    }
+  }
+
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 3vw, 3rem);
+
+    &-title {
+      text-align: center;
+      color: $color-5;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-top: 2rem;
+      letter-spacing: 2px;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      padding: $space;
+      max-width: 1200px;
+    }
+
+    &-image {
+      max-width: 700px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba($color-4, 0.4);
+    }
+
+    &-description {
+      font-size: 16px;
+      letter-spacing: 2px;
+      word-spacing: 2px;
+      color: $color-5;
+      word-break: break-word;
+      line-height: 1.5;
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
       }
     }
   }
@@ -57,6 +130,24 @@
     &-carousel {
       max-width: 1200px;
       width: 100vw;
+    }
+
+    &-explore {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.5rem;
+
+      &-description {
+        color: $color-5;
+        font-size: 1.2rem;
+      }
+
+      &-examples {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+      }
     }
   }
 
@@ -119,11 +210,44 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .home {
+    .hero {
+      &-content {
+        align-items: center;
+
+        &-title {
+          text-align: center;
+        }
+
+        &-description {
+          text-align: center;
+        }
+      }
+
+      &-image {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+   .hero {
+      &-image {
+        max-width: 400px;
+      }
+    }
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

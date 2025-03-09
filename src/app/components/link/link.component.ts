@@ -14,7 +14,7 @@ export class LinkComponent {
   @Input() routerLink: string = '';
   @Input() target: string = '_self'; 
   @Input() disabled: boolean = false;
-  @Input() class: string = '';
+  @Input() classname: string = '';
   @Input() id: string = '';
   @Input() onClick: any = () => {};
 }

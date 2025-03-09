@@ -62,6 +62,7 @@
   color: $text;
   background-color: $color-2;
   height: fit-content;
+  border-bottom: 1px solid #00000020;
 
   &-container {
     display: flex;

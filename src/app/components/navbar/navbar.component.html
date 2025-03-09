@@ -3,11 +3,9 @@
   <div class="toolbar-container">
     <section class="toolbar-left">
       <!-- Add drawer -->
-      @if (isMobile) {
       <button class="toolbar-drawer-button" (click)="drawer.toggleDrawer()">
         <mat-icon>menu</mat-icon>
       </button>
-      }
       <div class="toolbar-logo">
         <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-logo">
           <img src="/assets/images/logo/bingsu_logo.jpg" alt="logo" class="toolbar-logo-image">

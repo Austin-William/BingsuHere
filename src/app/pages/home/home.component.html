@@ -1,17 +1,45 @@
 <main class="home">
-  <section class="home-hero">
-    <div class="home-hero-content">
-      <h1 class="home-hero-content-title">
-        Experience the Magic of Korean Bingsu
-      </h1>
-      <p class="home-hero-content-description">
-        Discover the rich flavors of Korea with our delectable bingsu
-      </p>
-      <div class="home-hero-content-button">
-        <app-link routerLink="/products" type="button" id="home-explore-button" class="text-lg">
-          Explore Now
-        </app-link>
+  <section class="hero">
+    <div class="hero-content-wrapper">
+      <div class="hero-content">
+        <h1 class="hero-content-title">
+          Bingsu Project
+        </h1>
+        <p class="hero-content-description">
+          Discover the rich flavors of Korea with our delectable bingsu
+        </p>
+        <div class="hero-content-button">
+          <app-link routerLink="/products" id="home-explore-button" classname="bg-color-2 text-lg color-4">
+            Explore Now
+          </app-link>
+        </div>
       </div>
+      <img class="hero-image" src="/assets/images/presentation/3d_model_hero.png" alt="presentation_3d_model">
+    </div>
+  </section>
+
+  <section class="presentation">
+    <h2 class="presentation-title">
+      Our Story
+    </h2>
+    <div class="presentation-content">
+      <div class="presentation-description-wrapper">
+        <p class="presentation-description">
+          We are passionate about sharing the flavors of Korea with the world. Our bingsu is a
+          traditional Korean shaved ice that has been passed down for generations. It is made
+          with high-quality ingredients and is carefully crafted to perfection.
+        </p>
+        <p class="presentation-description">
+          We believe that bingsu should be accessible to everyone, regardless of their taste
+          preferences. That's why we offer a wide variety of flavors to suit everyone's
+          cravings.
+        </p>
+        <p class="presentation-description">
+          Come visit us today and experience the magic of Korean bingsu. We are sure you never experience such a
+          delicious bingsu like that before !
+        </p>
+      </div>
+      <img class="presentation-image" src="assets/images/presentation/story.jpg" alt="story" />
     </div>
   </section>
 
@@ -28,12 +56,20 @@
         </ng-template>
       </p-carousel>
     </div>
-  </section>
-
-  <section class="social-media">
-    <h2>
-      Discover Us !
-    </h2>
+    <div class="featured-products-explore">
+      <h2 class="featured-products-title">
+        Explore all our products
+      </h2>
+      <p class="featured-products-explore-description">
+        Discover the best flavors of bingsu in our wide selection
+      </p>
+      <div class="featured-products-explore-examples">
+        <img src="assets/images/presentation/examples.jpg" alt="bingsu_examples" />
+      </div>
+      <app-link routerLink="/products" id="home-explore-button" classname="text-lg border-color-5 color-5">
+        Explore Now
+      </app-link>
+    </div>
   </section>
 
   <section class="store-info">

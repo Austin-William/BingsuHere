@@ -20,9 +20,8 @@ type ListLanguage = { text: string, code: string, iconPath: string }[];
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }
 })
 
-export class NavbarComponent implements OnInit {  
+export class NavbarComponent {  
   isLanguageMenuOpen: boolean = false;
-  isMobile = false;
 
   product_links: ListProduct = [
     { name: 'Bingsu', path: 'bingsu' },
@@ -47,18 +46,6 @@ export class NavbarComponent implements OnInit {
     { text: 'English', code: 'en', iconPath: '/assets/icons/uk.png' },
     { text: 'Français', code: 'fr', iconPath: '/assets/icons/france.png' },
   ];
-
-  ngOnInit() {
-    this.handleMobileView();
-  }
-
-  ngOnChange() {
-    this.handleMobileView();
-  }
-
-  handleMobileView(): void {
-    this.isMobile = globalThis.innerWidth < 768;
-  }
 
   handleLanguageSwitch(option: string): void {
     const url = window.location.href;
