@@ -1,0 +1,53 @@
+{
+  "links": [
+    {
+      "name": "Bingsu",
+      "path": "bingsu"
+    },
+    {
+      "name": "Frozen Yogurt",
+      "path": "frozen-yogurt"
+    },
+    {
+      "name": "Drinks",
+      "path": "drinks"
+    },
+    {
+      "name": "Cakes",
+      "path": "cakes"
+    },
+    {
+      "name": "Desserts",
+      "path": "desserts"
+    }
+  ],
+  "routes": [
+    {
+      "name": "Home",
+      "icon": "/assets/icons/home.svg",
+      "path": "/"
+    },
+    {
+      "name": "Stores",
+      "icon": "/assets/icons/shopping_bag.svg",
+      "path": "store"
+    },
+    {
+      "name": "Help",
+      "icon": "/assets/icons/help.svg",
+      "path": "help"
+    }
+  ],
+  "socials": [
+    {
+      "name": "Instagram",
+      "iconPath": "/assets/icons/instagram.svg",
+      "url": "https://instagram.com"
+    },
+    {
+      "name": "X",
+      "iconPath": "/assets/icons/x-twitter.svg",
+      "url": "https://x.com"
+    }
+  ]
+}

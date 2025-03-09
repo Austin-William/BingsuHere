@@ -1,0 +1,14 @@
+{
+  "languages": [
+    {
+      "text": "English",
+      "code": "en",
+      "iconPath": "/assets/icons/uk.png"
+    },
+    {
+      "text": "Français",
+      "code": "fr",
+      "iconPath": "/assets/icons/france.png"
+    }
+  ]
+}

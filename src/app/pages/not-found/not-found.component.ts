@@ -2,11 +2,7 @@ import { Component } from '@angular/core';
 
 import { LinkComponent } from '../../components/link/link.component';
 
-interface Button {
-  title: string;
-  description: string;
-  url: string;
-}
+import { NotFoundButtonLinks } from '../../types/types';
 
 @Component({
   selector: 'app-not-found',
@@ -17,7 +13,7 @@ interface Button {
 })
 
 export class NotFoundComponent {
-  list_buttons: Button[] = [
+  list_buttons: NotFoundButtonLinks[] = [
     {
       'title': 'Home',
       'description': 'Go to home page',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -7,10 +7,10 @@ import { MatMenuModule } from '@angular/material/menu';
 
 import { DrawerComponent } from '../drawer/drawer.component';
 
-type ListProduct = { name: string, path: string }[];
-type ListButton = { name: string, icon: string, path: string }[];
-type ListSocial = { name: string, iconPath: string, url: string }[];
-type ListLanguage = { text: string, code: string, iconPath: string }[];
+import { NavbarListProduct, NavbarListButton, NavbarListSocial, NavbarListLanguage } from '../../types/types';
+
+import links from '../../data/links.json';
+import languages from '../../data/languages.json';
 
 @Component({
   selector: 'app-navbar',
@@ -20,32 +20,14 @@ type ListLanguage = { text: string, code: string, iconPath: string }[];
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }
 })
 
-export class NavbarComponent {  
+export class NavbarComponent {
   isLanguageMenuOpen: boolean = false;
 
-  product_links: ListProduct = [
-    { name: 'Bingsu', path: 'bingsu' },
-    { name: 'Frozen Yogurt', path: 'frozen-yogurt' },
-    { name: 'Drinks', path: 'drinks' },
-    { name: 'Cakes', path: 'cakes' },
-    { name: 'Desserts', path: 'desserts' },
-  ];
+  product_links: NavbarListProduct = links.links;
+  buttons_links: NavbarListButton = links.routes;
+  social_links: NavbarListSocial = links.socials;
 
-  buttons_links: ListButton = [
-    { name: 'Home', icon: '/assets/icons/home.svg', path: '/' },
-    { name: 'Stores', icon: '/assets/icons/shopping_bag.svg', path: 'store' },
-    { name: 'Help', icon: '/assets/icons/help.svg', path: 'help' },
-  ];
-
-  social_links: ListSocial = [
-    { name: 'Instagram', iconPath: '/assets/icons/instagram.svg', url: 'https://instagram.com' },
-    { name: 'X', iconPath: '/assets/icons/x-twitter.svg', url: 'https://x.com' }
-  ];
-
-  languages: ListLanguage = [
-    { text: 'English', code: 'en', iconPath: '/assets/icons/uk.png' },
-    { text: 'Français', code: 'fr', iconPath: '/assets/icons/france.png' },
-  ];
+  languages: NavbarListLanguage = languages.languages;
 
   handleLanguageSwitch(option: string): void {
     const url = window.location.href;

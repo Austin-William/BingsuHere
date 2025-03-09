@@ -10,7 +10,7 @@ import { MatIcon } from '@angular/material/icon';
 })
 
 export class DrawerComponent {
-  isOpen = false;
+  isOpen: boolean = false;
 
   ngOnChanges() {
     this.blockScrolling();

@@ -2,17 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { LabelComponent } from '../label/label.component';
 
-type OptionType = {
-  id: number;
-  title: string;
-  value: string; // set to "s", "m", "l"
-  price: number;
-}
-
-type LabelsType = {
-  title: string;
-  classname: string;
-}
+import { CardOptionType, CardLabelsType } from '../../types/types';
 
 @Component({
   selector: 'app-card',
@@ -30,8 +20,8 @@ export class CardComponent implements OnInit {
   @Input() imagePath: string = '';
   @Input() featured: boolean = false;
   @Input() available: boolean = false;
-  @Input() labels: LabelsType[] = [];
-  @Input() options: OptionType[] = [];
+  @Input() labels: CardLabelsType[] = [];
+  @Input() options: CardOptionType[] = [];
   @Input() discount: number = 0;
   @Input() kcal: number = 0;
 
