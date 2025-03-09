@@ -6,6 +6,7 @@ import { LinkComponent } from '../../components/link/link.component';
 import { CardComponent } from '../../components/card/card.component';
 
 import { products } from '../../data/products.json';
+import { links } from "../../data/links.json"; 
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ import { products } from '../../data/products.json';
 
 export class HomeComponent {
   products_signature = products.signatures;
+  categories_links = links;
 
   responsiveOptions: any[] = [
     {

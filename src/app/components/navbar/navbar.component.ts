@@ -9,8 +9,8 @@ import { DrawerComponent } from '../drawer/drawer.component';
 
 import { NavbarListProduct, NavbarListButton, NavbarListSocial, NavbarListLanguage } from '../../types/types';
 
-import links from '../../data/links.json';
-import languages from '../../data/languages.json';
+import { links, routes, socials} from '../../data/links.json';
+import { languages } from '../../data/languages.json';
 
 @Component({
   selector: 'app-navbar',
@@ -23,11 +23,11 @@ import languages from '../../data/languages.json';
 export class NavbarComponent {
   isLanguageMenuOpen: boolean = false;
 
-  product_links: NavbarListProduct = links.links;
-  buttons_links: NavbarListButton = links.routes;
-  social_links: NavbarListSocial = links.socials;
+  product_links: NavbarListProduct = links;
+  buttons_links: NavbarListButton = routes;
+  social_links: NavbarListSocial = socials;
 
-  languages: NavbarListLanguage = languages.languages;
+  languages: NavbarListLanguage = languages;
 
   handleLanguageSwitch(option: string): void {
     const url = window.location.href;

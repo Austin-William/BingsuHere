@@ -72,8 +72,8 @@
       text-align: center;
       color: $color-5;
       font-size: clamp(2rem, 4vw, 3rem);
-      margin-top: 2rem;
       letter-spacing: 2px;
+      margin-bottom: 2rem;
     }
 
     &-content {
@@ -104,8 +104,6 @@
       &-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 1.5rem;
       }
     }
@@ -144,7 +142,7 @@
         font-size: 1.2rem;
       }
 
-      &-examples {
+      &-categories {
         margin-top: 2rem;
         margin-bottom: 3rem;
       }
@@ -237,6 +235,20 @@
    .hero {
       &-image {
         max-width: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+ .home {
+   .presentation {
+      &-content {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      &-image {
+        max-width: 100%;
       }
     }
   }
