@@ -121,7 +121,9 @@
       text-align: center;
       color: $color-5;
       font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
       letter-spacing: 2px;
     }
 
@@ -130,21 +132,65 @@
       width: 100vw;
     }
 
+    &-banner {
+      width: 100lvw;
+      height: 200px;
+      background: url("/assets/images/presentation/banner.jpg") center/cover no-repeat;
+      margin-bottom: 3rem;
+    }
+
     &-explore {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-top: 2.5rem;
-
-      &-description {
-        color: $color-5;
-        font-size: 1.2rem;
-      }
+      margin-top: 4rem;
 
       &-categories {
-        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
         margin-bottom: 3rem;
+        margin-top: 1rem;
+
+        &-link {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: clamp(1rem, 2vw, 2rem);
+          padding: clamp(0.5rem, 2vw, 1rem);
+          border: 1px solid $color-4;
+          border-radius: 10px;
+          text-decoration: none;
+          transition: all $transition-time $transition-type;
+
+          &:hover {
+            border-color: $color-3;
+
+            img {
+              transform: scale(1.1);
+            }
+
+            span {
+              transform: translateX(10px);
+            }
+          }
+
+          img {
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+            transition: all $transition-time $transition-type;
+          }
+
+          span {
+            color: $color-5;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all $transition-time $transition-type;
+          }
+        }
       }
     }
   }
@@ -208,6 +254,19 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .home {
+    .featured-products {
+      &-explore {
+        &-categories {
+          padding: 0 0.5rem;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .home {
     .hero {
@@ -232,21 +291,37 @@
 
 @media screen and (max-width: 1024px) {
   .home {
-   .hero {
+    .hero {
       &-image {
         max-width: 400px;
+      }
+    }
+
+    .featured-products {
+      &-explore {
+        &-categories {
+          grid-template-columns: repeat(2, 1fr);
+
+          &-link {
+            img {
+              height: 40px;
+              width: 40px;
+            }
+          }
+        }
       }
     }
   }
 }
 
 @media screen and (max-width: 1200px) {
- .home {
-   .presentation {
+  .home {
+    .presentation {
       &-content {
         flex-direction: column;
         gap: 2rem;
       }
+
       &-image {
         max-width: 100%;
       }

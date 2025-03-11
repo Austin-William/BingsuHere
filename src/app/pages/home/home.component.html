@@ -57,18 +57,20 @@
       </p-carousel>
     </div>
     <div class="featured-products-explore">
+      <div class="featured-products-banner"></div>
       <h2 class="featured-products-title">
-        Explore all our products
-      </h2>
-      <p class="featured-products-explore-description">
         Discover the best flavors of bingsu in our wide selection
-      </p>
+      </h2>
       <div class="featured-products-explore-categories">
-        <img src="assets/images/presentation/examples.jpg" alt="bingsu_examples" />
+        @for (item of categories_links; track $index) {
+        <a routerLink="{{ item.path }}" class="featured-products-explore-categories-link">
+          <img [src]="item.imagePath" alt="{{item.name}}" />
+          <span>
+            {{item.name}}
+          </span>
+        </a>
+        }
       </div>
-      <app-link routerLink="/products" id="home-explore-button" classname="text-lg border-color-5 color-5">
-        Explore Now
-      </app-link>
     </div>
   </section>
 

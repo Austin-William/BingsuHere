@@ -2,23 +2,28 @@
   "links": [
     {
       "name": "Bingsu",
-      "path": "bingsu"
+      "path": "bingsu",
+      "imagePath": "/assets/images/presentation/bingsu_examples.jpg"
     },
     {
       "name": "Frozen Yogurt",
-      "path": "frozen-yogurt"
+      "path": "frozen-yogurt",
+      "imagePath": "/assets/images/presentation/frozen-yogurt_examples.jpg"
     },
     {
       "name": "Drinks",
-      "path": "drinks"
+      "path": "drinks",
+      "imagePath": "/assets/images/presentation/drinks_examples.jpg"
     },
     {
       "name": "Cakes",
-      "path": "cakes"
+      "path": "cakes",
+      "imagePath": "/assets/images/presentation/cakes_examples.jpg"
     },
     {
       "name": "Desserts",
-      "path": "desserts"
+      "path": "desserts",
+      "imagePath": "/assets/images/presentation/desserts_examples.jpg"
     }
   ],
   "routes": [
