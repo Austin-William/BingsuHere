@@ -75,41 +75,33 @@
   </section>
 
   <section class="store-info">
+    <h2 class="store-info-title">
+      Visit our stores
+    </h2>
     <div class="info-content">
-      <h2>
-        Visit Us Today
-      </h2>
-      <p>
-        Experience the perfect blend of traditional Korean shaved ice with modern flavors
-      </p>
-      <div class="info-details">
-        <div class="info-item">
-          <mat-icon>
-            access_time
-          </mat-icon>
-          <div>
-            <h4>
-              Schedule
-            </h4>
-            <p>
-              Monday-Sunday: 11AM - 9PM
-            </p>
+      <p-carousel [value]="shops" [numVisible]="1" [numScroll]="1" [showIndicators]="true">
+        <ng-template let-shop #item>
+          <div class="info-content-card">
+            <p-image [src]="shop.imagePath" alt="{{ shop.location.city }}" width="350" [preview]="true" />
+            <div class="info-content-card-data">
+              <div class="info-content-card-location">
+                <mat-icon>location_on</mat-icon>
+                <span class="info-content-card-location-text">
+                  <p>{{ shop.location.address }}</p>
+                  <p>{{ shop.location.city }} - {{ shop.location.postalCode }}</p>
+                </span>
+              </div>
+              <div class="info-content-card-schedule">
+                <mat-icon>schedule</mat-icon>
+                <span class="info-content-card-schedule-text">
+                  <p>{{ shop.schedule.days }}</p>
+                  <p>{{ shop.schedule.hours }}</p>
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="info-item">
-          <mat-icon>
-            location_on
-          </mat-icon>
-          <div>
-            <h4>
-              Location
-            </h4>
-            <p>
-              123 Dessert Street, Sweet City
-            </p>
-          </div>
-        </div>
-      </div>
+        </ng-template>
+      </p-carousel>
     </div>
   </section>
 </main>

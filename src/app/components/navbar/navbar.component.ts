@@ -23,11 +23,11 @@ import { languages } from '../../data/languages.json';
 export class NavbarComponent {
   isLanguageMenuOpen: boolean = false;
 
-  product_links: NavbarListProduct = links;
-  buttons_links: NavbarListButton = routes;
-  social_links: NavbarListSocial = socials;
+  product_links: NavbarListProduct[] = links;
+  buttons_links: NavbarListButton[] = routes;
+  social_links: NavbarListSocial[] = socials;
 
-  languages: NavbarListLanguage = languages;
+  languages: NavbarListLanguage[] = languages;
 
   handleLanguageSwitch(option: string): void {
     const url = window.location.href;
