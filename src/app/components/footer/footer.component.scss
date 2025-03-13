@@ -1,0 +1,94 @@
+@use "../../../variables.scss" as *;
+
+$margin-bottom: 1rem;
+
+footer {
+  background-color: $footer-background-color;
+  color: $text-light;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: clamp(1rem, 10vw, 3rem);
+
+    .rights {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+
+    .links {
+      h2 {
+        margin-bottom: $margin-bottom;
+      }
+
+      ul {
+        margin-left: 1rem;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        color: $text-light;
+        transition: color $transition-time $transition-type;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .socials {
+      h2 {
+        margin-bottom: $margin-bottom;
+      }
+
+      a {
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          margin-right: 1rem;
+          transition: color $transition-time $transition-type;
+        }
+      }
+    }
+
+    .shops-info {
+      h2 {
+        margin-bottom: $margin-bottom;
+      }
+
+      h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      .phone, .email, .address {
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+
+  .footer-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

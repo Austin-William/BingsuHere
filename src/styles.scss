@@ -36,6 +36,8 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $background;
+  color: $text;
   
   // Custom css p-carousel
   --p-carousel-indicator-active-background: #457b9d;

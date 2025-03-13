@@ -1,3 +1,55 @@
 <footer>
-  test
+  <div class="container">
+    <div class="footer-links">
+      <section class="links">
+        <h2>
+          Categories
+        </h2>
+        <ul>
+          @for (item of categories_links; track $index) {
+          <li>
+            <a [routerLink]="item.path" target="_blank">
+              {{ item.name }}
+            </a>
+          </li>
+          }
+        </ul>
+      </section>
+      <section class="socials">
+        <h2>
+          Follow Us
+        </h2>
+        @for (item of socials; track $index) {
+        <a [routerLink]="item.url" target="_blank">
+          <img src="{{ item.iconPath }}" alt="{{ item.name }}">
+        </a>
+        }
+      </section>
+      <section class="shops-info">
+        <h2>
+          Shops
+        </h2>
+        @for (item of shops; track $index) {
+        <h4 class="location">
+          {{ item.location.city }} {{ item.location.postalCode }}
+        </h4>
+        <p class="phone">
+          <a href="tel:{{ item.contact.phone }}">{{ item.contact.phone }}</a>
+        </p>
+        <p class="email">
+          <a href="mailto:{{ item.contact.email }}">{{ item.contact.email }}</a>
+        </p>
+        <p class="address">
+          {{ item.location.address }}
+        </p>
+        }
+      </section>
+    </div>
+    <section class="rights">
+      <img src="/assets/images/logo/bingsu_logo.jpg" alt="logo">
+      <span>
+        2025 &copy; All Rights Reserved
+      </span>
+    </section>
+  </div>
 </footer>
