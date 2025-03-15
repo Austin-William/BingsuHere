@@ -7,20 +7,20 @@
         <mat-icon>menu</mat-icon>
       </button>
       <div class="toolbar-logo">
-        <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-logo">
+        <a [routerLink]="['/']" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-logo">
           <img src="/assets/images/logo/bingsu_logo.jpg" alt="logo" class="toolbar-logo-image">
         </a>
       </div>
     </section>
     <section class="toolbar-middle">
       <div class="toolbar-title">
-        <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-title">
+        <a [routerLink]="['/']" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-title">
           Bingsu Project
         </a>
       </div>
       <div class="toolbar-menu">
         @for (item of product_links; track $index) {
-        <a routerLink="/products/{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page"
+        <a [routerLink]="['/products/', item.path]" routerLinkActive="active" ariaCurrentWhenActive="page"
           class="toolbar-menu-item">
           {{ item.name }}
         </a>
@@ -30,7 +30,7 @@
     <section class="toolbar-right">
       <div class="toolbar-buttons">
         @for (item of buttons_links; track $index) {
-        <a routerLink="{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-button"
+        <a [routerLink]="item.path" routerLinkActive="active" ariaCurrentWhenActive="page" class="toolbar-button"
           [tabIndex]="$index">
           <img src="{{ item.icon }}" alt="{{ item.name }}" class="toolbar-button-icon" />
         </a>
@@ -71,7 +71,7 @@
         Links
       </h3>
       @for (item of buttons_links; track $index) {
-      <a routerLink="/{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page" class="drawer-menu-item"
+      <a [routerLink]="['/', item.path]" routerLinkActive="active" ariaCurrentWhenActive="page" class="drawer-menu-item"
         [tabIndex]="$index">
         {{ item.name }}
       </a>
@@ -82,7 +82,7 @@
         Products
       </h3>
       @for (item of product_links; track $index) {
-      <a routerLink="/products/{{ item.path }}" routerLinkActive="active" ariaCurrentWhenActive="page"
+      <a [routerLink]="['/products/', item.path]" routerLinkActive="active" ariaCurrentWhenActive="page"
         class="drawer-menu-item" [tabIndex]="$index">
         {{ item.name }}
       </a>
@@ -91,7 +91,7 @@
   </section>
   <section class="drawer-social">
     @for (item of social_links; track $index) {
-    <a href="{{ item.url }}" target="_blank" class="drawer-social-item" [tabIndex]="$index">
+    <a [routerLink]="item.url" target="_blank" class="drawer-social-item" [tabIndex]="$index">
       <img src="{{ item.iconPath }}" alt="{{ item.name }}" class="drawer-social-item-image">
     </a>
     }

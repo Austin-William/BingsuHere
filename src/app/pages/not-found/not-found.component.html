@@ -9,7 +9,7 @@
     </p>
     <div class="error-page-links">
       @for (item of list_buttons; track $index) {
-      <app-link routerLink="{{ item.url }}" target="_self" classname="color-5 border-color-5 text-lg">
+      <app-link [routerLink]="item.url" target="_self" classname="color-5 border-color-5 text-lg">
         {{ item.title }}
       </app-link>
       }

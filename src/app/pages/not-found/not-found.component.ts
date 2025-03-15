@@ -6,6 +6,7 @@ import { NotFoundButtonLinks } from '../../types/types';
 
 @Component({
   selector: 'app-not-found',
+  standalone: true,
   imports: [LinkComponent],
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.scss',

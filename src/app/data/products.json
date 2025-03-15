@@ -136,8 +136,383 @@
         ]
       }
     ],
-    "usual": [
-
-    ]
+    "bingsu": [
+      {
+        "id": 20000001,
+        "title": "Blueberry Bingsu",
+        "description": "Blueberry Bingsu with sweet blueberry chunks, creamy condensed milk and a scoop of vanilla ice cream.",
+        "image": "assets/images/products/bingsu/blueberry-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [],
+        "ingredients": [
+          "Fresh Blueberries",
+          "Shaved Ice",
+          "Condensed Milk",
+          "Vanilla Ice Cream"
+        ],
+        "kcal": 230,
+        "options": [
+          {
+            "id": 20000011,
+            "title": "Small",
+            "value": "s",
+            "price": 6.00
+          },
+          {
+            "id": 20000012,
+            "title": "Medium",
+            "value": "m",
+            "price": 8.00
+          },
+          {
+            "id": 20000013,
+            "title": "Large",
+            "value": "l",
+            "price": 10.00
+          }
+        ]
+      },
+      {
+        "id": 20000002,
+        "title": "Chocolate Bingsu",
+        "description": "Rich chocolate Bingsu topped with chocolate chips, brownie pieces, and drizzled with chocolate syrup.",
+        "image": "assets/images/products/bingsu/chocolate-bingsu.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Popular",
+            "classname": "label-popular"
+          }
+        ],
+        "ingredients": [
+          "Chocolate Shaved Ice",
+          "Chocolate Chips",
+          "Brownie Pieces",
+          "Chocolate Syrup",
+          "Whipped Cream"
+        ],
+        "kcal": 520,
+        "options": [
+          {
+            "id": 20000021,
+            "title": "Small",
+            "value": "s",
+            "price": 7.50
+          },
+          {
+            "id": 20000022,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.50
+          },
+          {
+            "id": 20000023,
+            "title": "Large",
+            "value": "l",
+            "price": 12.50
+          }
+        ]
+      },
+      {
+        "id": 20000003,
+        "title": "Oreo Bingsu",
+        "description": "Cookies and cream Bingsu with crushed Oreo cookies, chocolate sauce, and a scoop of vanilla ice cream.",
+        "image": "assets/images/products/bingsu/oreo-bingsu.jpg",
+        "discount": 1.50,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          },
+          {
+            "title": "Kids Favorite",
+            "classname": "label-kids-favorite"
+          }
+        ],
+        "ingredients": [
+          "Crushed Oreo Cookies",
+          "Shaved Ice",
+          "Chocolate Sauce",
+          "Vanilla Ice Cream",
+          "Whipped Cream"
+        ],
+        "kcal": 480,
+        "options": [
+          {
+            "id": 20000031,
+            "title": "Small",
+            "value": "s",
+            "price": 7.00
+          },
+          {
+            "id": 20000032,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.00
+          },
+          {
+            "id": 20000033,
+            "title": "Large",
+            "value": "l",
+            "price": 12.00
+          }
+        ]
+      },
+      {
+        "id": 20000004,
+        "title": "Red Bean Bingsu",
+        "description": "Traditional Korean Bingsu with sweet red beans, chewy rice cakes, and a drizzle of condensed milk.",
+        "image": "assets/images/products/bingsu/red-bean-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          }
+        ],
+        "ingredients": [
+          "Sweet Red Beans",
+          "Shaved Ice",
+          "Rice Cakes",
+          "Condensed Milk"
+        ],
+        "kcal": 350,
+        "options": [
+          {
+            "id": 20000041,
+            "title": "Small",
+            "value": "s",
+            "price": 6.50
+          },
+          {
+            "id": 20000042,
+            "title": "Medium",
+            "value": "m",
+            "price": 8.50
+          },
+          {
+            "id": 20000043,
+            "title": "Large",
+            "value": "l",
+            "price": 11.50
+          }
+        ]
+      },
+      {
+        "id": 20000005,
+        "title": "Green Tea Bingsu",
+        "description": "Refreshing green tea Bingsu with red bean paste, mochi, and a sprinkle of green tea powder.",
+        "image": "assets/images/products/bingsu/green-tea-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [],
+        "ingredients": [
+          "Green Tea Powder",
+          "Shaved Ice",
+          "Red Bean Paste",
+          "Mochi",
+          "Condensed Milk"
+        ],
+        "kcal": 320,
+        "options": [
+          {
+            "id": 20000051,
+            "title": "Small",
+            "value": "s",
+            "price": 7.00
+          },
+          {
+            "id": 20000052,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.00
+          },
+          {
+            "id": 20000053,
+            "title": "Large",
+            "value": "l",
+            "price": 12.00
+          }
+        ]
+      },
+      {
+        "id": 20000006,
+        "title": "Taro Bingsu",
+        "description": "Unique taro-flavored Bingsu with taro chunks, sweet taro paste, and mini mochi toppings.",
+        "image": "assets/images/products/bingsu/taro-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "New",
+            "classname": "label-new"
+          }
+        ],
+        "ingredients": [
+          "Taro Chunks",
+          "Shaved Ice",
+          "Taro Paste",
+          "Mini Mochi",
+          "Condensed Milk"
+        ],
+        "kcal": 380,
+        "options": [
+          {
+            "id": 20000061,
+            "title": "Small",
+            "value": "s",
+            "price": 7.50
+          },
+          {
+            "id": 20000062,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.50
+          },
+          {
+            "id": 20000063,
+            "title": "Large",
+            "value": "l",
+            "price": 12.50
+          }
+        ]
+      },
+      {
+        "id": 20000007,
+        "title": "Coffee Bingsu",
+        "description": "Rich coffee-flavored Bingsu topped with chocolate-covered espresso beans and coffee jelly.",
+        "image": "assets/images/products/bingsu/coffee-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [],
+        "ingredients": [
+          "Coffee-Infused Shaved Ice",
+          "Chocolate-Covered Espresso Beans",
+          "Coffee Jelly",
+          "Whipped Cream",
+          "Chocolate Sauce"
+        ],
+        "kcal": 340,
+        "options": [
+          {
+            "id": 20000071,
+            "title": "Small",
+            "value": "s",
+            "price": 7.00
+          },
+          {
+            "id": 20000072,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.00
+          },
+          {
+            "id": 20000073,
+            "title": "Large",
+            "value": "l",
+            "price": 12.00
+          }
+        ]
+      },
+      {
+        "id": 20000008,
+        "title": "Injeolmi Bingsu",
+        "description": "Traditional Korean Bingsu with injeolmi (sweet rice cake) coated in roasted soybean powder.",
+        "image": "assets/images/products/bingsu/injeolmi-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          }
+        ],
+        "ingredients": [
+          "Injeolmi (Sweet Rice Cake)",
+          "Shaved Ice",
+          "Roasted Soybean Powder",
+          "Condensed Milk"
+        ],
+        "kcal": 360,
+        "options": [
+          {
+            "id": 20000081,
+            "title": "Small",
+            "value": "s",
+            "price": 7.00
+          },
+          {
+            "id": 20000082,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.00
+          },
+          {
+            "id": 20000083,
+            "title": "Large",
+            "value": "l",
+            "price": 12.00
+          }
+        ]
+      },
+      {
+        "id": 20000009,
+        "title": "Mango Cheese Bingsu",
+        "description": "Mango Bingsu with cream cheese cubes, fresh mango chunks, and cheesecake pieces.",
+        "image": "assets/images/products/bingsu/mango-cheese-bingsu.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Premium",
+            "classname": "label-premium"
+          }
+        ],
+        "ingredients": [
+          "Fresh Mango Chunks",
+          "Shaved Ice",
+          "Cream Cheese Cubes",
+          "Cheesecake Pieces",
+          "Condensed Milk"
+        ],
+        "kcal": 450,
+        "options": [
+          {
+            "id": 20000091,
+            "title": "Small",
+            "value": "s",
+            "price": 8.50
+          },
+          {
+            "id": 20000092,
+            "title": "Medium",
+            "value": "m",
+            "price": 10.50
+          },
+          {
+            "id": 20000093,
+            "title": "Large",
+            "value": "l",
+            "price": 13.50
+          }
+        ]
+      }
+    ],
+    "desserts": [],
+    "drinks": [],
+    "others": []
   }
 }

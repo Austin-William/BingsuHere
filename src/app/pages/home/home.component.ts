@@ -13,6 +13,7 @@ import { shops } from "../../data/shops.json";
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [RouterLink, MatIconModule, LinkComponent, CardComponent, ImageModule, CarouselModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
