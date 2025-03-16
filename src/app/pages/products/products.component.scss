@@ -7,12 +7,16 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: clamp(0.5rem, 3vw, 1.5rem) 0;
 
     .cards {
       width: 100%;
       max-width: 1000px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
