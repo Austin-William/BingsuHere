@@ -229,10 +229,6 @@
           {
             "title": "Sale",
             "classname": "label-discount"
-          },
-          {
-            "title": "Kids Favorite",
-            "classname": "label-kids-favorite"
           }
         ],
         "ingredients": [
@@ -268,16 +264,11 @@
         "id": 20000004,
         "title": "Red Bean Bingsu",
         "description": "Traditional Korean Bingsu with sweet red beans, chewy rice cakes, and a drizzle of condensed milk.",
-        "image": "assets/images/products/bingsu/red-bean-bingsu.jpg",
+        "image": "assets/images/products/bingsu/red-beans-bingsu.jpg",
         "discount": 0.00,
         "featured": false,
         "available": true,
-        "labels": [
-          {
-            "title": "Traditional",
-            "classname": "label-traditional"
-          }
-        ],
+        "labels": [],
         "ingredients": [
           "Sweet Red Beans",
           "Shaved Ice",

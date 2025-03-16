@@ -1,12 +1,11 @@
-<main #products>
+<main class="products" id="products">
   <div class="container">
-    <article>
-      <section>
-        <h1>Products</h1>
-      </section>
+    <article class="cards">
+      @for (item of displayedProducts; track $index) {
+      <app-card [id]="item.id" [title]="item.title" [description]="item.description" [imagePath]="item.image"
+        [discount]="item.discount" [available]="item.available" [labels]="item.labels" [options]="item.options"
+        [kcal]="item.kcal" />
+      }
     </article>
-    <aside class="filters">
-
-    </aside>
   </div>
 </main>

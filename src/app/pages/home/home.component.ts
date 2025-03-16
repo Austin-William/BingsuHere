@@ -7,6 +7,8 @@ import { ImageModule } from 'primeng/image';
 import { LinkComponent } from '../../components/link/link.component';
 import { CardComponent } from '../../components/card/card.component';
 
+import { Product } from '../../types/types';
+
 import { products } from '../../data/products.json';
 import { links } from "../../data/links.json"; 
 import { shops } from "../../data/shops.json"; 
@@ -21,7 +23,7 @@ import { shops } from "../../data/shops.json";
 })
 
 export class HomeComponent {
-  products_signature: any = products.signatures;
+  products_signature: Product[] = products.signatures;
   categories_links: any = links;
   shops: any = shops;
 
