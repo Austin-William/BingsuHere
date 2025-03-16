@@ -7,7 +7,7 @@ interface LabelProduct {
 interface OptionProduct {
   id: number;
   title: string;
-  value: string; // set to s, m, l
+  value: string;
   price: number;
 }
 

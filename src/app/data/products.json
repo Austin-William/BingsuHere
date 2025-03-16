@@ -500,10 +500,837 @@
             "price": 13.50
           }
         ]
+      },
+      {
+        "id": 20000010,
+        "title": "Black Sesame Bingsu",
+        "description": "Rich and nutty black sesame Bingsu topped with roasted black sesame seeds, sweet red bean paste, and chewy mochi pieces.",
+        "image": "assets/images/products/bingsu/black-sesame-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "New",
+            "classname": "label-new"
+          }
+        ],
+        "ingredients": [
+          "Black Sesame Powder",
+          "Shaved Ice",
+          "Sweet Red Bean Paste",
+          "Mochi Pieces",
+          "Condensed Milk"
+        ],
+        "kcal": 370,
+        "options": [
+          {
+            "id": 20000101,
+            "title": "Small",
+            "value": "s",
+            "price": 7.50
+          },
+          {
+            "id": 20000102,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.50
+          },
+          {
+            "id": 20000103,
+            "title": "Large",
+            "value": "l",
+            "price": 12.50
+          }
+        ]
+      },
+      {
+        "id": 20000011,
+        "title": "Persimmon Bingsu",
+        "description": "Seasonal Korean persimmon Bingsu with sweet dried persimmon slices, honey drizzle, and a sprinkle of cinnamon.",
+        "image": "assets/images/products/bingsu/persimmon-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Seasonal",
+            "classname": "label-seasonal"
+          }
+        ],
+        "ingredients": [
+          "Dried Persimmon Slices",
+          "Shaved Ice",
+          "Honey",
+          "Cinnamon",
+          "Condensed Milk"
+        ],
+        "kcal": 310,
+        "options": [
+          {
+            "id": 20000111,
+            "title": "Small",
+            "value": "s",
+            "price": 7.00
+          },
+          {
+            "id": 20000112,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.00
+          },
+          {
+            "id": 20000113,
+            "title": "Large",
+            "value": "l",
+            "price": 12.00
+          }
+        ]
+      },
+      {
+        "id": 20000012,
+        "title": "Yuzu Bingsu",
+        "description": "Refreshing citrus Bingsu with yuzu (Korean citrus) zest, yuzu jelly, and a tangy yuzu syrup drizzle.",
+        "image": "assets/images/products/bingsu/yuzu-bingsu.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Premium",
+            "classname": "label-premium"
+          }
+        ],
+        "ingredients": [
+          "Yuzu Zest",
+          "Shaved Ice",
+          "Yuzu Jelly",
+          "Yuzu Syrup",
+          "Condensed Milk"
+        ],
+        "kcal": 290,
+        "options": [
+          {
+            "id": 20000121,
+            "title": "Small",
+            "value": "s",
+            "price": 8.00
+          },
+          {
+            "id": 20000122,
+            "title": "Medium",
+            "value": "m",
+            "price": 10.00
+          },
+          {
+            "id": 20000123,
+            "title": "Large",
+            "value": "l",
+            "price": 13.00
+          }
+        ]
+      },
+      {
+        "id": 20000013,
+        "title": "Misugaru Bingsu",
+        "description": "Nutritious Bingsu made with misugaru (Korean mixed grain powder), topped with nuts and a drizzle of honey.",
+        "image": "assets/images/products/bingsu/misugaru-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Healthy",
+            "classname": "label-healthy"
+          }
+        ],
+        "ingredients": [
+          "Misugaru (Mixed Grain Powder)",
+          "Shaved Ice",
+          "Almonds",
+          "Walnuts",
+          "Honey",
+          "Condensed Milk"
+        ],
+        "kcal": 330,
+        "options": [
+          {
+            "id": 20000131,
+            "title": "Small",
+            "value": "s",
+            "price": 7.50
+          },
+          {
+            "id": 20000132,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.50
+          },
+          {
+            "id": 20000133,
+            "title": "Large",
+            "value": "l",
+            "price": 12.50
+          }
+        ]
+      },
+      {
+        "id": 20000014,
+        "title": "Omija Bingsu",
+        "description": "Unique five-flavor berry Bingsu made with omija (magnolia berry) syrup, known for its complex sweet, sour, salty, bitter, and pungent taste.",
+        "image": "assets/images/products/bingsu/omija-bingsu.jpg",
+        "discount": 1.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          },
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Omija (Magnolia Berry) Syrup",
+          "Shaved Ice",
+          "Fresh Berries",
+          "Pine Nuts",
+          "Condensed Milk"
+        ],
+        "kcal": 280,
+        "options": [
+          {
+            "id": 20000141,
+            "title": "Small",
+            "value": "s",
+            "price": 8.00
+          },
+          {
+            "id": 20000142,
+            "title": "Medium",
+            "value": "m",
+            "price": 10.00
+          },
+          {
+            "id": 20000143,
+            "title": "Large",
+            "value": "l",
+            "price": 13.00
+          }
+        ]
+      },
+      {
+        "id": 20000015,
+        "title": "Hallabong Bingsu",
+        "description": "Jeju Island specialty Bingsu featuring hallabong (Jeju tangerine) segments, zest, and a tangy hallabong syrup.",
+        "image": "assets/images/products/bingsu/hallabong-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Regional",
+            "classname": "label-regional"
+          }
+        ],
+        "ingredients": [
+          "Hallabong Segments",
+          "Shaved Ice",
+          "Hallabong Zest",
+          "Hallabong Syrup",
+          "Condensed Milk"
+        ],
+        "kcal": 300,
+        "options": [
+          {
+            "id": 20000151,
+            "title": "Small",
+            "value": "s",
+            "price": 8.50
+          },
+          {
+            "id": 20000152,
+            "title": "Medium",
+            "value": "m",
+            "price": 10.50
+          },
+          {
+            "id": 20000153,
+            "title": "Large",
+            "value": "l",
+            "price": 13.50
+          }
+        ]
+      },
+      {
+        "id": 20000016,
+        "title": "Sikhye Bingsu",
+        "description": "Traditional Korean sweet rice punch Bingsu with chewy rice grains, pine nuts, and a sweet malt flavor.",
+        "image": "assets/images/products/bingsu/sikhye-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          }
+        ],
+        "ingredients": [
+          "Sikhye (Sweet Rice Punch)",
+          "Shaved Ice",
+          "Rice Grains",
+          "Pine Nuts",
+          "Cinnamon"
+        ],
+        "kcal": 320,
+        "options": [
+          {
+            "id": 20000161,
+            "title": "Small",
+            "value": "s",
+            "price": 7.00
+          },
+          {
+            "id": 20000162,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.00
+          },
+          {
+            "id": 20000163,
+            "title": "Large",
+            "value": "l",
+            "price": 12.00
+          }
+        ]
+      },
+      {
+        "id": 20000017,
+        "title": "Honey Ginger Bingsu",
+        "description": "Warming honey and ginger Bingsu with candied ginger pieces, honey drizzle, and a sprinkle of cinnamon.",
+        "image": "assets/images/products/bingsu/honey-ginger-bingsu.jpg",
+        "discount": 0.50,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Healthy",
+            "classname": "label-healthy"
+          },
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Candied Ginger",
+          "Shaved Ice",
+          "Honey",
+          "Cinnamon",
+          "Condensed Milk"
+        ],
+        "kcal": 310,
+        "options": [
+          {
+            "id": 20000171,
+            "title": "Small",
+            "value": "s",
+            "price": 7.00
+          },
+          {
+            "id": 20000172,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.00
+          },
+          {
+            "id": 20000173,
+            "title": "Large",
+            "value": "l",
+            "price": 12.00
+          }
+        ]
+      },
+      {
+        "id": 20000018,
+        "title": "Jujube Bingsu",
+        "description": "Traditional Korean jujube (date) Bingsu with dried jujube pieces, jujube syrup, and pine nuts for a naturally sweet treat.",
+        "image": "assets/images/products/bingsu/jujube-bingsu.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          }
+        ],
+        "ingredients": [
+          "Dried Jujube Pieces",
+          "Shaved Ice",
+          "Jujube Syrup",
+          "Pine Nuts",
+          "Condensed Milk"
+        ],
+        "kcal": 340,
+        "options": [
+          {
+            "id": 20000181,
+            "title": "Small",
+            "value": "s",
+            "price": 7.50
+          },
+          {
+            "id": 20000182,
+            "title": "Medium",
+            "value": "m",
+            "price": 9.50
+          },
+          {
+            "id": 20000183,
+            "title": "Large",
+            "value": "l",
+            "price": 12.50
+          }
+        ]
       }
     ],
-    "desserts": [],
+    "desserts": [
+      {
+        "id": 30000001,
+        "title": "Hotteok",
+        "description": "Traditional Korean sweet pancakes filled with brown sugar, cinnamon, and nuts. Served hot with a crispy exterior and gooey sweet filling.",
+        "image": "assets/images/products/desserts/hotteok-dessert.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Popular",
+            "classname": "label-popular"
+          }
+        ],
+        "ingredients": [
+          "Sweet Dough",
+          "Brown Sugar",
+          "Cinnamon",
+          "Chopped Nuts"
+        ],
+        "kcal": 250,
+        "options": [
+          {
+            "id": 30000011,
+            "title": "Single",
+            "value": "s",
+            "price": 3.50
+          },
+          {
+            "id": 30000012,
+            "title": "Double",
+            "value": "m",
+            "price": 6.00
+          },
+          {
+            "id": 30000013,
+            "title": "Family Pack",
+            "value": "l",
+            "price": 10.00
+          }
+        ]
+      },
+      {
+        "id": 30000002,
+        "title": "Bungeoppang",
+        "description": "Fish-shaped pastry filled with sweet red bean paste. Crispy on the outside and soft on the inside, this iconic Korean street food is a winter favorite.",
+        "image": "assets/images/products/desserts/bungeoppang-dessert.jpg",
+        "discount": 0.50,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Wheat Flour",
+          "Sweet Red Bean Paste",
+          "Sugar",
+          "Vanilla Extract"
+        ],
+        "kcal": 180,
+        "options": [
+          {
+            "id": 30000021,
+            "title": "2 Pieces",
+            "value": "2",
+            "price": 3.00
+          },
+          {
+            "id": 30000022,
+            "title": "4 Pieces",
+            "value": "4",
+            "price": 5.50
+          },
+          {
+            "id": 30000023,
+            "title": "6 Pieces",
+            "value": "6",
+            "price": 8.00
+          }
+        ]
+      },
+      {
+        "id": 30000003,
+        "title": "Yakgwa",
+        "description": "Traditional Korean honey cookie made from wheat flour, sesame oil, and honey. These flower-shaped treats have a rich history dating back to the Joseon Dynasty.",
+        "image": "assets/images/products/desserts/yakgwa-dessert.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          }
+        ],
+        "ingredients": [
+          "Wheat Flour",
+          "Rice Wine",
+          "Honey",
+          "Sesame Oil",
+          "Ginger Juice"
+        ],
+        "kcal": 220,
+        "options": [
+          {
+            "id": 30000031,
+            "title": "Small Box",
+            "value": "s",
+            "price": 5.00
+          },
+          {
+            "id": 30000032,
+            "title": "Medium Box",
+            "value": "m",
+            "price": 9.00
+          },
+          {
+            "id": 30000033,
+            "title": "Large Box",
+            "value": "l",
+            "price": 15.00
+          }
+        ]
+      },
+      {
+        "id": 30000004,
+        "title": "Songpyeon",
+        "description": "Half-moon shaped rice cakes traditionally eaten during Chuseok (Korean Thanksgiving). Filled with sweet sesame seeds, red beans, or chestnuts and steamed over pine needles.",
+        "image": "assets/images/products/desserts/songpyeon-dessert.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Seasonal",
+            "classname": "label-seasonal"
+          }
+        ],
+        "ingredients": [
+          "Rice Flour",
+          "Sweet Sesame Seeds",
+          "Sweet Red Bean Paste",
+          "Honey",
+          "Pine Needles (for steaming)"
+        ],
+        "kcal": 150,
+        "options": [
+          {
+            "id": 30000041,
+            "title": "5 Pieces",
+            "value": "5",
+            "price": 6.00
+          },
+          {
+            "id": 30000042,
+            "title": "10 Pieces",
+            "value": "10",
+            "price": 11.00
+          },
+          {
+            "id": 30000043,
+            "title": "15 Pieces",
+            "value": "15",
+            "price": 15.00
+          }
+        ]
+      },
+      {
+        "id": 30000005,
+        "title": "Gyeongdan",
+        "description": "Colorful, chewy rice cake balls coated with various toppings like sesame seeds, bean powder, or coconut flakes. These bite-sized treats are perfect for special occasions.",
+        "image": "assets/images/products/desserts/gyeongdan-dessert.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "New",
+            "classname": "label-new"
+          }
+        ],
+        "ingredients": [
+          "Glutinous Rice Flour",
+          "Sweet Red Bean Paste",
+          "Sesame Seeds",
+          "Soybean Powder",
+          "Coconut Flakes"
+        ],
+        "kcal": 180,
+        "options": [
+          {
+            "id": 30000051,
+            "title": "6 Pieces",
+            "value": "6",
+            "price": 5.50
+          },
+          {
+            "id": 30000052,
+            "title": "12 Pieces",
+            "value": "12",
+            "price": 10.00
+          },
+          {
+            "id": 30000053,
+            "title": "18 Pieces",
+            "value": "18",
+            "price": 14.50
+          }
+        ]
+      },
+      {
+        "id": 30000006,
+        "title": "Hwajeon",
+        "description": "Elegant flower rice cakes made with edible flower petals pressed into rice flour dough and pan-fried. These seasonal treats are traditionally enjoyed in spring.",
+        "image": "assets/images/products/desserts/hwajeon-dessert.jpg",
+        "discount": 1.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Premium",
+            "classname": "label-premium"
+          },
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Rice Flour",
+          "Edible Flower Petals",
+          "Honey",
+          "Pine Nuts"
+        ],
+        "kcal": 200,
+        "options": [
+          {
+            "id": 30000061,
+            "title": "4 Pieces",
+            "value": "4",
+            "price": 7.00
+          },
+          {
+            "id": 30000062,
+            "title": "8 Pieces",
+            "value": "8",
+            "price": 13.00
+          },
+          {
+            "id": 30000063,
+            "title": "12 Pieces",
+            "value": "12",
+            "price": 18.00
+          }
+        ]
+      },
+      {
+        "id": 30000007,
+        "title": "Dasik",
+        "description": "Traditional pressed cookies made from various powdered ingredients like sesame, pine nuts, or soybean. These delicate, patterned treats are often served with tea.",
+        "image": "assets/images/products/desserts/dasik-dessert.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          }
+        ],
+        "ingredients": [
+          "Rice Flour",
+          "Honey",
+          "Black Sesame Powder",
+          "Pine Nut Powder",
+          "Cinnamon Powder"
+        ],
+        "kcal": 160,
+        "options": [
+          {
+            "id": 30000071,
+            "title": "Small Set",
+            "value": "s",
+            "price": 8.00
+          },
+          {
+            "id": 30000072,
+            "title": "Medium Set",
+            "value": "m",
+            "price": 15.00
+          },
+          {
+            "id": 30000073,
+            "title": "Large Set",
+            "value": "l",
+            "price": 22.00
+          }
+        ]
+      },
+      {
+        "id": 30000008,
+        "title": "Yugwa",
+        "description": "Crispy, deep-fried rice snacks glazed with honey syrup. These light and airy treats have a satisfying crunch and subtle sweetness.",
+        "image": "assets/images/products/desserts/yugwa-dessert.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [],
+        "ingredients": [
+          "Glutinous Rice Flour",
+          "Rice Wine",
+          "Honey",
+          "Sesame Seeds"
+        ],
+        "kcal": 300,
+        "options": [
+          {
+            "id": 30000081,
+            "title": "Small Bag",
+            "value": "s",
+            "price": 4.50
+          },
+          {
+            "id": 30000082,
+            "title": "Medium Bag",
+            "value": "m",
+            "price": 8.00
+          },
+          {
+            "id": 30000083,
+            "title": "Large Bag",
+            "value": "l",
+            "price": 12.00
+          }
+        ]
+      },
+      {
+        "id": 30000009,
+        "title": "Chapssaltteok",
+        "description": "Chewy glutinous rice cake filled with sweet red bean paste. This simple yet satisfying dessert is a beloved Korean comfort food.",
+        "image": "assets/images/products/desserts/chapssaltteok-dessert.jpg",
+        "discount": 0.50,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Best Seller",
+            "classname": "label-best-seller"
+          },
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Glutinous Rice Flour",
+          "Sweet Red Bean Paste",
+          "Sugar",
+          "Salt"
+        ],
+        "kcal": 210,
+        "options": [
+          {
+            "id": 30000091,
+            "title": "2 Pieces",
+            "value": "s",
+            "price": 3.50
+          },
+          {
+            "id": 30000092,
+            "title": "4 Pieces",
+            "value": "m",
+            "price": 6.50
+          },
+          {
+            "id": 30000093,
+            "title": "6 Pieces",
+            "value": "l",
+            "price": 9.00
+          }
+        ]
+      },
+      {
+        "id": 30000010,
+        "title": "Yaksik",
+        "description": "Sweet glutinous rice mixed with jujubes, chestnuts, pine nuts, and honey. This nutritious dessert is traditionally served during special celebrations.",
+        "image": "assets/images/products/desserts/yaksik-dessert.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          }
+        ],
+        "ingredients": [
+          "Glutinous Rice",
+          "Jujubes",
+          "Chestnuts",
+          "Pine Nuts",
+          "Honey",
+          "Cinnamon"
+        ],
+        "kcal": 320,
+        "options": [
+          {
+            "id": 30000101,
+            "title": "Small Portion",
+            "value": "s",
+            "price": 6.00
+          },
+          {
+            "id": 30000102,
+            "title": "Medium Portion",
+            "value": "m",
+            "price": 11.00
+          },
+          {
+            "id": 30000103,
+            "title": "Large Portion",
+            "value": "l",
+            "price": 16.00
+          }
+        ]
+      }
+    ],
     "drinks": [],
-    "others": []
+    "frozen-yogurt": [],
+    "ice-cream": []
   }
 }

@@ -1,4 +1,6 @@
-.products  {
+@use "../../../variables.scss" as *;
+
+.products {
   min-height: calc(100vh - 100px);
 
   .container {
@@ -7,7 +9,30 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: clamp(0.5rem, 3vw, 1.5rem) 0;
+    padding: clamp(1.5rem, 3vw, 3.5rem) clamp(1rem, 3vw, 4rem);
+
+    .wrapper {
+      max-width: 1200px;
+    }
+
+    .title {
+      width: 100%;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: clamp(0.5rem, 3vw, 1.5rem);
+    }
+
+    .fancy {
+      font-weight: 700;
+      text-shadow: -15px 5px 20px $color-2;
+      transform: translate(-50%, -50%);
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: $color-3;
+      text-shadow: 4px 4px 0px $color-4,
+        8px 8px 0px $color-2;
+    }
 
     .cards {
       width: 100%;

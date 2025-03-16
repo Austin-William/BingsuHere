@@ -1,4 +1,4 @@
-import { Component, OnInit, signal  } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CardComponent } from '../../components/card/card.component';
@@ -19,32 +19,49 @@ import { Product } from '../../types/types';
 
 export class ProductsComponent implements OnInit {
   currentParameterRoute: string = '';
-  displayedProducts: Product[] = [];
+  currentTitle: string = '';
   products = signal<Product[]>([]);
-  layout: 'grid' | 'list' = 'grid';
-  
-  constructor(private productService: ProductService, private route: ActivatedRoute) {}
+  displayedProducts: Product[] = [];
+
+  constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params?.subscribe(params => {
-      this.currentParameterRoute = params['category'];
-    });
-
-    this.setDisplayedProducts(this.currentParameterRoute);
+    this.setRouteParameter();
   }
 
-  setDisplayedProducts(category: string): void {
+  setRouteParameter(): void {
+    this.route.params.subscribe(params => {
+      this.setCurrentParameterRoute(params['category']);
+      this.setDisplayedProducts();
+      this.setCurrentTitle();
+    });
+  }
+
+  setCurrentTitle(): void {
+    const titleMap: Record<string, string | undefined> = {
+      'desserts': 'Desserts',
+      'drinks': 'Drinks',
+      'bingsu': 'Bingsu'
+    };
+    this.currentTitle = titleMap[this.currentParameterRoute] || '';
+  }
+
+  setDisplayedProducts(): void {
     const products = this.productService.getProductsData();
     const categoryMap: Record<string, Product[] | undefined> = {
       'desserts': products.desserts,
       'drinks': products.drinks,
       'bingsu': products.bingsu
     };
-    const categoryProducts = categoryMap[category]; 
-    
+    const categoryProducts = categoryMap[this.currentParameterRoute]
+
     if (categoryProducts) {
       this.setDisplayCategoriesProducts(categoryProducts);
     }
+  }
+
+  setCurrentParameterRoute(parameter: string): void {
+    this.currentParameterRoute = parameter;
   }
 
   setDisplayCategoriesProducts(data: Product[]): void {

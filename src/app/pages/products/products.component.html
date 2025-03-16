@@ -1,11 +1,18 @@
 <main class="products" id="products">
   <div class="container">
-    <article class="cards">
-      @for (item of displayedProducts; track $index) {
-      <app-card [id]="item.id" [title]="item.title" [description]="item.description" [imagePath]="item.image"
-        [discount]="item.discount" [available]="item.available" [labels]="item.labels" [options]="item.options"
-        [kcal]="item.kcal" />
-      }
-    </article>
+    <div class="wrapper">
+      <h1 class="title">
+        <span class="">O</span>
+        <span>ur </span>
+        <span class="fancy">{{ currentTitle }}</span>
+      </h1>
+      <article class="cards">
+        @for (item of displayedProducts; track $index) {
+        <app-card [id]="item.id" [title]="item.title" [description]="item.description" [imagePath]="item.image"
+          [discount]="item.discount" [available]="item.available" [labels]="item.labels" [options]="item.options"
+          [kcal]="item.kcal" />
+        }
+      </article>
+    </div>
   </div>
 </main>
