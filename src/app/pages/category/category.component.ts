@@ -9,16 +9,16 @@ import { ProductService } from '../../services/product.service';
 import { Product } from '../../types/types';
 
 @Component({
-  selector: 'app-products',
+  selector: 'app-category',
   standalone: true,
   imports: [CardComponent, SpinnerComponent],
-  templateUrl: './products.component.html',
-  styleUrl: './products.component.scss',
+  templateUrl: './category.component.html',
+  styleUrl: './category.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() },
   providers: [ProductService]
 })
 
-export class ProductsComponent implements OnInit {
+export class CategoryComponent implements OnInit {
   currentParameterRoute: string = '';
   currentTitle: string = '';
   products = signal<Product[]>([]);
