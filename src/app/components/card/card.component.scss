@@ -1,5 +1,21 @@
 @use "../../../variables.scss" as *;
 
+@mixin setCurencySize($isDiscount) {
+  @if $isDiscount {
+    .card-price-currency {
+      font-size: 18px;
+      margin-left: 2px;
+    }
+  }
+
+  @else {
+    .card-price-currency {
+      font-size: 24px;
+      margin-left: 2px;
+    }
+  }
+}
+
 .card {
   width: 300px;
   min-width: 300px;
@@ -68,14 +84,15 @@
     text-align: end;
 
     &-text {
-      font-size: 26px;
+      font-size: 30px;
       font-weight: 500;
-      color: darken($color: $color-4, $amount: 10%);
+      color: $color-4;
+      @include setCurencySize($isDiscount: false);
     }
 
-    &-currency {
-      font-size: 20px;
-      margin-left: 2px;
+    &-discount {
+      font-size: 18px;
+      @include setCurencySize($isDiscount: true);
     }
   }
 
@@ -102,11 +119,11 @@
       transition: border-color $transition-time $transition-type;
 
       &:hover {
-        border: 2px solid lighten($color: $color-4, $amount: 30%);
+        border: 2px solid $color-3;
       }
 
       &:checked {
-        border: 2px solid $color-5;
+        border: 2px solid $color-4;
       }
     }
 
@@ -117,6 +134,11 @@
       font-size: 12px;
     }
   }
+}
+
+.discount {
+  color: $color-1;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {

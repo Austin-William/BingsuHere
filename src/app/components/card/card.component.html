@@ -32,7 +32,12 @@
       }
     </div>
     <div class="card-price">
-      <span class="card-price-text">
+      @if (isDiscount) {
+        <span class="card-price-discount">
+          {{ priceBeforeDiscount }}<span class="card-price-currency">€</span>
+        </span>
+      }
+      <span class="card-price-text {{ isDiscount ? 'discount' : '' }}">
         {{ displayedPrice }}<span class="card-price-currency">€</span>
       </span>
     </div>

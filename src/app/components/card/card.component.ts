@@ -27,13 +27,17 @@ export class CardComponent implements OnInit {
 
   selectedOptionId: number = 0;
   selectedOptionValue: string = '';
+  discountPrice: number = 0;
   displayedPrice: number = 0;
+  priceBeforeDiscount: number = 0;
   classType: string = '';
+  isDiscount: boolean = false;
 
   setDefaultChooseOption() {
     this.selectedOptionId = this.options[0].id;
     this.selectedOptionValue = this.options[0].value;
     this.displayedPrice = this.options[0].price;
+    this.priceBeforeDiscount = this.options[0].price;
   }
 
   handleSelectedOption(id: number, value: string, price: number) {
@@ -53,10 +57,22 @@ export class CardComponent implements OnInit {
     }
   }
 
+  setDiscountPrice(): void {
+    this.setIsDiscount();
+  }
+
+  setIsDiscount(): void {
+    if (this.discount > 0) {
+      this.isDiscount = true;
+      this.displayedPrice = this.displayedPrice - this.discount;
+    }
+  }
+
   ngOnInit() {
     this.setClassType();
     if (this.options && this.options.length > 0) {
       this.setDefaultChooseOption();
     }
+    this.setDiscountPrice();
   }
 }

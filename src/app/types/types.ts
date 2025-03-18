@@ -25,6 +25,9 @@ export interface Product {
   options: OptionProduct[]
 }
 
+// Spinner types
+export type SpinnerSizeType = 'sm' | 'md' | 'lg';
+
 // Navbar types
 export interface NavbarListProduct { name: string, path: string };
 export interface NavbarListButton { name: string, icon: string, path: string };

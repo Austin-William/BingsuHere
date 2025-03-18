@@ -2,6 +2,7 @@ import { Component, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CardComponent } from '../../components/card/card.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
 
 import { ProductService } from '../../services/product.service';
 
@@ -10,7 +11,7 @@ import { Product } from '../../types/types';
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, SpinnerComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() },
@@ -22,6 +23,7 @@ export class ProductsComponent implements OnInit {
   currentTitle: string = '';
   products = signal<Product[]>([]);
   displayedProducts: Product[] = [];
+  isLoading: boolean = false;
 
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
@@ -31,10 +33,16 @@ export class ProductsComponent implements OnInit {
 
   setRouteParameter(): void {
     this.route.params.subscribe(params => {
+      this.setIsLoading(true);
       this.setCurrentParameterRoute(params['category']);
       this.setDisplayedProducts();
       this.setCurrentTitle();
     });
+    this.setIsLoading(false);
+  }
+
+  setIsLoading(value: boolean): void {
+    this.isLoading = value;
   }
 
   setCurrentTitle(): void {

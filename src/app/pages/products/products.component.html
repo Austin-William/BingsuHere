@@ -7,10 +7,15 @@
         <span class="fancy">{{ currentTitle }}</span>
       </h1>
       <article class="cards">
-        @for (item of displayedProducts; track $index) {
-        <app-card [id]="item.id" [title]="item.title" [description]="item.description" [imagePath]="item.image"
-          [discount]="item.discount" [available]="item.available" [labels]="item.labels" [options]="item.options"
-          [kcal]="item.kcal" />
+        @if (isLoading) {
+          <app-spinner [size]="'lg'" />
+        }
+        @else {
+          @for (item of displayedProducts; track $index) {
+            <app-card [id]="item.id" [title]="item.title" [description]="item.description" [imagePath]="item.image"
+              [discount]="item.discount" [available]="item.available" [labels]="item.labels" [options]="item.options"
+              [kcal]="item.kcal" />
+            }
         }
       </article>
     </div>
