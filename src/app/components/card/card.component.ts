@@ -27,23 +27,23 @@ export class CardComponent implements OnInit {
 
   selectedOptionId: number = 0;
   selectedOptionValue: string = '';
-  discountPrice: number = 0;
   displayedPrice: number = 0;
   priceBeforeDiscount: number = 0;
   classType: string = '';
   isDiscount: boolean = false;
 
-  setDefaultChooseOption() {
-    this.selectedOptionId = this.options[0].id;
-    this.selectedOptionValue = this.options[0].value;
-    this.displayedPrice = this.options[0].price;
-    this.priceBeforeDiscount = this.options[0].price;
+  setDefaultChooseOption(): void {
+    if (this.options && this.options.length > 0) {
+      this.selectedOptionId = this.options[0].id;
+      this.selectedOptionValue = this.options[0].value;
+      this.setDiscountPrice(this.options[0].price, this.discount);
+    }
   }
 
-  handleSelectedOption(id: number, value: string, price: number) {
+  handleSelectedOption(id: number, value: string, price: number): void {
     this.selectedOptionId = id;
     this.selectedOptionValue = value;
-    this.displayedPrice = price;
+    this.setDiscountPrice(price, this.discount);
   }
 
   setClassType() {
@@ -57,22 +57,16 @@ export class CardComponent implements OnInit {
     }
   }
 
-  setDiscountPrice(): void {
-    this.setIsDiscount();
-  }
-
-  setIsDiscount(): void {
-    if (this.discount > 0) {
+  setDiscountPrice(basePrice: number, discountPrice: number): void {
+    if (discountPrice > 0) {
       this.isDiscount = true;
-      this.displayedPrice = this.displayedPrice - this.discount;
+      this.priceBeforeDiscount = basePrice;
     }
+    this.displayedPrice = basePrice - discountPrice;
   }
 
   ngOnInit() {
     this.setClassType();
-    if (this.options && this.options.length > 0) {
-      this.setDefaultChooseOption();
-    }
-    this.setDiscountPrice();
+    this.setDefaultChooseOption();
   }
 }

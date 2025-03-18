@@ -92,6 +92,7 @@
 
     &-discount {
       font-size: 18px;
+      text-decoration: line-through;
       @include setCurencySize($isDiscount: true);
     }
   }

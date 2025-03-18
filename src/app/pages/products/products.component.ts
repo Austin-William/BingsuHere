@@ -33,12 +33,10 @@ export class ProductsComponent implements OnInit {
 
   setRouteParameter(): void {
     this.route.params.subscribe(params => {
-      this.setIsLoading(true);
       this.setCurrentParameterRoute(params['category']);
       this.setDisplayedProducts();
       this.setCurrentTitle();
     });
-    this.setIsLoading(false);
   }
 
   setIsLoading(value: boolean): void {
@@ -49,7 +47,9 @@ export class ProductsComponent implements OnInit {
     const titleMap: Record<string, string | undefined> = {
       'desserts': 'Desserts',
       'drinks': 'Drinks',
-      'bingsu': 'Bingsu'
+      'bingsu': 'Bingsu',
+      'frozen-yogurt': 'Frozen Yogurts',
+      'cakes': 'Cakes',
     };
     this.currentTitle = titleMap[this.currentParameterRoute] || '';
   }
@@ -64,7 +64,10 @@ export class ProductsComponent implements OnInit {
     const categoryProducts = categoryMap[this.currentParameterRoute]
 
     if (categoryProducts) {
+      this.setIsLoading(false);
       this.setDisplayCategoriesProducts(categoryProducts);
+    } else {
+      this.setIsLoading(true);
     }
   }
 

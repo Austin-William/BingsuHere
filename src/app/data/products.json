@@ -1329,8 +1329,770 @@
         ]
       }
     ],
-    "drinks": [],
-    "frozen-yogurt": [],
-    "ice-cream": []
+    "drinks": [
+      {
+        "id": 40000001,
+        "title": "Choco Milk",
+        "description": "Delicious chocolate milk with a hint of vanilla. Perfect for a hot summer day.",
+        "image": "assets/images/products/drinks/choco-milk-drink.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Popular",
+            "classname": "label-popular"
+          }
+        ],
+        "ingredients": [
+          "Milk",
+          "Chocolate Syrup",
+          "Vanilla Extract"
+        ],
+        "kcal": 100,
+        "options": [
+          {
+            "id": 40000011,
+            "title": "Small",
+            "value": "s",
+            "price": 2.50
+          },
+          {
+            "id": 40000012,
+            "title": "Medium",
+            "value": "m",
+            "price": 3.50
+          },
+          {
+            "id": 40000013,
+            "title": "Large",
+            "value": "l",
+            "price": 4.50
+          }
+        ]
+      },
+      {
+        "id": 40000002,
+        "title": "Strawberry Milk",
+        "description": "Refreshing strawberry milk with a hint of vanilla. A perfect choice for a hot summer day.",
+        "image": "assets/images/products/drinks/strawberry-milk-drink.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [],
+        "ingredients": [
+          "Milk",
+          "Strawberry Syrup",
+          "Vanilla Extract"
+        ],
+        "kcal": 120,
+        "options": [
+          {
+            "id": 40000021,
+            "title": "Small",
+            "value": "s",
+            "price": 3.00
+          },
+          {
+            "id": 40000022,
+            "title": "Medium",
+            "value": "m",
+            "price": 4.00
+          },
+          {
+            "id": 40000023,
+            "title": "Large",
+            "value": "l",
+            "price": 5.00
+          }
+        ]
+      },
+      {
+        "id": 40000003,
+        "title": "Vanilla Milk",
+        "description": "Classic vanilla milk with a hint of caramel. A perfect choice for a hot summer day.",
+        "image": "assets/images/products/drinks/vanilla-milk-drink.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [],
+        "ingredients": [
+          "Milk",
+          "Vanilla Extract",
+          "Caramel Syrup"
+        ],
+        "kcal": 110,
+        "options": [
+          {
+            "id": 40000031,
+            "title": "Small",
+            "value": "s",
+            "price": 3.00
+          },
+          {
+            "id": 40000032,
+            "title": "Medium",
+            "value": "m",
+            "price": 4.00
+          },
+          {
+            "id": 40000033,
+            "title": "Large",
+            "value": "l",
+            "price": 5.00
+          }
+        ]
+      },
+      {
+        "id": 40000004,
+        "title": "Sikhye",
+        "description": "Traditional Korean sweet rice drink made with malt water and garnished with pine nuts. Served cold for a refreshing taste.",
+        "image": "assets/images/products/drinks/sikhye-drink.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          }
+        ],
+        "ingredients": [
+          "Sweet Rice",
+          "Malt Water",
+          "Sugar",
+          "Pine Nuts"
+        ],
+        "kcal": 130,
+        "options": [
+          {
+            "id": 40000041,
+            "title": "Small",
+            "value": "s",
+            "price": 3.50
+          },
+          {
+            "id": 40000042,
+            "title": "Medium",
+            "value": "m",
+            "price": 4.50
+          },
+          {
+            "id": 40000043,
+            "title": "Large",
+            "value": "l",
+            "price": 5.50
+          }
+        ]
+      },
+      {
+        "id": 40000005,
+        "title": "Yuzu Tea",
+        "description": "Refreshing Korean citrus tea made with preserved yuzu fruit and honey. Served hot or cold for a vitamin C boost.",
+        "image": "assets/images/products/drinks/yuzu-tea-drink.jpg",
+        "discount": 1.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          },
+          {
+            "title": "Popular",
+            "classname": "label-popular"
+          }
+        ],
+        "ingredients": [
+          "Yuzu Fruit",
+          "Honey",
+          "Sugar",
+          "Water"
+        ],
+        "kcal": 90,
+        "options": [
+          {
+            "id": 40000051,
+            "title": "Small",
+            "value": "s",
+            "price": 4.00
+          },
+          {
+            "id": 40000052,
+            "title": "Medium",
+            "value": "m",
+            "price": 5.00
+          },
+          {
+            "id": 40000053,
+            "title": "Large",
+            "value": "l",
+            "price": 6.00
+          }
+        ]
+      },
+      {
+        "id": 40000006,
+        "title": "Misugaru",
+        "description": "Nutritious Korean multi-grain drink made with roasted grains including barley, rice, and beans. A healthy energy boost.",
+        "image": "assets/images/products/drinks/misugaru-drink.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Healthy",
+            "classname": "label-healthy"
+          }
+        ],
+        "ingredients": [
+          "Roasted Barley",
+          "Brown Rice",
+          "Black Beans",
+          "Black Sesame",
+          "Milk"
+        ],
+        "kcal": 180,
+        "options": [
+          {
+            "id": 40000061,
+            "title": "Small",
+            "value": "s",
+            "price": 4.50
+          },
+          {
+            "id": 40000062,
+            "title": "Medium",
+            "value": "m",
+            "price": 5.50
+          },
+          {
+            "id": 40000063,
+            "title": "Large",
+            "value": "l",
+            "price": 6.50
+          }
+        ]
+      },
+      {
+        "id": 40000007,
+        "title": "Dalgona Coffee",
+        "description": "Trendy Korean whipped coffee made by vigorously mixing instant coffee, sugar, and hot water, then served over cold milk.",
+        "image": "assets/images/products/drinks/dalgona-coffee-drink.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Trending",
+            "classname": "label-trending"
+          }
+        ],
+        "ingredients": [
+          "Instant Coffee",
+          "Sugar",
+          "Hot Water",
+          "Cold Milk"
+        ],
+        "kcal": 150,
+        "options": [
+          {
+            "id": 40000071,
+            "title": "Small",
+            "value": "s",
+            "price": 4.00
+          },
+          {
+            "id": 40000072,
+            "title": "Medium",
+            "value": "m",
+            "price": 5.00
+          },
+          {
+            "id": 40000073,
+            "title": "Large",
+            "value": "l",
+            "price": 6.00
+          }
+        ]
+      },
+      {
+        "id": 40000008,
+        "title": "Omija Tea",
+        "description": "Traditional Korean five-flavor berry tea known for its complex taste profile - sweet, sour, salty, bitter, and pungent all in one.",
+        "image": "assets/images/products/drinks/omija-tea-drink.jpg",
+        "discount": 0.50,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Traditional",
+            "classname": "label-traditional"
+          },
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Omija Berries",
+          "Honey",
+          "Water",
+          "Lemon"
+        ],
+        "kcal": 70,
+        "options": [
+          {
+            "id": 40000081,
+            "title": "Small",
+            "value": "s",
+            "price": 3.50
+          },
+          {
+            "id": 40000082,
+            "title": "Medium",
+            "value": "m",
+            "price": 4.50
+          },
+          {
+            "id": 40000083,
+            "title": "Large",
+            "value": "l",
+            "price": 5.50
+          }
+        ]
+      }
+    ],
+    "frozen-yogurt": [
+      {
+        "id": 50000001,
+        "title": "Strawberry Frozen Yogurt",
+        "description": "Creamy frozen yogurt with fresh strawberry puree and real strawberry chunks. A perfect balance of sweet and tangy flavors.",
+        "image": "assets/images/products/frozen-yogurt/strawberry-frozen-yogurt.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Best Seller",
+            "classname": "label-best-seller"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Fresh Strawberries",
+          "Organic Honey",
+          "Vanilla Extract"
+        ],
+        "kcal": 180,
+        "options": [
+          {
+            "id": 50000011,
+            "title": "Small",
+            "value": "s",
+            "price": 4.50
+          },
+          {
+            "id": 50000012,
+            "title": "Medium",
+            "value": "m",
+            "price": 5.50
+          },
+          {
+            "id": 50000013,
+            "title": "Large",
+            "value": "l",
+            "price": 6.50
+          }
+        ]
+      },
+      {
+        "id": 50000002,
+        "title": "Blueberry Cheesecake Froyo",
+        "description": "Tangy frozen yogurt with blueberry swirls and graham cracker crumbles. Tastes like cheesecake but with fewer calories.",
+        "image": "assets/images/products/frozen-yogurt/blueberry-cheesecake-froyo.jpg",
+        "discount": 1.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Blueberry Compote",
+          "Graham Cracker Crumbles",
+          "Cream Cheese"
+        ],
+        "kcal": 220,
+        "options": [
+          {
+            "id": 50000021,
+            "title": "Small",
+            "value": "s",
+            "price": 5.00
+          },
+          {
+            "id": 50000022,
+            "title": "Medium",
+            "value": "m",
+            "price": 6.00
+          },
+          {
+            "id": 50000023,
+            "title": "Large",
+            "value": "l",
+            "price": 7.00
+          }
+        ]
+      },
+      {
+        "id": 50000003,
+        "title": "Matcha Green Tea Froyo",
+        "description": "Authentic Japanese matcha green tea frozen yogurt with a subtle earthy flavor and natural sweetness. Topped with red bean paste.",
+        "image": "assets/images/products/frozen-yogurt/matcha-green-tea-froyo.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "New",
+            "classname": "label-new"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Premium Matcha Powder",
+          "Red Bean Paste",
+          "Honey"
+        ],
+        "kcal": 190,
+        "options": [
+          {
+            "id": 50000031,
+            "title": "Small",
+            "value": "s",
+            "price": 5.50
+          },
+          {
+            "id": 50000032,
+            "title": "Medium",
+            "value": "m",
+            "price": 6.50
+          },
+          {
+            "id": 50000033,
+            "title": "Large",
+            "value": "l",
+            "price": 7.50
+          }
+        ]
+      },
+      {
+        "id": 50000004,
+        "title": "Mango Passion Fruit Froyo",
+        "description": "Tropical frozen yogurt with sweet mango and tangy passion fruit. A refreshing treat that transports you to a beach paradise.",
+        "image": "assets/images/products/frozen-yogurt/mango-passion-fruit-froyo.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Tropical",
+            "classname": "label-tropical"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Fresh Mango Puree",
+          "Passion Fruit Syrup",
+          "Coconut Flakes"
+        ],
+        "kcal": 200,
+        "options": [
+          {
+            "id": 50000041,
+            "title": "Small",
+            "value": "s",
+            "price": 5.00
+          },
+          {
+            "id": 50000042,
+            "title": "Medium",
+            "value": "m",
+            "price": 6.00
+          },
+          {
+            "id": 50000043,
+            "title": "Large",
+            "value": "l",
+            "price": 7.00
+          }
+        ]
+      },
+      {
+        "id": 50000005,
+        "title": "Honey Lavender Froyo",
+        "description": "Delicate frozen yogurt infused with organic honey and culinary lavender. A sophisticated flavor with floral notes and natural sweetness.",
+        "image": "assets/images/products/frozen-yogurt/honey-lavender-froyo.jpg",
+        "discount": 0.50,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Premium",
+            "classname": "label-premium"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Organic Honey",
+          "Culinary Lavender",
+          "Vanilla Bean"
+        ],
+        "kcal": 170,
+        "options": [
+          {
+            "id": 50000051,
+            "title": "Small",
+            "value": "s",
+            "price": 5.50
+          },
+          {
+            "id": 50000052,
+            "title": "Medium",
+            "value": "m",
+            "price": 6.50
+          },
+          {
+            "id": 50000053,
+            "title": "Large",
+            "value": "l",
+            "price": 7.50
+          }
+        ]
+      },
+      {
+        "id": 50000006,
+        "title": "Cookies and Cream Froyo",
+        "description": "Classic frozen yogurt blended with crushed chocolate cookies. A perfect balance of creamy yogurt and crunchy cookie pieces.",
+        "image": "assets/images/products/frozen-yogurt/cookies-cream-froyo.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Popular",
+            "classname": "label-popular"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Chocolate Cookie Crumbles",
+          "Vanilla Extract",
+          "Organic Sugar"
+        ],
+        "kcal": 230,
+        "options": [
+          {
+            "id": 50000061,
+            "title": "Small",
+            "value": "s",
+            "price": 5.00
+          },
+          {
+            "id": 50000062,
+            "title": "Medium",
+            "value": "m",
+            "price": 6.00
+          },
+          {
+            "id": 50000063,
+            "title": "Large",
+            "value": "l",
+            "price": 7.00
+          }
+        ]
+      },
+      {
+        "id": 50000007,
+        "title": "Caramel Pretzel Froyo",
+        "description": "Sweet and salty frozen yogurt with caramel swirls and pretzel pieces. A delightful combination of contrasting flavors and textures.",
+        "image": "assets/images/products/frozen-yogurt/caramel-pretzel-froyo.jpg",
+        "discount": 1.50,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "New",
+            "classname": "label-new"
+          },
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Caramel Sauce",
+          "Pretzel Pieces",
+          "Sea Salt"
+        ],
+        "kcal": 250,
+        "options": [
+          {
+            "id": 50000071,
+            "title": "Small",
+            "value": "s",
+            "price": 5.50
+          },
+          {
+            "id": 50000072,
+            "title": "Medium",
+            "value": "m",
+            "price": 6.50
+          },
+          {
+            "id": 50000073,
+            "title": "Large",
+            "value": "l",
+            "price": 7.50
+          }
+        ]
+      },
+      {
+        "id": 50000008,
+        "title": "Lemon Blueberry Froyo",
+        "description": "Refreshing lemon frozen yogurt with fresh blueberry compote. A bright, tangy treat perfect for hot summer days.",
+        "image": "assets/images/products/frozen-yogurt/lemon-blueberry-froyo.jpg",
+        "discount": 0.00,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Seasonal",
+            "classname": "label-seasonal"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Fresh Lemon Juice",
+          "Lemon Zest",
+          "Blueberry Compote"
+        ],
+        "kcal": 180,
+        "options": [
+          {
+            "id": 50000081,
+            "title": "Small",
+            "value": "s",
+            "price": 5.00
+          },
+          {
+            "id": 50000082,
+            "title": "Medium",
+            "value": "m",
+            "price": 6.00
+          },
+          {
+            "id": 50000083,
+            "title": "Large",
+            "value": "l",
+            "price": 7.00
+          }
+        ]
+      },
+      {
+        "id": 50000009,
+        "title": "Pistachio Rosewater Froyo",
+        "description": "Exotic frozen yogurt infused with delicate rosewater and topped with crushed pistachios. A Middle Eastern-inspired dessert experience.",
+        "image": "assets/images/products/frozen-yogurt/pistachio-rosewater-froyo.jpg",
+        "discount": 0.00,
+        "featured": true,
+        "available": true,
+        "labels": [
+          {
+            "title": "Premium",
+            "classname": "label-premium"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Rosewater",
+          "Crushed Pistachios",
+          "Honey"
+        ],
+        "kcal": 210,
+        "options": [
+          {
+            "id": 50000091,
+            "title": "Small",
+            "value": "s",
+            "price": 5.50
+          },
+          {
+            "id": 50000092,
+            "title": "Medium",
+            "value": "m",
+            "price": 6.50
+          },
+          {
+            "id": 50000093,
+            "title": "Large",
+            "value": "l",
+            "price": 7.50
+          }
+        ]
+      },
+      {
+        "id": 50000010,
+        "title": "Coconut Pineapple Froyo",
+        "description": "Tropical frozen yogurt with creamy coconut and sweet pineapple chunks. A vacation in a cup that brings the taste of the islands to you.",
+        "image": "assets/images/products/frozen-yogurt/coconut-pineapple-froyo.jpg",
+        "discount": 0.75,
+        "featured": false,
+        "available": true,
+        "labels": [
+          {
+            "title": "Tropical",
+            "classname": "label-tropical"
+          },
+          {
+            "title": "Sale",
+            "classname": "label-discount"
+          }
+        ],
+        "ingredients": [
+          "Greek Yogurt",
+          "Coconut Milk",
+          "Fresh Pineapple Chunks",
+          "Toasted Coconut Flakes"
+        ],
+        "kcal": 220,
+        "options": [
+          {
+            "id": 50000101,
+            "title": "Small",
+            "value": "s",
+            "price": 5.25
+          },
+          {
+            "id": 50000102,
+            "title": "Medium",
+            "value": "m",
+            "price": 6.25
+          },
+          {
+            "id": 50000103,
+            "title": "Large",
+            "value": "l",
+            "price": 7.25
+          }
+        ]
+      }
+    ],
+    "cakes": []
   }
 }
