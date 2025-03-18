@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { LabelComponent } from '../label/label.component';
 
@@ -6,7 +7,7 @@ import { CardOptionType, CardLabelsType } from '../../types/types';
 
 @Component({
   selector: 'app-card',
-  imports: [LabelComponent],
+  imports: [LabelComponent, RouterLink],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }

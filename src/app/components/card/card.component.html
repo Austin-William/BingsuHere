@@ -8,9 +8,11 @@
       </app-label>
       }
     </div>
-    <h2 class="card-title">
-      {{ title }}
-    </h2>
+    <a [routerLink]="['/product/', id]" target="_self">
+      <h2 class="card-title">
+        {{ title }}
+      </h2>
+    </a>
     <p class="card-description">
       {{ description }}
     </p>

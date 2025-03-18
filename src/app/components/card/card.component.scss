@@ -52,6 +52,16 @@
     height: 20px;
   }
 
+  a {
+    text-decoration: none;
+    color: $color-5;
+    transition: color $transition-time $transition-type;
+
+    &:hover {
+      color: $color-1;
+    }
+  }
+
   &-title {
     margin-top: 1rem;
     text-transform: capitalize;
