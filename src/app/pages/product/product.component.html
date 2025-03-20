@@ -1,8 +1,26 @@
-<main id="product">
+<main id="product" class="product">
   <div class="container">
-    <section>
-      
+    @if (product) {
+    <section class="product-bloc">
+      <div class="product-bloc-img">
+        <img src="{{ product.image }}" alt="product-img">
+      </div>
+      <div class="product-bloc-info">
+        <h1>{{ product.title }}</h1>
+        <p>{{ product.description }}</p>
+        <span class="product-bloc-availability">
+          {{ product.available ? "Disponible" : "Indisponible" }}
+        </span>
+      </div>
     </section>
+    <section class="product-info">
+
+    </section>
+    }@else {
+    <div class="product-not-found">
+      <h1>Produit introuvable</h1>
+    </div>
+    }
     <!-- a gauche photo produit -->
     <!-- text et description a droite -->
     <!-- lister les ingredients -->

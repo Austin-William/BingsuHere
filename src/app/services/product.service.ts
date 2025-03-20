@@ -6,4 +6,8 @@ export class ProductService {
   getProductsData() {
     return products;
   }
+
+  getProductById(id: number) {
+    return Object.values(products).flat().find(product => product.id === id);
+  }
 }

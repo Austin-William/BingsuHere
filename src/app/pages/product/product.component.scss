@@ -1,0 +1,15 @@
+.product {
+  min-height: calc(100vh - 100px);
+
+  .container {
+    padding: clamp(1rem, 2vw, 2rem);
+    max-width: 1200px;
+  }
+
+  &-bloc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
