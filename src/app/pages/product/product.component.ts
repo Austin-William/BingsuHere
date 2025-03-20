@@ -28,11 +28,11 @@ export class ProductComponent implements OnInit  {
 
   setSlugFromUrl(): void {
     this.route.params.subscribe(params => {
-      this.slug = params['slug'];
+      this.slug = params['id'];
     });
   }
 
   setProduct(): void {
-    this.product = this.productService.getProductById(this.slug);
+    this.product = this.productService.findProductById(this.slug);
   }
 }
