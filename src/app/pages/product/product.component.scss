@@ -1,15 +1,166 @@
+@use "../../../variables.scss" as *;
+
+@mixin availability($available) {
+  @if $available {
+    color: green;
+  }
+
+  @else {
+    color: red;
+  }
+}
+
+@mixin setCurencySize($isDiscount) {
+  @if $isDiscount {
+    .product-bloc-price-currency {
+      font-size: 26px;
+      margin-left: 2px;
+    }
+  }
+
+  @else {
+    .product-bloc-price-currency {
+      font-size: 24px;
+      margin-left: 2px;
+    }
+  }
+}
+
 .product {
   min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 
   .container {
-    padding: clamp(1rem, 2vw, 2rem);
+    padding: clamp(1rem, 5vw, 3rem);
     max-width: 1200px;
   }
 
   &-bloc {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    gap: 5rem;
+    width: 100%;
+
+    &-img {
+      width: auto;
+      height: clamp(10rem, 50vw, 500px);
+      border-radius: 10px;
+    }
+
+    &-options {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      color: $color-5;
+    }
+
+    &-radio {
+      position: relative;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input[type="radio"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        appearance: none;
+        border: 1px solid $border-color;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: border-color $transition-time $transition-type;
+
+        &:hover {
+          border: 2px solid $color-3;
+        }
+
+        &:checked {
+          border: 2px solid $color-4;
+        }
+      }
+
+      label {
+        z-index: 1;
+        line-height: 0;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $color-5;
+      }
+    }
+
+    &-price {
+      font-size: clamp(1.5rem, 3vw, 5rem);
+      font-weight: 500;
+      letter-spacing: 2px;
+      word-spacing: 1px;
+
+      &-text {
+        font-size: 40px;
+        font-weight: 500;
+        color: $color-4;
+        @include setCurencySize($isDiscount: false);
+      }
+  
+      &-discount {
+        font-size: 36px;
+        text-decoration: line-through;
+        @include setCurencySize($isDiscount: true);
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+
+      h1 {
+        font-size: clamp(3rem, 2vw, 6rem);
+        letter-spacing: 3px;
+        word-spacing: 1px;
+        color: $color-5;
+      }
+
+      p {
+        font-size: clamp(0.8rem, 1.3vw, 2rem);
+        letter-spacing: 2px;
+        word-spacing: 1px;
+        color: $color-5;
+      }
+
+      &-availability {
+        letter-spacing: 2px;
+        font-weight: 500;
+
+        &.available {
+          @include availability(true);
+        }
+
+        &.unavailable {
+          @include availability(false);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    padding: 2rem;
+
+    &-bloc {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }

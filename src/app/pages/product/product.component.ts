@@ -17,13 +17,19 @@ import { Product } from '../../types/types';
 export class ProductComponent implements OnInit  {
   @Input() product: Product | undefined = undefined;
 
-  slug: number = 0;
+  slug: number = 0;  
+  selectedOptionId: number = 0;
+  selectedOptionValue: string = '';
+  isDiscount: boolean = false;
+  displayedPrice: number = 0;
+  priceBeforeDiscount: number = 0;
 
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.setSlugFromUrl();
     this.setProduct();
+    this.setDefaultChooseOption();
   }
 
   setSlugFromUrl(): void {
@@ -34,5 +40,27 @@ export class ProductComponent implements OnInit  {
 
   setProduct(): void {
     this.product = this.productService.findProductById(this.slug);
+  }
+
+  setDefaultChooseOption(): void {
+    if (this.product && this.product.options && this.product.options.length > 0) {
+      this.selectedOptionId = this.product.options[0].id;
+      this.selectedOptionValue = this.product.options[0].value;
+      this.setDiscountPrice(this.product.options[0].price, this.product.discount);
+    }
+  }
+
+  handleSelectedOption(id: number, value: string, price: number): void {
+    this.selectedOptionId = id;
+    this.selectedOptionValue = value;
+    this.setDiscountPrice(price, this.product?.discount ? this.product.discount : 0);
+  }
+
+  setDiscountPrice(basePrice: number, discountPrice: number): void {
+    if (discountPrice > 0) {
+      this.isDiscount = true;
+      this.priceBeforeDiscount = basePrice;
+    }
+    this.displayedPrice = basePrice - discountPrice;
   }
 }

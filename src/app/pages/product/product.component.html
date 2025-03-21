@@ -2,15 +2,43 @@
   <div class="container">
     @if (product) {
     <section class="product-bloc">
-      <div class="product-bloc-img">
-        <img src="{{ product.image }}" alt="product-img">
-      </div>
+      <img class="product-bloc-img" src="{{ product.image }}" alt="product-img">
       <div class="product-bloc-info">
         <h1>{{ product.title }}</h1>
         <p>{{ product.description }}</p>
-        <span class="product-bloc-availability">
-          {{ product.available ? "Disponible" : "Indisponible" }}
+        <span class="product-bloc-info-availability {{ product.available ? 'available' : 'unavailable' }}">
+          {{ product.available ?
+            "Disponible" :
+            "Indisponible"
+          }}
         </span>
+        <div class="product-bloc-options">
+          @for (item of product.options; track $index) {
+          <div class="product-bloc-radio">
+            <label for="{{ item.id }}">
+              {{ item.value }}
+            </label>
+            <input
+              type="radio"
+              name="size_{{ item.id }}"
+              id="{{ item.id }}"
+              value="{{ item.value }}"
+              (change)="handleSelectedOption(item.id, item.value, item.price)"
+              [checked]="selectedOptionId === item.id"
+              />
+          </div>
+          }
+        </div>
+        <div class="product-bloc-price">
+          @if (isDiscount) {
+            <span class="product-bloc-price-discount">
+              {{ priceBeforeDiscount }}<span class="product-bloc-price-currency">€</span>
+            </span>
+          }
+          <span class="product-bloc-price-text {{ isDiscount ? 'discount' : '' }}">
+            {{ displayedPrice }}<span class="product-bloc-price-currency">€</span>
+          </span>
+        </div>
       </div>
     </section>
     <section class="product-info">
