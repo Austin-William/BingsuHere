@@ -8,8 +8,8 @@
         <p>{{ product.description }}</p>
         <span class="product-bloc-info-availability {{ product.available ? 'available' : 'unavailable' }}">
           {{ product.available ?
-            "Disponible" :
-            "Indisponible"
+          "Available" :
+          "Out of stock"
           }}
         </span>
         <div class="product-bloc-options">
@@ -18,40 +18,40 @@
             <label for="{{ item.id }}">
               {{ item.value }}
             </label>
-            <input
-              type="radio"
-              name="size_{{ item.id }}"
-              id="{{ item.id }}"
-              value="{{ item.value }}"
+            <input type="radio" name="size_{{ item.id }}" id="{{ item.id }}" value="{{ item.value }}"
               (change)="handleSelectedOption(item.id, item.value, item.price)"
-              [checked]="selectedOptionId === item.id"
-              />
+              [checked]="selectedOptionId === item.id" />
           </div>
           }
         </div>
         <div class="product-bloc-price">
-          @if (isDiscount) {
-            <span class="product-bloc-price-discount">
-              {{ priceBeforeDiscount }}<span class="product-bloc-price-currency">€</span>
-            </span>
-          }
           <span class="product-bloc-price-text {{ isDiscount ? 'discount' : '' }}">
             {{ displayedPrice }}<span class="product-bloc-price-currency">€</span>
           </span>
+          @if (isDiscount) {
+          <span class="product-bloc-price-discount">
+            {{ priceBeforeDiscount }}<span class="product-bloc-price-currency">€</span>
+          </span>
+          }
+
+        </div>
+        <div class="product-bloc-ingredients">
+          <span>Ingredients</span>
+          <ul>
+            @for (item of product.ingredients; track $index) {
+            <li>{{ item }}</li>
+            }
+          </ul>
         </div>
       </div>
     </section>
-    <section class="product-info">
-
+    <section>
+      <!-- mettre carousel pour suggestions de produits -->
     </section>
     }@else {
     <div class="product-not-found">
       <h1>Produit introuvable</h1>
     </div>
     }
-    <!-- a gauche photo produit -->
-    <!-- text et description a droite -->
-    <!-- lister les ingredients -->
-    <!-- afficher les propositions de tailles -->
   </div>
 </main>

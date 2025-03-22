@@ -99,21 +99,17 @@
     }
 
     &-price {
-      font-size: clamp(1.5rem, 3vw, 5rem);
-      font-weight: 500;
-      letter-spacing: 2px;
-      word-spacing: 1px;
-
       &-text {
         font-size: 40px;
         font-weight: 500;
         color: $color-4;
         @include setCurencySize($isDiscount: false);
       }
-  
+
       &-discount {
-        font-size: 36px;
+        font-size: 26px;
         text-decoration: line-through;
+        margin-left: 1rem;
         @include setCurencySize($isDiscount: true);
       }
     }
@@ -121,7 +117,7 @@
     &-info {
       display: flex;
       flex-direction: column;
-      gap: 1.8rem;
+      gap: 1.5rem;
 
       h1 {
         font-size: clamp(3rem, 2vw, 6rem);
@@ -131,7 +127,7 @@
       }
 
       p {
-        font-size: clamp(0.8rem, 1.3vw, 2rem);
+        font-size: clamp(0.8rem, 1vw, 1.5rem);
         letter-spacing: 2px;
         word-spacing: 1px;
         color: $color-5;
@@ -150,7 +146,36 @@
         }
       }
     }
+
+    &-ingredients {
+      span {
+        font-size: 16px;
+        letter-spacing: 3px;
+        word-spacing: 1px;
+      }
+
+      ul {
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+
+        li {
+          color: $color-5;
+          font-size: 16px;
+          letter-spacing: 2px;
+          word-spacing: 1px;
+
+          &::marker {
+            color: $color-4;
+          }
+        }
+      }
+    }
   }
+}
+
+.discount {
+  color: $color-1;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
@@ -161,6 +186,19 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 2rem;
+
+      &-info {
+        gap: 1rem;
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      &-img {
+        height: 80vw;
+      }
     }
   }
 }
