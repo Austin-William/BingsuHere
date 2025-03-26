@@ -5,13 +5,15 @@
       <img class="product-bloc-img" src="{{ product.image }}" alt="product-img">
       <div class="product-bloc-info">
         <h1>{{ product.title }}</h1>
-        <div class="product-bloc-labels">
-          @for (item of product.labels; track $index) {
-          <app-label [classname]="item.classname">
-            {{ item.title }}
-          </app-label>
-          }
-        </div>
+        @if (product.labels.length > 0) {
+          <div class="product-bloc-labels">
+            @for (item of product.labels; track $index) {
+            <app-label [classname]="item.classname">
+              {{ item.title }}
+            </app-label>
+            }
+          </div>
+        }
         <span class="product-bloc-info-availability {{ product.available ? 'available' : 'unavailable' }}">
           {{ product.available ?
           "Available" :
@@ -53,14 +55,20 @@
         </div>
       </div>
     </section>
+    <br class="separator" />
     <section class="suggestions">
-      <p-carousel [value]="randomProducts" [numVisible]="3" [numScroll]="2" [responsiveOptions]="responsiveOptions">
-        <ng-template let-product #item>
-          <app-card type="carousel" [id]="product.id" [title]="product.title" [description]="product.description"
-            [imagePath]="product.image" [discount]="product.discount" [available]="product.available"
-            [labels]="product.labels" [options]="product.options" [kcal]="product.kcal" />
-        </ng-template>
-      </p-carousel>
+      <h1 class="suggestions-title">
+        Want to try something else ?
+      </h1>
+      <div class="suggestions-carousel">
+        <p-carousel [value]="randomProducts" [numVisible]="3" [numScroll]="2" [responsiveOptions]="responsiveOptions">
+          <ng-template let-product #item>
+            <app-card type="carousel" [id]="product.id" [title]="product.title" [description]="product.description"
+              [imagePath]="product.image" [discount]="product.discount" [available]="product.available"
+              [labels]="product.labels" [options]="product.options" [kcal]="product.kcal" />
+          </ng-template>
+        </p-carousel>
+      </div>
     </section>
     }@else {
     <div class="product-not-found">

@@ -35,6 +35,11 @@
   .container {
     padding: clamp(1rem, 5vw, 3rem);
     max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8lvh;
   }
 
   &-bloc {
@@ -113,7 +118,7 @@
 
     &-price {
       &-text {
-        font-size: 46px;
+        font-size: 60px;
         color: $color-4;
         @include setCurencySize($isDiscount: false);
       }
@@ -190,7 +195,28 @@
 }
 
 .suggestions {
-  margin-top: 3rem;
+  &-title {
+    font-size: 36px;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+    font-weight: 500;
+    color: $color-5;
+  }
+
+  &-carousel {
+    width: 100vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}
+
+.separator {
+  width: 50lvw;
+  height: 1px;
+  background-color: $color-4;
+  display: block;
+  content: ' ';
 }
 
 @media screen and (max-width: 768px) {
@@ -204,7 +230,7 @@
       gap: 2rem;
 
       &-info {
-        gap: 1rem;
+        gap: 1.3rem;
 
         p {
           font-size: 14px;
@@ -214,6 +240,24 @@
       &-img {
         height: 80vw;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .product {
+    .container {
+      padding: 0;
+    }
+
+    &-bloc {
+      padding: 2rem 3rem;
+    }
+  }
+
+  .suggestions {
+    &-title {
+      padding: 0 3rem;
     }
   }
 }
