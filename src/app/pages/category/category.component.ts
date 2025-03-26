@@ -21,7 +21,6 @@ import { Product } from '../../types/types';
 export class CategoryComponent implements OnInit {
   currentParameterRoute: string = '';
   currentTitle: string = '';
-  products = signal<Product[]>([]);
   displayedProducts: Product[] = [];
   isLoading: boolean = false;
 
@@ -59,7 +58,9 @@ export class CategoryComponent implements OnInit {
     const categoryMap: Record<string, Product[] | undefined> = {
       'desserts': products.desserts,
       'drinks': products.drinks,
-      'bingsu': products.bingsu
+      'bingsu': products.bingsu,
+      'frozen-yogurt': products['frozen-yogurt'],
+      'cakes': products.cakes,
     };
     const categoryProducts = categoryMap[this.currentParameterRoute]
 

@@ -59,6 +59,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: lighten($color: $color-4, $amount: 30%);
+  background: $color-4;
   border-radius: 10px;
 }
