@@ -42,7 +42,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: 5rem;
+    gap: 4rem;
     width: 100%;
 
     &-img {
@@ -51,11 +51,24 @@
       border-radius: 10px;
     }
 
+    &-labels {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
     &-options {
       display: flex;
       flex-direction: row;
-      gap: 2rem;
+      gap: 1rem;
       color: $color-5;
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
 
     &-radio {
@@ -100,14 +113,13 @@
 
     &-price {
       &-text {
-        font-size: 40px;
-        font-weight: 500;
+        font-size: 46px;
         color: $color-4;
         @include setCurencySize($isDiscount: false);
       }
 
       &-discount {
-        font-size: 26px;
+        font-size: 24px;
         text-decoration: line-through;
         margin-left: 1rem;
         @include setCurencySize($isDiscount: true);
@@ -127,7 +139,7 @@
       }
 
       p {
-        font-size: clamp(0.8rem, 1vw, 1.5rem);
+        font-size: clamp(1rem, 1vw, 1.5rem);
         letter-spacing: 2px;
         word-spacing: 1px;
         color: $color-5;
@@ -135,7 +147,6 @@
 
       &-availability {
         letter-spacing: 2px;
-        font-weight: 500;
 
         &.available {
           @include availability(true);
@@ -175,7 +186,11 @@
 
 .discount {
   color: $color-1;
-  font-weight: 700;
+  font-weight: bold;
+}
+
+.suggestions {
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 768px) {

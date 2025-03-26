@@ -5,36 +5,20 @@
       <img class="product-bloc-img" src="{{ product.image }}" alt="product-img">
       <div class="product-bloc-info">
         <h1>{{ product.title }}</h1>
-        <p>{{ product.description }}</p>
+        <div class="product-bloc-labels">
+          @for (item of product.labels; track $index) {
+          <app-label [classname]="item.classname">
+            {{ item.title }}
+          </app-label>
+          }
+        </div>
         <span class="product-bloc-info-availability {{ product.available ? 'available' : 'unavailable' }}">
           {{ product.available ?
           "Available" :
           "Out of stock"
           }}
         </span>
-        <div class="product-bloc-options">
-          @for (item of product.options; track $index) {
-          <div class="product-bloc-radio">
-            <label for="{{ item.id }}">
-              {{ item.value }}
-            </label>
-            <input type="radio" name="size_{{ item.id }}" id="{{ item.id }}" value="{{ item.value }}"
-              (change)="handleSelectedOption(item.id, item.value, item.price)"
-              [checked]="selectedOptionId === item.id" />
-          </div>
-          }
-        </div>
-        <div class="product-bloc-price">
-          <span class="product-bloc-price-text {{ isDiscount ? 'discount' : '' }}">
-            {{ displayedPrice }}<span class="product-bloc-price-currency">€</span>
-          </span>
-          @if (isDiscount) {
-          <span class="product-bloc-price-discount">
-            {{ priceBeforeDiscount }}<span class="product-bloc-price-currency">€</span>
-          </span>
-          }
-
-        </div>
+        <p>{{ product.description }} ({{ product.kcal}} kcal)</p>
         <div class="product-bloc-ingredients">
           <span>Ingredients</span>
           <ul>
@@ -43,10 +27,40 @@
             }
           </ul>
         </div>
+        <div class="product-bloc-section">
+          <div class="product-bloc-options">
+            @for (item of product.options; track $index) {
+            <div class="product-bloc-radio">
+              <label for="{{ item.id }}">
+                {{ item.value }}
+              </label>
+              <input type="radio" name="size_{{ item.id }}" id="{{ item.id }}" value="{{ item.value }}"
+                (change)="handleSelectedOption(item.id, item.value, item.price)"
+                [checked]="selectedOptionId === item.id" />
+            </div>
+            }
+          </div>
+          <div class="product-bloc-price">
+            @if (isDiscount) {
+            <span class="product-bloc-price-discount">
+              {{ priceBeforeDiscount }}<span class="product-bloc-price-currency">€</span>
+            </span>
+            }
+            <span class="product-bloc-price-text {{ isDiscount ? 'discount' : '' }}">
+              {{ displayedPrice }}<span class="product-bloc-price-currency">€</span>
+            </span>
+          </div>
+        </div>
       </div>
     </section>
-    <section>
-      <!-- mettre carousel pour suggestions de produits -->
+    <section class="suggestions">
+      <p-carousel [value]="randomProducts" [numVisible]="3" [numScroll]="2" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product #item>
+          <app-card type="carousel" [id]="product.id" [title]="product.title" [description]="product.description"
+            [imagePath]="product.image" [discount]="product.discount" [available]="product.available"
+            [labels]="product.labels" [options]="product.options" [kcal]="product.kcal" />
+        </ng-template>
+      </p-carousel>
     </section>
     }@else {
     <div class="product-not-found">

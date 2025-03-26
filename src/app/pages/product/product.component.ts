@@ -1,5 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CarouselModule } from 'primeng/carousel';
+
+import { LabelComponent } from '../../components/label/label.component';
+import { CardComponent } from '../../components/card/card.component';
 
 import { ProductService } from '../../services/product.service';
 
@@ -8,6 +12,7 @@ import { Product } from '../../types/types';
 @Component({
   selector: 'app-product',
   standalone: true,
+  imports: [LabelComponent, CardComponent, CarouselModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() },
@@ -23,6 +28,25 @@ export class ProductComponent implements OnInit  {
   isDiscount: boolean = false;
   displayedPrice: number = 0;
   priceBeforeDiscount: number = 0;
+  randomProducts: Product[] = [];
+
+  responsiveOptions: any[] = [
+    {
+      breakpoint: '1024px',
+      numVisible: 2,
+      numScroll: 1
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 1,
+      numScroll: 1
+    },
+    {
+      breakpoint: '480px',
+      numVisible: 1,
+      numScroll: 1
+    },
+  ];
 
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
@@ -30,6 +54,7 @@ export class ProductComponent implements OnInit  {
     this.setSlugFromUrl();
     this.setProduct();
     this.setDefaultChooseOption();
+    this.randomProducts = this.productService.getRandomProducts('bingsu', 8);
   }
 
   setSlugFromUrl(): void {
