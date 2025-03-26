@@ -14,15 +14,15 @@
             }
           </div>
         }
+        <p>{{ product.description }}</p>
         <span class="product-bloc-info-availability {{ product.available ? 'available' : 'unavailable' }}">
           {{ product.available ?
           "Available" :
           "Out of stock"
           }}
         </span>
-        <p>{{ product.description }} ({{ product.kcal}} kcal)</p>
         <div class="product-bloc-ingredients">
-          <span>Ingredients</span>
+          <span class="product-bloc-ingredients-title">Ingredients ({{ product.kcal}} kcal)</span>
           <ul>
             @for (item of product.ingredients; track $index) {
             <li>{{ item }}</li>

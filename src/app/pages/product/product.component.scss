@@ -144,7 +144,7 @@
       }
 
       p {
-        font-size: clamp(1rem, 1vw, 1.5rem);
+        font-size: clamp(1rem, 0.8vw, 1.5rem);
         letter-spacing: 2px;
         word-spacing: 1px;
         color: $color-5;
@@ -164,10 +164,11 @@
     }
 
     &-ingredients {
-      span {
+      &-title {
         font-size: 16px;
-        letter-spacing: 3px;
-        word-spacing: 1px;
+        letter-spacing: 2px;
+        color: $color-5;
+        font-weight: 500;
       }
 
       ul {
@@ -176,7 +177,7 @@
 
         li {
           color: $color-5;
-          font-size: 16px;
+          font-size: 14px;
           letter-spacing: 2px;
           word-spacing: 1px;
 
