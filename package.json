@@ -1,6 +1,6 @@
 {
   "name": "bingsuproject",
-  "description": "A website to display product of a shop",
+  "description": "A website to display product of a bingsu shop",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",

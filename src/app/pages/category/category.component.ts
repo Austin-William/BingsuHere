@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { CardComponent } from '../../components/card/card.component';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { SearchbarComponent } from '../../components/searchbar/searchbar.component';
 
 import { ProductService } from '../../services/product.service';
 
@@ -11,7 +12,7 @@ import { Product } from '../../types/types';
 @Component({
   selector: 'app-category',
   standalone: true,
-  imports: [CardComponent, SpinnerComponent],
+  imports: [CardComponent, SpinnerComponent, SearchbarComponent],
   templateUrl: './category.component.html',
   styleUrl: './category.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() },
@@ -22,7 +23,9 @@ export class CategoryComponent implements OnInit {
   currentParameterRoute: string = '';
   currentTitle: string = '';
   displayedProducts: Product[] = [];
+  allCategoryProducts: Product[] = [];
   isLoading: boolean = false;
+  searchTerm: string = '';
 
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
@@ -77,6 +80,20 @@ export class CategoryComponent implements OnInit {
   }
 
   setDisplayCategoriesProducts(data: Product[]): void {
-    this.displayedProducts = data;
+    this.allCategoryProducts = [...data];
+    this.displayedProducts = [...data];
+  }
+
+  filterProductsBySearchTerm(): void {
+    if (!this.searchTerm || this.searchTerm.trim() === '') {
+      this.displayedProducts = [...this.allCategoryProducts];
+      return;
+    }
+    
+    const searchTerm = this.searchTerm.toLowerCase().trim();
+    this.displayedProducts = this.allCategoryProducts.filter(product => {
+      return product.title.toLowerCase().includes(searchTerm) || 
+             (product.description && product.description.toLowerCase().includes(searchTerm));
+    });
   }
 }

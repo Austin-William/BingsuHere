@@ -5,6 +5,12 @@
         <span>Our </span>
         <span class="fancy">{{ currentTitle }}</span>
       </h1>
+      <section class="filters">
+        <div class="searchbar">
+          <app-searchbar [(searchTerm)]="searchTerm" [placeholder]="'Search for products...'"
+            (searchTermChange)="filterProductsBySearchTerm()" />
+        </div>
+      </section>
       <article class="cards">
         @if (isLoading) {
         <app-spinner [size]="'lg'" />

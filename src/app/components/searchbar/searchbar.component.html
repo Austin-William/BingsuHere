@@ -1,0 +1,6 @@
+<div class="searchbar">
+  <button (click)="this.search()">
+    <mat-icon>search</mat-icon>
+  </button>
+  <input type="text" placeholder="{{ placeholder }}" [(ngModel)]="searchTerm" (ngModelChange)="onSearchTermChange()" (keyup)="this.search()">
+</div>

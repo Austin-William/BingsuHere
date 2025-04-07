@@ -12,7 +12,8 @@
     padding: clamp(1.5rem, 3vw, 3.5rem) clamp(1rem, 3vw, 4rem);
 
     .wrapper {
-      max-width: 1200px;
+      max-width: 1000px;
+      width: 100%;
     }
 
     .title {
@@ -36,7 +37,6 @@
 
     .cards {
       width: 100%;
-      max-width: 1000px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -44,4 +44,8 @@
       justify-content: center;
     }
   }
+}
+
+.filters {
+  margin: 0 16px 16px 16px;
 }
