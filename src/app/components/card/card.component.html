@@ -8,7 +8,7 @@
       </app-label>
       }
     </div>
-    <a [routerLink]="[id]" target="_self" class="card-link">
+    <a [routerLink]="['./']" [queryParams]="{value: id}" routerLinkActive="active" ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{ exact: false }" class="card-link">
       <h2 class="card-title">
         {{ title }} 
       </h2>

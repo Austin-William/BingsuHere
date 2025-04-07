@@ -20,7 +20,7 @@
       </div>
       <div class="toolbar-menu">
         @for (item of product_links; track $index) {
-        <a [routerLink]="['/products/', item.path]" routerLinkActive="active" ariaCurrentWhenActive="page"
+        <a [routerLink]="['/products/', item.path]" target="_parent" routerLinkActive="active" ariaCurrentWhenActive="page"
           class="toolbar-menu-item">
           {{ item.name }}
         </a>

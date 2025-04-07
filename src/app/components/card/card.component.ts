@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { LabelComponent } from '../label/label.component';
 
@@ -7,24 +7,25 @@ import { CardOptionType, CardLabelsType } from '../../types/types';
 
 @Component({
   selector: 'app-card',
-  imports: [LabelComponent, RouterLink],
+  imports: [LabelComponent, RouterLink, RouterLinkActive],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }
 })
 
 export class CardComponent implements OnInit {
-  @Input() id: number = 0;
-  @Input() title: string = '';
-  @Input() description: string = '';
-  @Input() type: string = '';
-  @Input() imagePath: string = '';
-  @Input() featured: boolean = false;
-  @Input() available: boolean = false;
-  @Input() labels: CardLabelsType[] = [];
-  @Input() options: CardOptionType[] = [];
-  @Input() discount: number = 0;
-  @Input() kcal: number = 0;
+  @Input() id?: number = 0;
+  @Input() title?: string = '';
+  @Input() category?: string = '';
+  @Input() description?: string = '';
+  @Input() type?: string = '';
+  @Input() imagePath?: string = '';
+  @Input() featured?: boolean = false;
+  @Input() available?: boolean = false;
+  @Input() labels?: CardLabelsType[] = [];
+  @Input() options?: CardOptionType[] = [];
+  @Input() discount?: number = 0;
+  @Input() kcal?: number = 0;
 
   selectedOptionId: number = 0;
   selectedOptionValue: string = '';
@@ -42,14 +43,14 @@ export class CardComponent implements OnInit {
     if (this.options && this.options.length > 0) {
       this.selectedOptionId = this.options[0].id;
       this.selectedOptionValue = this.options[0].value;
-      this.setDiscountPrice(this.options[0].price, this.discount);
+      this.setDiscountPrice(this.options[0].price, this.discount ? this.discount : 0);
     }
   }
 
   handleSelectedOption(id: number, value: string, price: number): void {
     this.selectedOptionId = id;
     this.selectedOptionValue = value;
-    this.setDiscountPrice(price, this.discount);
+    this.setDiscountPrice(price, this.discount ? this.discount : 0);
   }
 
   setClassType() {
