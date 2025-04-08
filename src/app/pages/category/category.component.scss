@@ -48,4 +48,23 @@
 
 .filters {
   margin: 0 16px 16px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  
+  .searchbar {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px)  {
+  .filters {
+    flex-direction: column;
+
+    .searchbar, .checkbox-filters {
+      width: 100%;
+    }
+  }
 }

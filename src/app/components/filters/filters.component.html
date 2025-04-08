@@ -1,0 +1,5 @@
+<select class="select" id="select">
+  @for (item of filters; track $index) {
+  <option id="{{ item.id }}" value="{{ item.title }}">{{ item.title }}</option>
+  }
+</select>

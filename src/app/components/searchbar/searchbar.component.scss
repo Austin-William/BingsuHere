@@ -2,26 +2,27 @@
 
 .searchbar {
   background: #f3f3f3;
-  padding: 0.5rem 0.8rem;
-  margin-bottom: 1rem;
+  padding: 0.35rem 0.8rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+  border: 1px solid transparent;
   border-radius: 10px;
+  transition: all $transition-time $transition-type;
 
   input {
     border: none;
     width: 100%;
     background: transparent;
     font-size: 1rem;
-    color: #333;
+    color: $text;
     outline: none;
   }
 
   button {
     border: none;
     background: transparent;
-    color: #333;
+    color: $text;
     cursor: pointer;
     transition: transform $transition-time $transition-type;
 
@@ -29,15 +30,12 @@
      transform: rotate(15deg); 
     }
   }
-}
 
-@media screen and (max-width: 768px) {
-  .searchbar {
-    margin-top: 1.5rem;
-    margin-bottom: 0;
+  &:hover {
+    border-color: $color-3;
+  }
 
-    button {
-     display: none;
-    }
+  &:focus-within {
+    border-color: $color-4;
   }
 }

@@ -52,3 +52,10 @@ export interface NotFoundButtonLinks {
   description: string;
   url: string;
 }
+
+// Filter types
+export interface FilterOption {
+  id: number;
+  title: string;
+  value: string;  
+}

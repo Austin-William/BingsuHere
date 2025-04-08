@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SelectModule } from 'primeng/select';
 
 import { CardComponent } from '../../components/card/card.component';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
@@ -7,12 +8,12 @@ import { SearchbarComponent } from '../../components/searchbar/searchbar.compone
 
 import { ProductService } from '../../services/product.service';
 
-import { Product } from '../../types/types';
+import { Product, FilterOption } from '../../types/types';
 
 @Component({
   selector: 'app-category',
   standalone: true,
-  imports: [CardComponent, SpinnerComponent, SearchbarComponent],
+  imports: [CardComponent, SpinnerComponent, SearchbarComponent, SelectModule],
   templateUrl: './category.component.html',
   styleUrl: './category.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() },
@@ -26,6 +27,17 @@ export class CategoryComponent implements OnInit {
   allCategoryProducts: Product[] = [];
   isLoading: boolean = false;
   searchTerm: string = '';
+  selectedFilters: FilterOption[] = [];
+  filters: FilterOption[] = [
+    { id: 1, title: 'Higher price', value: 'price_high' },
+    { id: 2, title: 'Lower price', value: 'price_low' },
+    { id: 3, title: 'A-Z', value: 'a_z' },
+    { id: 4, title: 'Z-A', value: 'z_a' },
+    { id: 5, title: 'Featured', value: 'featured' },
+    { id: 6, title: 'Available', value: 'available' },
+    { id: 7, title: 'Newest', value: 'newest' },
+    { id: 8, title: 'Discount', value: 'discount' }
+  ];
 
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
@@ -95,5 +107,9 @@ export class CategoryComponent implements OnInit {
       return product.title.toLowerCase().includes(searchTerm) || 
              (product.description && product.description.toLowerCase().includes(searchTerm));
     });
+  }
+
+  filterProducts(): void {
+    
   }
 }

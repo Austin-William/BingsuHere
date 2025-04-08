@@ -10,6 +10,9 @@
           <app-searchbar [(searchTerm)]="searchTerm" [placeholder]="'Search for products...'"
             (searchTermChange)="filterProductsBySearchTerm()" />
         </div>
+        <div class="checkbox-filters">
+          <p-select [options]="filters" optionLabel="title" placeholder="Filter products" [showClear]="true" class="select" ariaLabel="Filters options" (onChange)="filterProducts()" />
+        </div>
       </section>
       <article class="cards">
         @if (isLoading) {
