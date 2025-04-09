@@ -57,5 +57,19 @@ export interface NotFoundButtonLinks {
 export interface FilterOption {
   id: number;
   title: string;
-  value: string;  
+  value: string;
 }
+
+export enum FilterOptionTypeEnum {
+  POPULARITY = 'popularity',
+  PRICE_HIGH = 'price_high',
+  PRICE_LOW = 'price_low',
+  A_Z = 'a_z',
+  Z_A = 'z_a',
+  FEATURED = 'featured',
+  AVAILABLE = 'available',
+  NEW = 'new',
+  DISCOUNT = 'discount'
+}
+
+export type FilterOptionType = FilterOptionTypeEnum.PRICE_HIGH | FilterOptionTypeEnum.PRICE_LOW | FilterOptionTypeEnum.A_Z | FilterOptionTypeEnum.Z_A | FilterOptionTypeEnum.FEATURED | FilterOptionTypeEnum.AVAILABLE | FilterOptionTypeEnum.NEW | FilterOptionTypeEnum.DISCOUNT | FilterOptionTypeEnum.POPULARITY;

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Product } from '../types/types';
+import { CardLabelsType, Product } from '../types/types';
 
 import { products } from '../data/products.json';
 
@@ -35,7 +35,7 @@ export class ProductService {
         return foundProduct;
       }
     }
-    
+
     return undefined;
   }
 
@@ -51,7 +51,7 @@ export class ProductService {
 
     // If category is not found, return an empty array
     if (!products[category]) {
-      return randomProducts; 
+      return randomProducts;
     }
 
     // If limit is 0 or empty, set it to the total number of products in the category
@@ -69,5 +69,93 @@ export class ProductService {
     }
 
     return randomProducts;
+  }
+
+  /**
+   * Filters products by alphabetical order
+   * @param products The products to filter
+   * @returns The filtered products in alphabetical order
+   */
+  filterProductsByAlphabeticalOrder(products: Product[]): Product[] {
+    // Sort products alphabetically
+    return products.sort((a, b) => a.title.localeCompare(b.title));
+  }
+
+  /**
+   * Filters products by reverse alphabetical order
+   * @param products The products to filter
+   * @returns The filtered products in reverse alphabetical order
+   */
+  filterProductsByReverseAlphabeticalOrder(products: Product[]): Product[] {
+    // Sort products in reverse alphabetical order
+    return products.sort((a, b) => b.title.localeCompare(a.title));
+  }
+
+  /**
+   * Filters products by lowest price
+   * @param products The products to filter
+   * @returns The filtered products in descending order of price
+   */
+  filterProductsByLowestPrice(products: Product[]): Product[] {
+    // Sort products by price in descending order
+    return products.sort((a, b) => (a.options[0].price - a.discount) - (b.options[0].price - b.discount));
+  }
+
+  /**
+   * Filters products by highest price
+   * @param products The products to filter
+   * @returns The filtered products in ascending order of price
+   */
+  filterProductsByHighestPrice(products: Product[]): Product[] {
+    // Sort products by price in ascending order
+    return products.sort((a, b) => (b.options[0].price - b.discount) - (a.options[0].price - a.discount));
+  }
+
+  /**
+   * Filters products by featured products
+   * @param products The products to filter
+   * @returns The filtered products with the 'featured' property set to true
+   */
+  filterProductsByFeatured(products: Product[]): Product[] {
+    // Filter products with the 'featured' property set to true
+    return products.filter(product => product.featured);
+  }
+
+  /**
+   * Filters products if they contains the label
+   * @param products The products to filter
+   * @param label The label to filter by
+   * @returns The filtered products with the contained label
+   */
+  filterProductsByLabels(products: Product[], label: string): Product[] {
+    let filteredProducts: Product[] = [];
+
+    products.filter(product => {
+      product.labels.forEach((productLabel: CardLabelsType) => {
+        console.log(productLabel.title.toLowerCase(), label);
+        if (productLabel.title.toLowerCase() === label) {
+          filteredProducts.push(product);
+        }
+      });
+    });
+    return filteredProducts;
+  }
+
+  /**
+   * Filters products if they  are in discount
+   * @param products The products to filter
+   * @returns Return the products with discount
+   */
+  filterProductsByDiscount(products: Product[]): Product[] {
+    return products.filter(product => product.discount > 0);
+  }
+
+  /**
+   * Filters products if they  are available
+   * @param products The products to filter
+   * @returns Return available products
+   */
+  filterProductsByAvailability(products: Product[]): Product[] {
+    return products.filter(product => product.available);
   }
 }

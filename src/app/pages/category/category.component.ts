@@ -8,7 +8,9 @@ import { SearchbarComponent } from '../../components/searchbar/searchbar.compone
 
 import { ProductService } from '../../services/product.service';
 
-import { Product, FilterOption } from '../../types/types';
+import { Product, FilterOption, FilterOptionTypeEnum } from '../../types/types';
+
+import { filters } from '../../data/filters.json';
 
 @Component({
   selector: 'app-category',
@@ -28,16 +30,7 @@ export class CategoryComponent implements OnInit {
   isLoading: boolean = false;
   searchTerm: string = '';
   selectedFilters: FilterOption[] = [];
-  filters: FilterOption[] = [
-    { id: 1, title: 'Higher price', value: 'price_high' },
-    { id: 2, title: 'Lower price', value: 'price_low' },
-    { id: 3, title: 'A-Z', value: 'a_z' },
-    { id: 4, title: 'Z-A', value: 'z_a' },
-    { id: 5, title: 'Featured', value: 'featured' },
-    { id: 6, title: 'Available', value: 'available' },
-    { id: 7, title: 'Newest', value: 'newest' },
-    { id: 8, title: 'Discount', value: 'discount' }
-  ];
+  filters: FilterOption[] = filters;
 
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
@@ -101,15 +94,54 @@ export class CategoryComponent implements OnInit {
       this.displayedProducts = [...this.allCategoryProducts];
       return;
     }
-    
+
     const searchTerm = this.searchTerm.toLowerCase().trim();
     this.displayedProducts = this.allCategoryProducts.filter(product => {
-      return product.title.toLowerCase().includes(searchTerm) || 
-             (product.description && product.description.toLowerCase().includes(searchTerm));
+      return product.title.toLowerCase().includes(searchTerm) ||
+        (product.description && product.description.toLowerCase().includes(searchTerm));
     });
   }
 
-  filterProducts(): void {
+  filterProducts(value: FilterOption): void {
+    // Set by default to reset products data
+    if (!value) {
+      this.displayedProducts = [...this.allCategoryProducts];
+      return;
+    }
     
+    // Filter products by the selected filter option
+    switch (value.value) {
+      case FilterOptionTypeEnum.POPULARITY:
+        this.displayedProducts = this.productService.filterProductsByLabels(this.displayedProducts, FilterOptionTypeEnum.POPULARITY);
+        break;
+      case FilterOptionTypeEnum.PRICE_HIGH:
+        this.displayedProducts = this.productService.filterProductsByHighestPrice(this.displayedProducts);
+        break;
+      case FilterOptionTypeEnum.PRICE_LOW:
+        this.displayedProducts = this.productService.filterProductsByLowestPrice(this.displayedProducts);
+        break;
+      case FilterOptionTypeEnum.A_Z:
+        this.displayedProducts = this.productService.filterProductsByAlphabeticalOrder(this.displayedProducts);
+        break;
+      case FilterOptionTypeEnum.Z_A:
+        this.displayedProducts = this.productService.filterProductsByReverseAlphabeticalOrder(this.displayedProducts);
+        break;
+      case FilterOptionTypeEnum.FEATURED:
+        this.displayedProducts = this.productService.filterProductsByFeatured(this.displayedProducts);
+        break;
+      case FilterOptionTypeEnum.AVAILABLE:
+        this.displayedProducts = this.productService.filterProductsByAvailability(this.displayedProducts);
+        break;
+      case FilterOptionTypeEnum.NEW:
+        this.displayedProducts = this.productService.filterProductsByLabels(this.displayedProducts, FilterOptionTypeEnum.NEW);
+        break;
+      case FilterOptionTypeEnum.DISCOUNT:
+        this.displayedProducts = this.productService.filterProductsByDiscount(this.displayedProducts);
+        break;
+      default:
+        console.error('Error using filter options : ', value.value);
+        this.displayedProducts = [...this.allCategoryProducts];
+        break;
+    }
   }
 }

@@ -385,7 +385,7 @@
         "image": "assets/images/products/bingsu/coffee-bingsu.jpg",
         "discount": 0.00,
         "featured": false,
-        "available": true,
+        "available": false,
         "labels": [],
         "ingredients": [
           "Coffee-Infused Shaved Ice",
@@ -551,7 +551,7 @@
         "image": "assets/images/products/bingsu/persimmon-bingsu.jpg",
         "discount": 0.00,
         "featured": false,
-        "available": true,
+        "available": false,
         "labels": [
           {
             "title": "Seasonal",
@@ -814,7 +814,7 @@
         "image": "assets/images/products/bingsu/honey-ginger-bingsu.jpg",
         "discount": 0.50,
         "featured": false,
-        "available": true,
+        "available": false,
         "labels": [
           {
             "title": "Healthy",

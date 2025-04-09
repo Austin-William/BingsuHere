@@ -1,0 +1,13 @@
+{
+  "filters": [
+    { "id": 0, "title": "Popularity", "value": "popularity" },
+    { "id": 1, "title": "Higher price", "value": "price_high" },
+    { "id": 2, "title": "Lower price", "value": "price_low" },
+    { "id": 3, "title": "A-Z", "value": "a_z" },
+    { "id": 4, "title": "Z-A", "value": "z_a" },
+    { "id": 5, "title": "Featured", "value": "featured" },
+    { "id": 6, "title": "Available", "value": "available" },
+    { "id": 7, "title": "New", "value": "new" },
+    { "id": 8, "title": "Discount", "value": "discount" }
+  ]
+}
