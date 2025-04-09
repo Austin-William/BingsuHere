@@ -132,7 +132,6 @@ export class ProductService {
 
     products.filter(product => {
       product.labels.forEach((productLabel: CardLabelsType) => {
-        console.log(productLabel.title.toLowerCase(), label);
         if (productLabel.title.toLowerCase() === label) {
           filteredProducts.push(product);
         }

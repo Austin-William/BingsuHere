@@ -61,7 +61,7 @@ export interface FilterOption {
 }
 
 export enum FilterOptionTypeEnum {
-  POPULARITY = 'popularity',
+  POPULARITY = 'popular',
   PRICE_HIGH = 'price_high',
   PRICE_LOW = 'price_low',
   A_Z = 'a_z',

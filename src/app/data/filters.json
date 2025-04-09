@@ -1,6 +1,6 @@
 {
   "filters": [
-    { "id": 0, "title": "Popularity", "value": "popularity" },
+    { "id": 0, "title": "Popularity", "value": "popular" },
     { "id": 1, "title": "Higher price", "value": "price_high" },
     { "id": 2, "title": "Lower price", "value": "price_low" },
     { "id": 3, "title": "A-Z", "value": "a_z" },

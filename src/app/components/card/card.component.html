@@ -1,6 +1,6 @@
 <div class="card {{ classType }}" id="{{ id }}">
   <div class="card-container">
-    <img src="{{ imagePath }}" alt="{{ title }}" class="card-image" />
+    <img src="{{ imagePath }}" alt="{{ title }}" class="card-image {{ available ? '' : 'image-darker'}}" />
     <div class="card-labels">
       @for (item of labels; track $index) {
       <app-label [classname]="item.classname">
@@ -8,11 +8,18 @@
       </app-label>
       }
     </div>
-    <a [routerLink]="['./']" [queryParams]="{value: id}" routerLinkActive="active" ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{ exact: false }" class="card-link">
+    @if (available) {
+    <a [routerLink]="['./']" [queryParams]="{value: id}" routerLinkActive="active" ariaCurrentWhenActive="page"
+      [routerLinkActiveOptions]="{ exact: false }" class="card-link">
       <h2 class="card-title">
-        {{ title }} 
+        {{ title }}
       </h2>
     </a>
+    } @else {
+    <h2 class="card-title">
+      {{ title }}
+    </h2>
+    }
     <p class="card-description">
       {{ description }}
     </p>
@@ -22,26 +29,25 @@
         <label for="{{ item.id }}">
           {{ item.value }}
         </label>
-        <input
-          type="radio"
-          name="size_{{ id }}"
-          id="{{ item.id }}"
-          value="{{ item.value }}"
+        <input type="radio" name="size_{{ id }}" id="{{ item.id }}" value="{{ item.value }}" disabled="{{ !available }}"
           (change)="handleSelectedOption(item.id, item.value, item.price)"
-          [checked]="selectedOptionId === item.id"
-          />
+          [checked]="available && selectedOptionId === item.id" />
       </div>
       }
     </div>
     <div class="card-price">
+      @if (available) {
       @if (isDiscount) {
-        <span class="card-price-discount">
-          {{ priceBeforeDiscount }}<span class="card-price-currency">€</span>
-        </span>
+      <span class="card-price-discount">
+        {{ priceBeforeDiscount }}<span class="card-price-currency">€</span>
+      </span>
       }
       <span class="card-price-text {{ isDiscount ? 'discount' : '' }}">
         {{ displayedPrice }}<span class="card-price-currency">€</span>
       </span>
+      } @else {
+      <span class="out-of-stock">Out of stock</span>
+      }
     </div>
   </div>
 </div>

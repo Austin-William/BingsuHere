@@ -55,17 +55,17 @@
   a {
     text-decoration: none;
     color: $color-5;
-    transition: color $transition-time $transition-type;
-
-    &:hover {
-      color: $color-1;
-    }
   }
 
   &-title {
     margin-top: 1rem;
     text-transform: capitalize;
     letter-spacing: 1px;
+    transition: color $transition-time $transition-type;
+
+    &:hover {
+      color: $color-1;
+    }
   }
 
   &-description {
@@ -152,6 +152,16 @@
 .discount {
   color: $color-1;
   font-weight: 700;
+}
+
+.image-darker {
+  filter: brightness(0.5);
+}
+
+.out-of-stock {
+  color: $color-1;
+  font-weight: 500;
+  font-size: 30px;
 }
 
 @media (max-width: 768px) {
