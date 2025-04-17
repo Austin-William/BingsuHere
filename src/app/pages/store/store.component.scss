@@ -1,0 +1,209 @@
+@use "../../../variables.scss" as *;
+
+.store {
+  height: calc(100lvh - 100px);
+  background: url("/assets/images/backgrounds/background_2.png") no-repeat center center/cover;
+  background-blend-mode: color;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  .container {
+    padding: 2rem 3rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    .hero {
+      text-align: left;
+      max-width: 500px;
+
+      h1 {
+        font-size: 50px;
+        font-weight: 700;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 2rem;
+        color: $color-1;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: $background;
+        padding: 2rem;
+        border: 1px solid $color-5;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      &-descriptions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: $background;
+        padding: 2rem;
+        border: 1px solid $color-5;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+
+        p {
+          font-size: 16px;
+          letter-spacing: 2px;
+          word-spacing: 2px;
+          color: $color-5;
+          word-break: break-word;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .shops {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+
+      .shop-card {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        gap: 3rem;
+        border: 1px solid $color-5;
+        background: $background;
+        color: $text;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+
+        .information {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, $color-1, $color-3);
+          }
+
+          h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 8px;
+          }
+
+          .location,
+          .schedule {
+            margin-bottom: 1rem;
+          }
+
+          .reservation {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            &-item {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              gap: 8px;
+
+              a {
+                color: $color-1;
+                text-decoration: none;
+              }
+
+              mat-icon {
+                color: $text;
+              }
+            }
+          }
+        }
+
+        .image {
+          width: 400px;
+          height: auto;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+.separator {
+  content: ' ';
+  display: block;
+  width: 1px;
+  height: 300px;
+  background-color: $color-4;
+} 
+
+.sphere {
+  content: ' ';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color-1;
+}
+
+@media screen and (max-width: 768px) {
+  .store {
+    .container {
+      padding: 2rem 1rem;
+
+      .shops {
+        .shop-card {
+          flex-direction: column;
+          gap: 32px;
+
+          .information {
+            .reservation {
+              align-items: center;
+              justify-content: center;
+            }
+          }
+
+          .image {
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  .separator {
+    width: 60%;
+    height: 1px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .store {
+    min-height: 100lvh;
+
+    .container {
+      flex-direction: column;
+
+      .hero {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

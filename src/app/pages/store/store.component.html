@@ -1,3 +1,49 @@
 <main class="store">
-  store
+  <div class="container">
+    <section class="hero">
+      <h1>Looking For a Place To Eat ?</h1>
+      <div class="hero-descriptions">
+        <p>Enjoy the flavor of bingsu in our restaurants with friends or family !</p>
+        <p><ins>We accept group of up to 4 people.</ins></p>
+        <p>For group of more than 4 people, please book your reservation in advance !</p>
+      </div>
+    </section>
+    <section class="shops">
+      <p-carousel [value]="shops" [numVisible]="1" [numScroll]="1" [showIndicators]="true">
+        <ng-template let-shop #item>
+          <div class="shop-card">
+            <div class="information">
+              <div class="location">
+                <div class="sphere"></div>
+                <h2>{{ shop.location.city }}</h2>
+                <p>{{ shop.location.address }}</p>
+                <p>{{ shop.location.city }} - {{ shop.location.postalCode }}</p>
+              </div>
+              <div class="schedule">
+                <h3>Opening hours</h3>
+                <div class="schedule-item">
+                  <p>{{ shop.schedule.days }}</p>
+                  <p>{{ shop.schedule.hours }}</p>
+                </div>
+              </div>
+              <div class="reservation">
+                <h3>Book in this restaurant !</h3>
+                <div class="reservation-item">
+                  <a href="mailto:{{ shop.contact.email }}" class="email">{{ shop.contact.email }}</a>
+                  <a href="tel:{{ shop.contact.phone }}" class="phone">{{ shop.contact.phone }}</a>
+                </div>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div class="image">
+              <p-image [src]="shop.imagePath" alt="{{ shop.location.city }}" width="100%" [preview]="true" />
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </section>
+    <section>
+
+    </section>
+  </div>
 </main>

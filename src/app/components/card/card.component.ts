@@ -7,6 +7,7 @@ import { CardOptionType, CardLabelsType } from '../../types/types';
 
 @Component({
   selector: 'app-card',
+  standalone: true,
   imports: [LabelComponent, RouterLink, RouterLinkActive],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
