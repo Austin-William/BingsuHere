@@ -1,10 +1,12 @@
 @use "../../../variables.scss" as *;
 
 .store {
-  height: calc(100lvh - 100px);
+  min-height: calc(100lvh - 200px);
   background: url("/assets/images/backgrounds/background_2.png") no-repeat center center/cover;
   background-blend-mode: color;
   background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
 
   .container {
     padding: 2rem 3rem;
