@@ -4,7 +4,7 @@ type ButtonType = 'button' | 'submit' | 'reset';
 
 @Component({
   selector: 'app-button',
-  imports: [],
+  standalone: true,
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() }

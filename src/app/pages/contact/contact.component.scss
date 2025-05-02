@@ -1,0 +1,138 @@
+@use "../../../variables.scss" as *;
+
+.contact {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &-header {
+    width: 760px;
+
+    h1 {
+      font-size: 50px;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 2rem;
+      color: $color-1;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 32px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+
+    .input-group {
+      width: 700px;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 1rem;
+        color: $text;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+        position: relative;
+      }
+
+      input {
+        border: 0;
+        outline: 0;
+        padding: 10px 16px;
+        background-color: transparent;
+        border: 1px solid $text;
+        border-radius: 10px;
+        color: $text;
+        transition: border-color $transition-time $transition-type;
+
+        &:focus {
+          border-color: $color-4;
+        }
+      }
+
+      textarea {
+        border: 0;
+        outline: 0;
+        padding: 10px 16px;
+        background-color: transparent;
+        border: 1px solid $text;
+        border-radius: 10px;
+        color: $text;
+        min-height: 160px;
+        resize: vertical;
+        transition: border-color $transition-time $transition-type;
+
+        &:focus {
+          border-color: $color-4;
+        }
+      }
+    }
+
+    button {
+      padding: 1rem;
+      color: $color-5;
+      background-color: transparent;
+      border: 1px solid $color-5;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all $transition-time $transition-type;
+
+      &:hover {
+        color: $color-4;
+        border-color: $color-4;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 0 2rem;
+
+    &-header {
+      width: 100%;
+    }
+
+    &-body {
+      .input-group {
+        width: 400px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .contact {
+    &-body {
+      .input-group {
+        width: 100%;
+      }
+    }
+  }
+}
