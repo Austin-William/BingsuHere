@@ -4,6 +4,8 @@
 
 @use 'variables.scss' as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 html {
   @include mat.theme((color: (theme-type: light,
         primary: mat.$azure-palette,
@@ -79,6 +81,14 @@ body {
   color: $color-3;
   text-shadow: 4px 4px 0px $color-4,
     8px 8px 0px $color-2;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  color: $color-4;
 }
 
 // Scrollbar

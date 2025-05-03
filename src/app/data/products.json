@@ -3,7 +3,7 @@
     "signatures": [
       {
         "id": 10000001,
-        "title": "Mango Bingsu",
+        "title": "Mango",
         "description": "Mango Bingsu with sweet mango chunks, creamy condensed milk and a scoop of ice cream.",
         "image": "assets/images/products/signatures/mango-bingsu.jpg",
         "discount": 2.00,
@@ -48,7 +48,7 @@
       },
       {
         "id": 10000002,
-        "title": "Strawberry Bingsu",
+        "title": "Strawberry",
         "description": "Strawberry Bingsu with fresh, juicy strawberries, sweet strawberry syrup, and a drizzle of condensed milk.",
         "image": "assets/images/products/signatures/strawberry-bingsu.jpg",
         "discount": 0.00,
@@ -90,7 +90,7 @@
       },
       {
         "id": 10000003,
-        "title": "Matcha Bingsu",
+        "title": "Matcha",
         "description": "Matcha Bingsu with rich, earthy matcha flavor. Topped with sweet red bean, chewy mochi, matcha ice cream and a drizzle of condensed milk.",
         "image": "assets/images/products/signatures/matcha-bingsu.jpg",
         "discount": 0.00,
@@ -139,7 +139,7 @@
     "bingsu": [
       {
         "id": 20000001,
-        "title": "Blueberry Bingsu",
+        "title": "Blueberry",
         "description": "Blueberry Bingsu with sweet blueberry chunks, creamy condensed milk and a scoop of vanilla ice cream.",
         "image": "assets/images/products/bingsu/blueberry-bingsu.jpg",
         "discount": 0.00,
@@ -176,7 +176,7 @@
       },
       {
         "id": 20000002,
-        "title": "Chocolate Bingsu",
+        "title": "Chocolate",
         "description": "Rich chocolate Bingsu topped with chocolate chips, brownie pieces, and drizzled with chocolate syrup.",
         "image": "assets/images/products/bingsu/chocolate-bingsu.jpg",
         "discount": 0.00,
@@ -219,7 +219,7 @@
       },
       {
         "id": 20000003,
-        "title": "Oreo Bingsu",
+        "title": "Oreo",
         "description": "Cookies and cream Bingsu with crushed Oreo cookies, chocolate sauce, and a scoop of vanilla ice cream.",
         "image": "assets/images/products/bingsu/oreo-bingsu.jpg",
         "discount": 1.50,
@@ -262,7 +262,7 @@
       },
       {
         "id": 20000004,
-        "title": "Red Bean Bingsu",
+        "title": "Red Bean",
         "description": "Traditional Korean Bingsu with sweet red beans, chewy rice cakes, and a drizzle of condensed milk.",
         "image": "assets/images/products/bingsu/red-beans-bingsu.jpg",
         "discount": 0.00,
@@ -299,7 +299,7 @@
       },
       {
         "id": 20000005,
-        "title": "Green Tea Bingsu",
+        "title": "Green Tea",
         "description": "Refreshing green tea Bingsu with red bean paste, mochi, and a sprinkle of green tea powder.",
         "image": "assets/images/products/bingsu/green-tea-bingsu.jpg",
         "discount": 0.00,
@@ -337,7 +337,7 @@
       },
       {
         "id": 20000006,
-        "title": "Taro Bingsu",
+        "title": "Taro",
         "description": "Unique taro-flavored Bingsu with taro chunks, sweet taro paste, and mini mochi toppings.",
         "image": "assets/images/products/bingsu/taro-bingsu.jpg",
         "discount": 0.00,
@@ -380,7 +380,7 @@
       },
       {
         "id": 20000007,
-        "title": "Coffee Bingsu",
+        "title": "Coffee",
         "description": "Rich coffee-flavored Bingsu topped with chocolate-covered espresso beans and coffee jelly.",
         "image": "assets/images/products/bingsu/coffee-bingsu.jpg",
         "discount": 0.00,
@@ -418,7 +418,7 @@
       },
       {
         "id": 20000008,
-        "title": "Injeolmi Bingsu",
+        "title": "Injeolmi",
         "description": "Traditional Korean Bingsu with injeolmi (sweet rice cake) coated in roasted soybean powder.",
         "image": "assets/images/products/bingsu/injeolmi-bingsu.jpg",
         "discount": 0.00,
@@ -460,7 +460,7 @@
       },
       {
         "id": 20000009,
-        "title": "Mango Cheese Bingsu",
+        "title": "Mango Cheese",
         "description": "Mango Bingsu with cream cheese cubes, fresh mango chunks, and cheesecake pieces.",
         "image": "assets/images/products/bingsu/mango-cheese-bingsu.jpg",
         "discount": 0.00,
@@ -503,7 +503,7 @@
       },
       {
         "id": 20000010,
-        "title": "Black Sesame Bingsu",
+        "title": "Black Sesame",
         "description": "Rich and nutty black sesame Bingsu topped with roasted black sesame seeds, sweet red bean paste, and chewy mochi pieces.",
         "image": "assets/images/products/bingsu/black-sesame-bingsu.jpg",
         "discount": 0.00,
@@ -546,7 +546,7 @@
       },
       {
         "id": 20000011,
-        "title": "Persimmon Bingsu",
+        "title": "Persimmon",
         "description": "Seasonal Korean persimmon Bingsu with sweet dried persimmon slices, honey drizzle, and a sprinkle of cinnamon.",
         "image": "assets/images/products/bingsu/persimmon-bingsu.jpg",
         "discount": 0.00,
@@ -589,7 +589,7 @@
       },
       {
         "id": 20000012,
-        "title": "Yuzu Bingsu",
+        "title": "Yuzu",
         "description": "Refreshing citrus Bingsu with yuzu (Korean citrus) zest, yuzu jelly, and a tangy yuzu syrup drizzle.",
         "image": "assets/images/products/bingsu/yuzu-bingsu.jpg",
         "discount": 0.00,
@@ -632,7 +632,7 @@
       },
       {
         "id": 20000013,
-        "title": "Misugaru Bingsu",
+        "title": "Misugaru",
         "description": "Nutritious Bingsu made with misugaru (Korean mixed grain powder), topped with nuts and a drizzle of honey.",
         "image": "assets/images/products/bingsu/misugaru-bingsu.jpg",
         "discount": 0.00,
@@ -676,7 +676,7 @@
       },
       {
         "id": 20000014,
-        "title": "Omija Bingsu",
+        "title": "Omija",
         "description": "Unique five-flavor berry Bingsu made with omija (magnolia berry) syrup, known for its complex sweet, sour, salty, bitter, and pungent taste.",
         "image": "assets/images/products/bingsu/omija-bingsu.jpg",
         "discount": 1.00,
@@ -723,7 +723,7 @@
       },
       {
         "id": 20000015,
-        "title": "Hallabong Bingsu",
+        "title": "Hallabong",
         "description": "Jeju Island specialty Bingsu featuring hallabong (Jeju tangerine) segments, zest, and a tangy hallabong syrup.",
         "image": "assets/images/products/bingsu/hallabong-bingsu.jpg",
         "discount": 0.00,
@@ -766,7 +766,7 @@
       },
       {
         "id": 20000016,
-        "title": "Sikhye Bingsu",
+        "title": "Sikhye",
         "description": "Traditional Korean sweet rice punch Bingsu with chewy rice grains, pine nuts, and a sweet malt flavor.",
         "image": "assets/images/products/bingsu/sikhye-bingsu.jpg",
         "discount": 0.00,
@@ -809,7 +809,7 @@
       },
       {
         "id": 20000017,
-        "title": "Honey Ginger Bingsu",
+        "title": "Honey Ginger",
         "description": "Warming honey and ginger Bingsu with candied ginger pieces, honey drizzle, and a sprinkle of cinnamon.",
         "image": "assets/images/products/bingsu/honey-ginger-bingsu.jpg",
         "discount": 0.50,
@@ -856,7 +856,7 @@
       },
       {
         "id": 20000018,
-        "title": "Jujube Bingsu",
+        "title": "Jujube",
         "description": "Traditional Korean jujube (date) Bingsu with dried jujube pieces, jujube syrup, and pine nuts for a naturally sweet treat.",
         "image": "assets/images/products/bingsu/jujube-bingsu.jpg",
         "discount": 0.00,

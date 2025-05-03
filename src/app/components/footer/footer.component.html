@@ -8,7 +8,7 @@
         <ul>
           @for (item of categories_links; track $index) {
           <li>
-            <a [routerLink]="['/products/', item.path]" target="_blank">
+            <a [routerLink]="['/products/', item.path]" target="_parent">
               {{ item.name }}
             </a>
           </li>

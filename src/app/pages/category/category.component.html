@@ -3,8 +3,11 @@
     <div class="wrapper">
       <h1 class="title">
         <span>Our </span>
-        <span class="fancy">{{ currentTitle }}</span>
+        <span class="pacifico-regular">{{ currentTitle }}</span>
       </h1>
+      <p class="description">
+        Discover our selection of Korean desserts made with love.
+      </p>
       <section class="filters">
         <div class="searchbar">
           <app-searchbar [(searchTerm)]="searchTerm" [placeholder]="'Search for products...'"
@@ -28,5 +31,8 @@
         }
       </article>
     </div>
+  </div>
+  <div class="banners">
+    
   </div>
 </main>

@@ -22,3 +22,16 @@ $space: clamp(1rem, 10vw, 3rem);
 $color-new: #00b4d8;
 $color-best-seller: #a5be00;
 $color-discount: #c1121f;
+
+// Animitions
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

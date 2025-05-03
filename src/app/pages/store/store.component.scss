@@ -1,7 +1,7 @@
 @use "../../../variables.scss" as *;
 
 .store {
-  min-height: calc(100lvh - 200px);
+  min-height: calc(100lvh - 100px);
   background: url("/assets/images/backgrounds/background_2.png") no-repeat center center/cover;
   background-blend-mode: color;
   background-color: rgba(0, 0, 0, 0.1);

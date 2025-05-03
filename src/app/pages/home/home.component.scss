@@ -36,10 +36,11 @@
       }
 
       &-title {
-        font-size: clamp(3rem, 8lvw, 7rem);
+        font-size: clamp(3rem, 6lvw, 6rem);
         margin-bottom: clamp(2rem, 3lvw, 3rem);
         letter-spacing: 2px;
         text-transform: uppercase;
+        text-shadow: 0 0 10px $text-light;
         animation: fadeInUp 0.8s ease-out;
       }
 
@@ -70,10 +71,8 @@
 
     &-title {
       text-align: center;
-      color: $color-5;
       font-size: clamp(2rem, 4vw, 3rem);
       letter-spacing: 2px;
-      margin-bottom: 1rem;
     }
 
     &-content {
@@ -119,7 +118,6 @@
 
     &-title {
       text-align: center;
-      color: $color-5;
       font-size: clamp(2rem, 4vw, 3rem);
       margin-bottom: 2rem;
       padding: 0 1rem;
@@ -337,17 +335,5 @@
         max-width: 100%;
       }
     }
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

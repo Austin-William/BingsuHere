@@ -2,7 +2,10 @@
 
 .products {
   min-height: calc(100vh - 100px);
-  margin: 3rem 0;
+  //background: url(/assets/images/backgrounds/background_1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .container {
     display: flex;
@@ -14,6 +17,7 @@
     .wrapper {
       max-width: 1000px;
       width: 100%;
+      margin: 3rem 0;
     }
 
     .title {
@@ -21,6 +25,14 @@
       font-size: 3.5rem;
       font-weight: 600;
       text-transform: uppercase;
+      margin-bottom: 1rem;
+      padding: 0 16px;
+    }
+
+    .description {
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: 400;
       margin-bottom: 2rem;
       padding: 0 16px;
     }
