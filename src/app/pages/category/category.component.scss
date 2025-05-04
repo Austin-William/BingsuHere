@@ -1,11 +1,7 @@
 @use "../../../variables.scss" as *;
 
 .products {
-  min-height: calc(100vh - 100px);
-  //background: url(/assets/images/backgrounds/background_1.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  min-height: calc(100dvh - 100px);
 
   .container {
     display: flex;
@@ -13,6 +9,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    background: url('/assets/images/backgrounds/background_4.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
 
     .wrapper {
       max-width: 1000px;
@@ -83,8 +84,12 @@
 @media screen and (max-width: 767px) {
   .products {
     .container {
+      background-size: contain;
+      background-attachment: scroll;
+
       .wrapper {
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
       }
 
       .cards {
@@ -94,6 +99,8 @@
       .filters {
         flex-direction: column;
         text-align: center;
+        margin: 0;
+        padding: 0 1rem;
 
         .searchbar,
         .checkbox-filters {

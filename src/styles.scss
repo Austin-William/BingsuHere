@@ -47,16 +47,16 @@ body {
   --p-carousel-indicator-active-background: #457b9d;
 
   // Custom css p-select
-  --p-select-background: #f3f3f3;
+  --p-select-background: #ffffff;
   --p-select-border-color: transparent;
   --p-select-hover-border-color: #a8dadc;
   --p-select-focus-border-color: #457b9d;
   --p-select-padding-y: 0.6rem;
-  --p-select-shadow: none;
+  --p-select-shadow: 0 0 8px rgba(0, 0, 0, 0.1);;
   --p-select-placeholder-color: #666666;
   --p-select-color: #333333;
   --p-select-option-color: #666666;
-  --p-select-overlay-background	: #f3f3f3;
+  --p-select-overlay-background	: #ffffff;
   --p-select-overlay-border-color: #457b9d;
   --p-select-option-focus-background: #f1faee;
   --p-select-option-hover-background: #f1faee;

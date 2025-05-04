@@ -1,13 +1,14 @@
 @use "../../../variables.scss" as *;
 
 .searchbar {
-  background: #f3f3f3;
+  background: #ffffff;
   padding: 0.35rem 0.8rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   border: 1px solid transparent;
   border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   transition: all $transition-time $transition-type;
 
   input {
