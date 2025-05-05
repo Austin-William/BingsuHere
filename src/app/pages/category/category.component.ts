@@ -105,40 +105,38 @@ export class CategoryComponent implements OnInit {
   filterProducts(value: FilterOption): void {
     // Set by default to reset products data
     if (!value) {
-      this.displayedProducts = [...this.allCategoryProducts];
+      this.filterProductsBySearchTerm();
       return;
     }
 
-    console.log(value.value)
-    
     // Filter products by the selected filter option
     switch (value.value) {
       case FilterOptionTypeEnum.POPULARITY:
-        this.displayedProducts = this.productService.filterProductsByLabels(this.allCategoryProducts, FilterOptionTypeEnum.POPULARITY);
+        this.displayedProducts = this.productService.filterProductsByLabels([...this.displayedProducts], FilterOptionTypeEnum.POPULARITY);
         break;
       case FilterOptionTypeEnum.PRICE_HIGH:
-        this.displayedProducts = this.productService.filterProductsByHighestPrice(this.allCategoryProducts);
+        this.displayedProducts = this.productService.filterProductsByHighestPrice([...this.displayedProducts]);
         break;
       case FilterOptionTypeEnum.PRICE_LOW:
-        this.displayedProducts = this.productService.filterProductsByLowestPrice(this.allCategoryProducts);
+        this.displayedProducts = this.productService.filterProductsByLowestPrice([...this.displayedProducts]);
         break;
       case FilterOptionTypeEnum.A_Z:
-        this.displayedProducts = this.productService.filterProductsByAlphabeticalOrder(this.allCategoryProducts);
+        this.displayedProducts = this.productService.filterProductsByAlphabeticalOrder([...this.displayedProducts]);
         break;
       case FilterOptionTypeEnum.Z_A:
-        this.displayedProducts = this.productService.filterProductsByReverseAlphabeticalOrder(this.allCategoryProducts);
+        this.displayedProducts = this.productService.filterProductsByReverseAlphabeticalOrder([...this.displayedProducts]);
         break;
       case FilterOptionTypeEnum.FEATURED:
-        this.displayedProducts = this.productService.filterProductsByFeatured(this.allCategoryProducts);
+        this.displayedProducts = this.productService.filterProductsByFeatured([...this.displayedProducts]);
         break;
       case FilterOptionTypeEnum.AVAILABLE:
-        this.displayedProducts = this.productService.filterProductsByAvailability(this.allCategoryProducts);
+        this.displayedProducts = this.productService.filterProductsByAvailability([...this.displayedProducts]);
         break;
       case FilterOptionTypeEnum.NEW:
-        this.displayedProducts = this.productService.filterProductsByLabels(this.allCategoryProducts, FilterOptionTypeEnum.NEW);
+        this.displayedProducts = this.productService.filterProductsByLabels([...this.displayedProducts], FilterOptionTypeEnum.NEW);
         break;
       case FilterOptionTypeEnum.DISCOUNT:
-        this.displayedProducts = this.productService.filterProductsByDiscount(this.allCategoryProducts);
+        this.displayedProducts = this.productService.filterProductsByDiscount([...this.displayedProducts]);
         break;
       default:
         console.error('Error using filter options : ', value.value);
