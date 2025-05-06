@@ -109,6 +109,11 @@ export class CategoryComponent implements OnInit {
       return;
     }
 
+    // Set the list of products if there is a search term
+    if (this.searchTerm) {
+      this.filterProductsBySearchTerm();
+    }
+
     // Filter products by the selected filter option
     switch (value.value) {
       case FilterOptionTypeEnum.POPULARITY:
