@@ -41,24 +41,33 @@
   }
 
   &-header {
-    width: 760px;
+    width: 700px;
 
     h1 {
-      font-size: 50px;
-      font-weight: 700;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       margin-bottom: 2rem;
-      color: $color-1;
     }
 
     p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
+      font-size: 16px;
+      letter-spacing: 2px;
+      word-spacing: 2px;
+      color: #1d3557;
+      word-break: break-word;
+      line-height: 1.5;
     }
 
     ul {
       margin-left: 32px;
       margin-bottom: 1rem;
+
+      li {
+        font-size: 14px;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        color: #1d3557;
+        word-break: break-word;
+        line-height: 1.5;
+      }
     }
   }
 
@@ -89,7 +98,7 @@
         border: 0;
         outline: 0;
         padding: 10px 16px;
-        background-color: transparent;
+        background-color: $background;
         border: 1px solid $text;
         border-radius: 10px;
         color: $text;
@@ -104,7 +113,7 @@
         border: 0;
         outline: 0;
         padding: 10px 16px;
-        background-color: transparent;
+        background-color: $background;
         border: 1px solid $text;
         border-radius: 10px;
         color: $text;
@@ -141,16 +150,22 @@
 
     &-sticker {
       &-1 {
-        right: 0;
+        width: 150px;
+        height: 150px;
+        top: 10rem;
+        right: 20px;
       }
 
       &-2 {
-
+        width: 150px;
+        height: 150px;
+        bottom: 3rem;
+        left: 20px;
       }
     }
 
     &-header {
-      width: 100%;
+      width: 400px;
     }
 
     &-body {
@@ -164,6 +179,20 @@
 
 @media screen and (max-width: 480px) {
   .contact {
+    &-header {
+      width: 100%;
+    }
+
+    &-sticker {
+      &-1 {
+        display: none;
+      }
+
+      &-2 {
+        display: none;
+      }
+    }
+
     &-body {
       .input-group {
         width: 100%;

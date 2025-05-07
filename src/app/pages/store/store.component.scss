@@ -1,51 +1,38 @@
 @use "../../../variables.scss" as *;
 
 .store {
-  min-height: calc(100lvh - 100px);
   background: url("/assets/images/backgrounds/background_2.png") no-repeat center center/cover;
   background-blend-mode: color;
   background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
 
   .container {
     padding: 2rem 3rem;
-    height: 100%;
-    width: 100%;
+    height: calc(100dvh - 200px);
+    background-color: #fefefe;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 32px;
+    justify-content: space-between;
+    gap: 3rem;
 
     .hero {
       text-align: left;
       max-width: 500px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      // background-color: $background;
 
       h1 {
-        font-size: 50px;
-        font-weight: 700;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         margin-bottom: 2rem;
-        color: $color-1;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        background-color: $background;
-        padding: 2rem;
-        border: 1px solid $color-5;
-        border-radius: 10px;
-        text-align: center;
       }
 
       &-descriptions {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        background-color: $background;
-        padding: 2rem;
-        border: 1px solid $color-5;
-        border-radius: 10px;
-        margin-bottom: 2rem;
 
         p {
           font-size: 16px;
@@ -169,7 +156,21 @@
     .container {
       padding: 2rem 1rem;
 
+      .hero {
+        h1 {
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+
       .shops {
+        width: 100%;
+        display: block;
+
         .shop-card {
           flex-direction: column;
           gap: 32px;
@@ -182,8 +183,8 @@
           }
 
           .image {
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
           }
         }
       }
@@ -198,13 +199,28 @@
 
 @media screen and (max-width: 1200px) {
   .store {
-    min-height: 100lvh;
+    min-height: unset;
 
     .container {
+      padding: 0;
       flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      height: 100%;
 
       .hero {
         margin-top: 2rem;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 3rem;
+
+        h1 {
+          margin-bottom: 2rem;
+        }
+
+        &-descriptions {
+          gap: 8px;
+        }
       }
     }
   }

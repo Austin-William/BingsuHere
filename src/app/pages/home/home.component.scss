@@ -40,7 +40,8 @@
         margin-bottom: clamp(2rem, 3lvw, 3rem);
         letter-spacing: 2px;
         text-transform: uppercase;
-        text-shadow: 0 0 10px $text-light;
+        color: $text-light;
+        text-shadow: 0 0 10px $color-4;
         animation: fadeInUp 0.8s ease-out;
       }
 
@@ -198,7 +199,6 @@
 
     &-title {
       text-align: center;
-      color: $color-5;
       font-size: clamp(2rem, 4vw, 3rem);
       margin-bottom: 3rem;
       padding: 0 1rem;

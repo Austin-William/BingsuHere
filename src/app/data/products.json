@@ -1666,7 +1666,7 @@
     "frozen-yogurt": [
       {
         "id": 50000001,
-        "title": "Strawberry Frozen Yogurt",
+        "title": "Strawberry",
         "description": "Creamy frozen yogurt with fresh strawberry puree and real strawberry chunks. A perfect balance of sweet and tangy flavors.",
         "image": "assets/images/products/frozen-yogurt/strawberry-frozen-yogurt.jpg",
         "discount": 0.00,
@@ -1708,7 +1708,7 @@
       },
       {
         "id": 50000002,
-        "title": "Blueberry Cheesecake Froyo",
+        "title": "Blueberry Cheese",
         "description": "Tangy frozen yogurt with blueberry swirls and graham cracker crumbles. Tastes like cheesecake but with fewer calories.",
         "image": "assets/images/products/frozen-yogurt/blueberry-cheesecake-froyo.jpg",
         "discount": 1.00,
@@ -1750,7 +1750,7 @@
       },
       {
         "id": 50000003,
-        "title": "Matcha Green Tea Froyo",
+        "title": "Matcha Green Tea",
         "description": "Authentic Japanese matcha green tea frozen yogurt with a subtle earthy flavor and natural sweetness. Topped with red bean paste.",
         "image": "assets/images/products/frozen-yogurt/matcha-green-tea-froyo.jpg",
         "discount": 0.00,
@@ -1792,7 +1792,7 @@
       },
       {
         "id": 50000004,
-        "title": "Mango Passion Fruit Froyo",
+        "title": "Mango Passion Fruit",
         "description": "Tropical frozen yogurt with sweet mango and tangy passion fruit. A refreshing treat that transports you to a beach paradise.",
         "image": "assets/images/products/frozen-yogurt/mango-passion-fruit-froyo.jpg",
         "discount": 0.00,
@@ -1834,7 +1834,7 @@
       },
       {
         "id": 50000005,
-        "title": "Honey Lavender Froyo",
+        "title": "Honey Lavender",
         "description": "Delicate frozen yogurt infused with organic honey and culinary lavender. A sophisticated flavor with floral notes and natural sweetness.",
         "image": "assets/images/products/frozen-yogurt/honey-lavender-froyo.jpg",
         "discount": 0.50,
@@ -1876,7 +1876,7 @@
       },
       {
         "id": 50000006,
-        "title": "Cookies and Cream Froyo",
+        "title": "Cookies Cream",
         "description": "Classic frozen yogurt blended with crushed chocolate cookies. A perfect balance of creamy yogurt and crunchy cookie pieces.",
         "image": "assets/images/products/frozen-yogurt/cookies-cream-froyo.jpg",
         "discount": 0.00,
@@ -1918,7 +1918,7 @@
       },
       {
         "id": 50000007,
-        "title": "Caramel Pretzel Froyo",
+        "title": "Caramel Pretzel",
         "description": "Sweet and salty frozen yogurt with caramel swirls and pretzel pieces. A delightful combination of contrasting flavors and textures.",
         "image": "assets/images/products/frozen-yogurt/caramel-pretzel-froyo.jpg",
         "discount": 1.50,
@@ -1964,7 +1964,7 @@
       },
       {
         "id": 50000008,
-        "title": "Lemon Blueberry Froyo",
+        "title": "Lemon Blueberry",
         "description": "Refreshing lemon frozen yogurt with fresh blueberry compote. A bright, tangy treat perfect for hot summer days.",
         "image": "assets/images/products/frozen-yogurt/lemon-blueberry-froyo.jpg",
         "discount": 0.00,
@@ -2006,7 +2006,7 @@
       },
       {
         "id": 50000009,
-        "title": "Pistachio Rosewater Froyo",
+        "title": "Pistachio Rosewater",
         "description": "Exotic frozen yogurt infused with delicate rosewater and topped with crushed pistachios. A Middle Eastern-inspired dessert experience.",
         "image": "assets/images/products/frozen-yogurt/pistachio-rosewater-froyo.jpg",
         "discount": 0.00,
@@ -2048,7 +2048,7 @@
       },
       {
         "id": 50000010,
-        "title": "Coconut Pineapple Froyo",
+        "title": "Coconut Pineapple",
         "description": "Tropical frozen yogurt with creamy coconut and sweet pineapple chunks. A vacation in a cup that brings the taste of the islands to you.",
         "image": "assets/images/products/frozen-yogurt/coconut-pineapple-froyo.jpg",
         "discount": 0.75,
