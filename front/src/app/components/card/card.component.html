@@ -1,5 +1,6 @@
 <div class="card {{ classType }}" id="{{ id }}">
   <div class="card-container">
+    <!-- mettre skeleton pour loading image -->
     @if (available) {
     <a [routerLink]="['/products', category, id]" class="card-link" routerLinkActive="active"
       ariaCurrentWhenActive="page">
