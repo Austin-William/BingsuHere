@@ -1,0 +1,21 @@
+{
+  "shops": [
+    {
+      "status": "open",
+      "imagePath": "/assets/images/shops/shop-paris.jpg",
+      "schedule": {
+        "days": "Monday - Friday",
+        "hours": "10:00 - 22:00"
+      },
+      "location": {
+        "address": "Rue de la Paix 123",
+        "city": "Paris",
+        "postalCode": "75001"
+      },
+      "contact": {
+        "phone": "+33 1 23 45 67 89",
+        "email": "bingsushop-paris@email.com"
+      }
+    }
+  ]
+}

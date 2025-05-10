@@ -6,9 +6,9 @@
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Austin-William Lo",
   "license": "ISC",
-  "description": "",
+  "description": "Server for Bingsu Project",
   "dependencies": {
     "express": "^5.1.0"
   },

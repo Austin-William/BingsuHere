@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SelectModule } from 'primeng/select';
+import { SkeletonModule } from 'primeng/skeleton';
 
 import { CardComponent } from '../../components/card/card.component';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
@@ -15,7 +16,7 @@ import { filters } from '../../data/filters.json';
 @Component({
   selector: 'app-category',
   standalone: true,
-  imports: [CardComponent, SpinnerComponent, SearchbarComponent, SelectModule],
+  imports: [CardComponent, SpinnerComponent, SearchbarComponent, SelectModule, SkeletonModule],
   templateUrl: './category.component.html',
   styleUrl: './category.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() },

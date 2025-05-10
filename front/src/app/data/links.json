@@ -1,6 +1,11 @@
 {
   "links": [
     {
+      "name": "Signatures",
+      "path": "signatures",
+      "imagePath": "/assets/images/presentation/cakes_examples.jpg"
+    },
+    {
       "name": "Bingsu",
       "path": "bingsu",
       "imagePath": "/assets/images/presentation/bingsu_examples.jpg"
@@ -14,11 +19,6 @@
       "name": "Drinks",
       "path": "drinks",
       "imagePath": "/assets/images/presentation/drinks_examples.jpg"
-    },
-    {
-      "name": "Cakes",
-      "path": "cakes",
-      "imagePath": "/assets/images/presentation/cakes_examples.jpg"
     },
     {
       "name": "Desserts",
