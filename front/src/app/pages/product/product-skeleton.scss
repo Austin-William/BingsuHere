@@ -1,0 +1,36 @@
+.carousel-items {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.carousel-item {
+  flex: 0 0 calc(33.33% - 1rem);
+  min-width: 250px;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+}

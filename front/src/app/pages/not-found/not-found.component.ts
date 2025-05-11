@@ -23,7 +23,7 @@ export class NotFoundComponent {
     {
       'title': 'See all products',
       'description': 'Go to products page',
-      'url': '/products'
+      'url': '/products/bingsu'
     }
   ]
 }

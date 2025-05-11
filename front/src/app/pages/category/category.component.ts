@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SelectModule } from 'primeng/select';
-import { SkeletonModule } from 'primeng/skeleton';
 
 import { CardComponent } from '../../components/card/card.component';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
@@ -16,7 +15,7 @@ import { filters } from '../../data/filters.json';
 @Component({
   selector: 'app-category',
   standalone: true,
-  imports: [CardComponent, SpinnerComponent, SearchbarComponent, SelectModule, SkeletonModule],
+  imports: [CardComponent, SpinnerComponent, SearchbarComponent, SelectModule],
   templateUrl: './category.component.html',
   styleUrl: './category.component.scss',
   host: { 'id': crypto.getRandomValues(new Uint32Array(1))[0].toString() },
@@ -40,11 +39,12 @@ export class CategoryComponent implements OnInit {
   }
 
   setRouteParameter(): void {
+    this.setIsLoading(true);
     this.route.params.subscribe(params => {
       this.setCurrentParameterRoute(params['category']);
-      this.setDisplayedProducts();
-      this.setCurrentTitle();
     });
+    this.setDisplayedProducts();
+    this.setCurrentTitle();
   }
 
   setIsLoading(value: boolean): void {
@@ -57,27 +57,19 @@ export class CategoryComponent implements OnInit {
       'drinks': 'Drinks',
       'bingsu': 'Bingsu',
       'frozen-yogurt': 'Frozen Yogurts',
-      'cakes': 'Cakes',
+      'signatures': 'Signatures',
     };
     this.currentTitle = titleMap[this.currentParameterRoute] || '';
   }
 
-  setDisplayedProducts(): void {
-    const products = this.productService.getProductsData();
-    const categoryMap: Record<string, Product[] | undefined> = {
-      'desserts': products.desserts,
-      'drinks': products.drinks,
-      'bingsu': products.bingsu,
-      'frozen-yogurt': products['frozen-yogurt'],
-      'cakes': products.cakes,
-    };
-    const categoryProducts = categoryMap[this.currentParameterRoute]
+  async setDisplayedProducts(): Promise<void> {
+    try {
+      const data = await this.productService.getProductsByCategory(this.currentParameterRoute);
 
-    if (categoryProducts) {
+      this.setDisplayCategoriesProducts(data);
       this.setIsLoading(false);
-      this.setDisplayCategoriesProducts(categoryProducts);
-    } else {
-      this.setIsLoading(true);
+    } catch (error) {
+      console.error('Error fetching products:', error);
     }
   }
 

@@ -64,6 +64,9 @@ body {
   --p-select-option-focus-color: #333333;
   --p-select-option-selected-focus-color: #333333;
   --p-select-option-selected-color: #333333;
+  --p-skeleton-background: #a8dadc;
+  --p-skeleton-animation-background: #f1faee;
+  --p-skeleton-border-radius: 16px;
 }
 
 // Avoid scrolling in mobile mode when drawer is open

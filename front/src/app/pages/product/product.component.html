@@ -1,18 +1,51 @@
 <main id="product" class="product">
   <div class="container">
     @if (product) {
+    @if(loadingProduct) {
+    <section class="product-bloc">
+      <p-skeleton width="clamp(10rem, 50vw, 500px)" height="clamp(10rem, 50vw, 500px)"></p-skeleton>
+      <div class="product-bloc-info">
+        <p-skeleton width="70%" height="64px" styleClass="mb-2"></p-skeleton>
+        <div class="product-bloc-labels">
+          <p-skeleton width="80px" height="30px" styleClass="mr-2"></p-skeleton>
+          <p-skeleton width="80px" height="30px"></p-skeleton>
+        </div>
+        <p-skeleton width="clamp(5rem, 30vw, 300px)" height="80px" styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="120px" height="24px" styleClass="mb-2"></p-skeleton>
+        <div class="product-bloc-ingredients">
+          <p-skeleton width="200px" height="24px" styleClass="mb-2"></p-skeleton>
+          <ul>
+            <li><p-skeleton width="90%" height="10px" styleClass="mb-2"></p-skeleton></li>
+            <li><p-skeleton width="80%" height="10px" styleClass="mb-2"></p-skeleton></li>
+            <li><p-skeleton width="85%" height="10px"></p-skeleton></li>
+          </ul>
+        </div>
+        <div class="product-bloc-section">
+          <div class="product-bloc-options">
+            <p-skeleton shape="circle" width="40px" height="40px" styleClass="mr-2"></p-skeleton>
+            <p-skeleton shape="circle" width="40px" height="40px" styleClass="mr-2"></p-skeleton>
+            <p-skeleton shape="circle" width="40px" height="40px"></p-skeleton>
+          </div>
+          <div class="product-bloc-price">
+            <p-skeleton width="100px" height="80px"></p-skeleton>
+          </div>
+        </div>
+      </div>
+    </section>
+  }
+    @else {
     <section class="product-bloc">
       <img class="product-bloc-img" src="{{ product.image }}" alt="product-img">
       <div class="product-bloc-info">
         <h1>{{ product.title }}</h1>
         @if (product.labels.length > 0) {
-          <div class="product-bloc-labels">
-            @for (item of product.labels; track $index) {
-            <app-label [classname]="item.classname">
-              {{ item.title }}
-            </app-label>
-            }
-          </div>
+        <div class="product-bloc-labels">
+          @for (item of product.labels; track $index) {
+          <app-label [classname]="item.classname">
+            {{ item.title }}
+          </app-label>
+          }
+        </div>
         }
         <p>{{ product.description }}</p>
         <span class="product-bloc-info-availability {{ product.available ? 'available' : 'unavailable' }}">
@@ -55,11 +88,16 @@
         </div>
       </div>
     </section>
-    <br class="separator" />
+    }
+    <hr class="separator" />
     <section class="suggestions">
-      <h1 class="suggestions-title">
+      <h1 class="suggestions-title pacifico-regular">
         Want to try something else ?
       </h1>
+      @if(loadingCarouselRandomProduct) {
+      <app-spinner [size]="'lg'"/>
+      }
+      @else {
       <div class="suggestions-carousel">
         <p-carousel [value]="randomProducts" [numVisible]="3" [numScroll]="2" [responsiveOptions]="responsiveOptions">
           <ng-template let-product #item>
@@ -69,10 +107,13 @@
           </ng-template>
         </p-carousel>
       </div>
+      }
     </section>
-    }@else {
+    }
+    @else {
     <div class="product-not-found">
-      <h1>Produit introuvable</h1>
+      <h1>Product not found</h1>
+      <p>We're sorry, but the product you are looking for does not exist.</p>
     </div>
     }
   </div>

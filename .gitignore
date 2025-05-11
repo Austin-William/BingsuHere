@@ -38,6 +38,7 @@
 /front/libpeerconnection.log
 /front/testem.log
 /front/typings
+**/.env
 
 # System files
 /front/.DS_Store

@@ -99,12 +99,26 @@
       .filters {
         flex-direction: column;
         text-align: center;
-        margin: 0;
+        margin: 0 0 16px 0;
         padding: 0 1rem;
 
         .searchbar,
         .checkbox-filters {
           width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .products {
+    .container {
+      .title {
+        font-size: 2rem;
+
+        span {
+          font-size: 2rem !important;
         }
       }
     }

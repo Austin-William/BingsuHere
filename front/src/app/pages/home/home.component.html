@@ -63,7 +63,7 @@
       </h2>
       <div class="featured-products-explore-categories">
         @for (item of categories_links; track $index) {
-        <a [routerLink]="item.path" class="featured-products-explore-categories-link">
+        <a [routerLink]="['/products/' + item.path]" class="featured-products-explore-categories-link">
           <img [src]="item.imagePath" alt="{{item.name}}" />
           <span>
             {{item.name}}

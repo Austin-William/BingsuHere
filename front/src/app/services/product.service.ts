@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import axios from 'axios';
 
 import { CardLabelsType, Product } from '../types/types';
 
-import { products } from '../data/products.json';
+import { environment } from '../../environments/environment';
 
 /**
  * Service for managing products data
@@ -10,12 +11,57 @@ import { products } from '../data/products.json';
 
 @Injectable()
 export class ProductService {
+  port: string = '';
+  url: string = '';
+
+  constructor() {
+    if (environment.apiPort && environment.apiUrl) {
+      this.port = environment.apiPort;
+      this.url = environment.apiUrl;
+    }
+  }
+
   /**
    * Retrieves all products data
    * @returns The products data
    */
-  getProductsData() {
-    return products;
+  async getProductsData() {
+    try {
+      const response = await axios.get(`${this.url}:${this.port}/products`)
+        .then((response) => {
+          if (!response.data) {
+            return [];
+          }
+          return response.data;
+        });
+
+      return response;
+    } catch (error) {
+      console.error('Error fetching products data:', error);
+      return [];
+    }
+  }
+
+  /**
+   * Retrieves all products data by category
+   * @param category The category to retrieve products for
+   * @returns The products data for the specified category
+   */
+  async getProductsByCategory(category: string) {
+    try {
+      const response = await axios.get(`${this.url}:${this.port}/products/${category}`)
+        .then((response) => {
+          if (!response.data) {
+            return [];
+          }
+          return response.data;
+        });
+
+      return response;
+    } catch (error) {
+      console.error('Error fetching products by category');
+      return [];
+    }
   }
 
   /**
@@ -23,20 +69,21 @@ export class ProductService {
    * @param id The product ID to search for
    * @returns The product with the matching ID or undefined if not found
    */
-  findProductById(id: number) {
-    const products: any = this.getProductsData();
+  async getProductById(id: number, category: string) {
+    try {
+      const response = await axios.get(`${this.url}:${this.port}/products/${category}/${id}`)
+        .then((response) => {
+          if (!response.data) {
+            return [];
+          }
+          return response.data;
+        });
 
-    for (const category in products) {
-      const categoryProducts = products[category];
-
-      // Search within the current category
-      const foundProduct = categoryProducts.find((product: Product) => product.id === Number(id));
-      if (foundProduct) {
-        return foundProduct;
-      }
+      return response;
+    } catch (error) {
+      console.error('Error fetching products by category');
+      return [];
     }
-
-    return undefined;
   }
 
   /**
@@ -45,30 +92,38 @@ export class ProductService {
    * @param limit The maximum number of products to retrieve. If 0 or empty, all products will be retrieved.
    * @returns An array of random products from each category
    */
-  getRandomProducts(category: string, limit?: number) {
-    const products: any = this.getProductsData();
-    const randomProducts: Product[] = [];
+  async getRandomProducts(category: string, limit?: number) {
+    try {
+      const products: any = await this.getProductsData();
+      const randomProducts: Product[] = [];
 
-    // If category is not found, return an empty array
-    if (!products[category]) {
-      return randomProducts;
-    }
-
-    // If limit is 0 or empty, set it to the total number of products in the category
-    if (limit === 0 || !limit) {
-      limit = products[category].length;
-    }
-
-    // Iterate through each category and select a random product
-    if (limit) {
-      for (let i = 0; i < limit; i++) {
-        const categoryProducts = products[category];
-        const randomIndex = Math.floor(Math.random() * categoryProducts.length);
-        randomProducts.push(categoryProducts[randomIndex]);
+      // If category is not found, return an empty array
+      if (!products[category]) {
+        return randomProducts;
       }
-    }
 
-    return randomProducts;
+      // If limit is 0 or empty, set it to the total number of products in the category
+      if (limit === 0 || !limit) {
+        limit = products[category].length;
+      }
+
+      // Iterate through each category and select a random product
+      if (limit) {
+        for (let i = 0; i < limit; i++) {
+          const categoryProducts = products[category];
+          const randomIndex = Math.floor(Math.random() * categoryProducts.length);
+          
+          if (categoryProducts[randomIndex].available) {
+            randomProducts.push(categoryProducts[randomIndex]);
+          }
+        }
+      }
+
+      return randomProducts;
+    } catch (error) {
+      console.error('Error fetching random products by category');
+      return [];
+    }
   }
 
   /**
