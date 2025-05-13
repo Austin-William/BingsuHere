@@ -27,7 +27,7 @@ export class ProductService {
    */
   async getProductsData() {
     try {
-      const response = await axios.get(`${this.url}:${this.port}/products`)
+      const response = await axios.get(`${this.url}${this.port}/products`)
         .then((response) => {
           if (!response.data) {
             return [];
@@ -49,7 +49,7 @@ export class ProductService {
    */
   async getProductsByCategory(category: string) {
     try {
-      const response = await axios.get(`${this.url}:${this.port}/products/${category}`)
+      const response = await axios.get(`${this.url}${this.port}/products/${category}`)
         .then((response) => {
           if (!response.data) {
             return [];
@@ -71,7 +71,7 @@ export class ProductService {
    */
   async getProductById(id: number, category: string) {
     try {
-      const response = await axios.get(`${this.url}:${this.port}/products/${category}/${id}`)
+      const response = await axios.get(`${this.url}${this.port}/products/${category}/${id}`)
         .then((response) => {
           if (!response.data) {
             return [];

@@ -25,7 +25,7 @@ export class ShopService {
    */
   async getShopsData() {
     try {
-      const response = await axios.get(`${this.url}:${this.port}/shops`)
+      const response = await axios.get(`${this.url}${this.port}/shops`)
         .then((response) => {
           if (!response.data) {
             return [];
