@@ -11,12 +11,10 @@ import { environment } from '../../environments/environment';
 
 @Injectable()
 export class ProductService {
-  port: string = '';
   url: string = '';
 
   constructor() {
-    if (environment.apiPort && environment.apiUrl) {
-      this.port = environment.apiPort;
+    if (environment.apiUrl) {
       this.url = environment.apiUrl;
     }
   }
@@ -27,7 +25,7 @@ export class ProductService {
    */
   async getProductsData() {
     try {
-      const response = await axios.get(`${this.url}${this.port}/products`)
+      const response = await axios.get(`${this.url}/products`)
         .then((response) => {
           if (!response.data) {
             return [];
@@ -49,7 +47,7 @@ export class ProductService {
    */
   async getProductsByCategory(category: string) {
     try {
-      const response = await axios.get(`${this.url}${this.port}/products/${category}`)
+      const response = await axios.get(`${this.url}/products/${category}`)
         .then((response) => {
           if (!response.data) {
             return [];
@@ -71,7 +69,7 @@ export class ProductService {
    */
   async getProductById(id: number, category: string) {
     try {
-      const response = await axios.get(`${this.url}${this.port}/products/${category}/${id}`)
+      const response = await axios.get(`${this.url}/products/${category}/${id}`)
         .then((response) => {
           if (!response.data) {
             return [];

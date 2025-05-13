@@ -9,12 +9,10 @@ import { environment } from '../../environments/environment';
 
 @Injectable()
 export class ShopService {
-  port: string = '';
   url: string = '';
 
   constructor() {
-    if (environment.apiPort && environment.apiUrl) {
-      this.port = environment.apiPort;
+    if (environment.apiUrl) {
       this.url = environment.apiUrl;
     }
   }
@@ -25,7 +23,7 @@ export class ShopService {
    */
   async getShopsData() {
     try {
-      const response = await axios.get(`${this.url}${this.port}/shops`)
+      const response = await axios.get(`${this.url}/shops`)
         .then((response) => {
           if (!response.data) {
             return [];

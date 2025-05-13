@@ -1,4 +1,3 @@
 export const environment = {
-  apiUrl: "http://localhost:",
-  apiPort: "8080"
+  apiUrl: "https://prominent-ferdinanda-austin-william-154ee239.koyeb.app/server"
 };
